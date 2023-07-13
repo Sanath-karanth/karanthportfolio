@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "error": true,
+  "message": true,
+  "data": [
+    {
+      "frameNo": 1,
+      "frameName": "OnePlus 10R",
+      "quantity": 13,
+      "expireDate": "12/10/2023",
+      "UID": 235,
+      "productId": "23",
+      "image": "oneplus-10R.jpg"
+    },
+    {
+      "frameNo": 2,
+      "frameName": "Samsung S21Ultra",
+      "quantity": 2,
+      "expireDate": "02/03/2023",
+      "UID": 435,
+      "productId": "24",
+      "image": "samsung S21Ultra.jpg"
+    },
+    {
+      "frameNo": 3,
+      "frameName": "iPhone 13",
+      "quantity": 23,
+      "expireDate": "12/12/2023",
+      "UID": 145,
+      "productId": "55",
+      "image": "iPhone_13.jpg"
+    },
+    {
+      "frameNo": 4,
+      "frameName": "Samsung S21Plus",
+      "quantity": 5,
+      "expireDate": "03/06/2023",
+      "UID": 195,
+      "productId": "78",
+      "image": "samsungs21Plus.jpg"
+    },
+    {
+      "frameNo": 5,
+      "frameName": "oneplus Nord",
+      "quantity": 14,
+      "expireDate": "15/04/2023",
+      "UID": 205,
+      "productId": "86",
+      "image": "oneplus-nord.jpg"
+    },
+    {
+      "frameNo": 6,
+      "frameName": "One Plus Nord 2t",
+      "quantity": 20,
+      "expireDate": "18/02/2023",
+      "UID": 105,
+      "productId": "34",
+      "image": "oneplus-nord2t.jpg"
+    }
+  ]
+}

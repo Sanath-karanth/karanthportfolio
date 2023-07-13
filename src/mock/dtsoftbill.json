@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "error": true,
+  "message": true,
+  "data": [
+    {
+      "productid": 124,
+      "productName": "OnePlus 10R",
+      "description": "High Resolution",
+      "quantity": 13,
+      "uom": "UOM675",
+      "capCodes": "C4543",
+      "expireDate": "12/10/2023 00:00:00, 14/12/2023 00:00:00",
+      "image": "oneplus-10R.jpg"
+    },
+    {
+      "productid": 125,
+      "productName": "Samsung S21 Ultra",
+      "description": "High Resolution",
+      "quantity": 19,
+      "uom": "UOM765",
+      "capCodes": "C364635",
+      "expireDate": "10-09-2023",
+      "image": "samsung S21Ultra.jpg"
+    },
+    {
+      "productid": 129,
+      "productName": "Apple iPhone13",
+      "description": "IOS Security Update",
+      "quantity": 30,
+      "uom": "UOM3454",
+      "capCodes": "C8790",
+      "expireDate": "12-12-2023",
+      "image": "iPhone_13.jpg"
+    },
+    {
+      "productid": 126,
+      "productName": "Samsung S21 Plus",
+      "description": "New HD Camera",
+      "quantity": 3,
+      "uom": "UOM7765",
+      "capCodes": "C6635",
+      "expireDate": "23-08-2023",
+      "image": "samsungs21Plus.jpg"
+    },
+    {
+      "productid": 127,
+      "productName": "OnePlus Nord",
+      "description": "New HD+ Camera",
+      "quantity": 34,
+      "uom": "UOM856",
+      "capCodes": "C9657",
+      "expireDate": "20-09-2023",
+      "image": "oneplus-nord.jpg"
+    },
+    {
+      "productid": 128,
+      "productName": "One Plus Nord 2t",
+      "description": "AMOLED Display",
+      "quantity": 40,
+      "uom": "UOM8654",
+      "capCodes": "C8765",
+      "expireDate": "02-12-2023",
+      "image": "oneplus-nord2t.jpg"
+    }
+  ]
+}

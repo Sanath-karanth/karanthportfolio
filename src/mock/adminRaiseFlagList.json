@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "error": true,
+  "message": true,
+  "data": [
+    {
+      "kitNumber": "KIT0023",
+      "designflag": true
+    },
+    {
+      "kitNumber": "KIT0045",
+      "designflag": true
+    }
+  ]
+}
