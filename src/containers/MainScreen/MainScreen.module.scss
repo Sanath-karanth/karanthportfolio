@@ -1,79 +1,57 @@
 @use '../../styles/variables';
 
-.dt-main-cont {
-  padding: 2vh;
-  margin: 2vh;
-  border: 1px solid #51a8db;
-}
-.dt-picture-soft-capture-Col {
-  width: 80% !important;
-}
-.dt-picturelist-Col {
-  width: 48% !important;
-  margin-right: 1vw !important;
-}
-.dt-capture-Col {
-  width: 50% !important;
-}
-.dt-operation-Col {
-  width: 20% !important;
-}
-.dt-picturelist-cont {
+/* --------------    parent container styles    ------------------- */
+
+.mainScreen-center {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 1vh;
+  align-items: center;
+  justify-content: center;
 }
-.dt-capture-cont {
-  padding-bottom: 1vh;
+.banner-cont {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #ffeded;
+  text-align: center;
+  padding-top: 4rem;
 }
-.dt-softbill-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 2vh;
-  padding-bottom: 1vh;
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+  }
 }
-.list-logo {
-  height: 3vh;
-  width: 2vw;
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+  }
 }
-.preview-logo {
-  height: 3vh;
-  width: 1.5vw;
-  margin-right: 0.5vw;
+
+/* Desktop View */
+@media (min-width: 1200px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+  }
 }
-.bill-logo {
-  height: 3vh;
-  width: 1.5vw;
-  margin-right: 0.5vw;
+
+/* Large Desktop View */
+@media (min-width: 1367px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+  }
 }
-.dt-plist-headerTxt {
-  text-align: left;
-  font-size: variables.$font-size-16;
-  font-weight: variables.$font-weight-bold;
-  font-family: variables.$font-family;
-  color: variables.$color-blue-dark;
-  letter-spacing: 0px;
-  line-height: 0px;
-  opacity: 1;
-  margin: 0;
-  text-transform: capitalize;
-}
-.dt-preview-txt {
-  @extend .dt-plist-headerTxt;
-}
-.dt-softbill-headerTxt {
-  @extend .dt-plist-headerTxt;
-}
-.dt-total-txt {
-  font-size: variables.$font-size-14;
-  font-weight: variables.$font-weight-normal;
-  font-family: variables.$font-family;
-  color: variables.$color-blue-dark;
-  letter-spacing: 0px;
-  line-height: 0px;
-  opacity: 1;
-  margin: 0;
-  text-transform: capitalize;
+
+@media (min-width: 1729px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+    max-width: 2000px;
+  }
 }
