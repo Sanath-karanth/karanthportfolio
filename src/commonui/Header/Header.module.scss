@@ -4,11 +4,26 @@
 
 .headerScreen-center {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.header-nav-txt {
-  font-family: 'Nunito', sans-serif;
+.header-img-cont,
+.header-txt-cont,
+.header-about-cont {
+  @extend .headerScreen-center;
+}
+.header-logo-Col,
+.header-center-Col,
+.header-right-Col {
+  @extend .headerScreen-center;
+}
+.header-txt-mobile-cont {
+  @extend .headerScreen-center;
+  margin-top: 0.8rem;
+}
+.header-logo:hover {
+  transition: 0.6s ease-out;
+  transform: scale(1.2);
 }
 
 /* Mobile View */
@@ -16,6 +31,50 @@
   .headerContainer-main {
     margin: 0 auto;
     width: auto;
+  }
+  .header-Desktop {
+    display: block;
+  }
+  .header-Mobile {
+    display: block;
+  }
+  .header-cont {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    padding: 12px 20px 12px 20px;
+    text-align: center;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 0px -10px;
+  }
+  .header-logo-Col {
+    width: 10% !important;
+  }
+  .header-center-Col {
+    width: 80% !important;
+  }
+  .header-right-Col {
+    width: 10% !important;
+  }
+  .header-txt-mobile-Col {
+    width: 100% !important;
+  }
+  .header-logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 20%;
+  }
+  .header-nav-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+  .header-about-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
   }
 }
 
@@ -25,6 +84,59 @@
     margin: 0 auto;
     width: auto;
   }
+  .header-Desktop {
+    display: block;
+  }
+  .header-Mobile {
+    display: block;
+  }
+  .header-cont {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    padding: 12px 20px 12px 20px;
+    text-align: center;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 0px -10px;
+  }
+  .header-logo-Col {
+    width: 10% !important;
+  }
+  .header-center-Col {
+    width: 80% !important;
+  }
+  .header-right-Col {
+    width: 10% !important;
+  }
+  .header-logo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 20%;
+  }
+  .header-nav-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+  }
+  .header-about-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  .anchor-btn {
+    display: block;
+    width: 5rem;
+    height: 3rem;
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ff0000;
+    font-weight: bold;
+    line-height: 25px;
+    border: 1px solid #d6d6d6;
+  }
 }
 
 /* Desktop View */
@@ -33,27 +145,71 @@
     margin: 0 auto;
     width: auto;
   }
+  .header-Desktop {
+    display: block;
+  }
+  .header-Mobile {
+    display: block;
+  }
   .header-cont {
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
-    background: #ffffff;
-    padding: 12px;
+    height: 6rem;
+    padding: 12px 20px 12px 20px;
     text-align: center;
     display: block;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 20px -10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 0px -10px;
   }
-  .header-logo:hover {
-    transition: 0.6s ease-out;
-    transform: scale(1.2);
+  .header-logo-Col {
+    width: 10% !important;
+  }
+  .header-center-Col {
+    width: 80% !important;
+  }
+  .header-right-Col {
+    width: 10% !important;
   }
   .header-logo {
     height: 4rem;
     width: 4rem;
     border-radius: 20%;
+  }
+  .header-nav-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+  }
+  .header-about-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  .anchor-btn {
+    display: block;
+    width: 6rem;
+    height: 3rem;
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ff0000;
+    font-weight: bold;
+    line-height: 25px;
+    border: 1px solid #d6d6d6;
+  }
+  .anchor-btn:hover {
+    display: block;
+    width: 6rem;
+    height: 3rem;
+    background: #ff0000;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 25px;
+    border: 1px solid #d6d6d6;
   }
 }
 

@@ -65,9 +65,9 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             </div>
           </section>
         </div>
-        <section id='about'>
+        <section id='services'>
           <div className='container-fluid reveal mt-5'>
-            <h2>About</h2>
+            <h2>Services</h2>
             <div className='text-container'>
               <div className='text-box'>
                 <h3>Section Text</h3>
@@ -93,9 +93,9 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             </div>
           </div>
         </section>
-        <section id='services'>
-          <div className='container reveal'>
-            <h2>Services</h2>
+        <section id='portfolio'>
+          <div className='container-fluid reveal'>
+            <h2>Portfolio</h2>
             <div className='text-container'>
               <div className='text-box'>
                 <h3>Section text</h3>
@@ -139,6 +139,24 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id='about'>
+          <div className='container reveal'>
+            <h2>About</h2>
+            <div className='text-container'>
+              <div className='text-box'>
+                <h3>Section Text</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
+                  perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
+                  quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
+                  accusamus doloremque.
+                </p>
               </div>
             </div>
           </div>
