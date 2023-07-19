@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
+import parallaxBackground1 from '../../images/banner/slider1.jpg';
+import parallaxBackground2 from '../../images/banner/slide3.jpg';
 
 interface IMainScreenProps {
   classname?: string;
@@ -66,8 +68,27 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
           </section>
         </div>
         <section id='services'>
-          <div className='container-fluid reveal mt-5'>
+          <div className='container-fluid unreveal mt-5'>
             <h2>Services</h2>
+            <div
+              className={styles['parallax']}
+              style={{
+                backgroundImage: `url(${parallaxBackground1})`,
+              }}
+            ></div>
+            <div style={{ height: '400px', background: 'red' }}>
+              <p>
+                Scroll Up and Down this page to see the parallax scrolling effect. This div is just
+                here to enable scrolling. Tip: Try to remove the background-attachment property to
+                remove the scrolling effect.
+              </p>
+            </div>
+            <div
+              className={styles['parallax']}
+              style={{
+                backgroundImage: `url(${parallaxBackground2})`,
+              }}
+            ></div>
             <div className='text-container'>
               <div className='text-box'>
                 <h3>Section Text</h3>
@@ -77,10 +98,6 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                   adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
                   quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
                   accusamus doloremque.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est rerum id quis
-                  eaque rem suscipit reprehenderit quaerat vero nesciunt?
                 </p>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
