@@ -7,13 +7,12 @@
   justify-content: center;
   align-items: center;
 }
-.header-txt-mobile-cont {
-  @extend .headerScreen-center;
-  margin-top: 0.8rem;
-}
 .header-logo:hover {
   transition: 0.6s ease-out;
   transform: scale(1.2);
+}
+.header-txt-cont {
+  transition: 0.6s ease-out;
 }
 
 /* Mobile View */
@@ -66,13 +65,13 @@
     border-radius: 20%;
   }
   .header-nav-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
     margin-bottom: 2px;
   }
   .header-about-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
   }
 }
 
@@ -130,25 +129,25 @@
     border-radius: 20%;
   }
   .header-nav-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
   }
   .header-about-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
   }
   .anchor-btn {
     display: block;
     width: 5rem;
     height: 3rem;
-    background: #ffffff;
+    background: variables.$color-FFFFFF;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    color: #ff0000;
+    color: variables.$color-danger;
     font-weight: bold;
     line-height: 25px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid variables.$color-gray-border;
   }
 }
 
@@ -206,38 +205,38 @@
     border-radius: 20%;
   }
   .header-nav-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
   }
   .header-about-txt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
   }
   .anchor-btn {
     display: block;
     width: 6rem;
     height: 3rem;
-    background: #ffffff;
+    background: variables.$color-FFFFFF;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    color: #ff0000;
+    color: variables.$color-danger;
     font-weight: bold;
     line-height: 25px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid variables.$color-gray-border;
   }
   .anchor-btn:hover {
     display: block;
     width: 6rem;
     height: 3rem;
-    background: #ff0000;
+    background: variables.$color-danger;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    color: #ffffff;
+    color: variables.$color-FFFFFF;
     font-weight: bold;
     line-height: 25px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid variables.$color-gray-border;
   }
 }
 

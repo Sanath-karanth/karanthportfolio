@@ -19,9 +19,13 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     setOpen(!isOpen);
     const headerTextDivElement: HTMLElement | null = document.querySelector('#header-navtxt');
     if (isOpen) {
-      headerTextDivElement && (headerTextDivElement.style.display = 'none');
+      headerTextDivElement &&
+        ((headerTextDivElement.style.display = 'none'),
+        (headerTextDivElement.style.transition = ' 2s ease-out'));
     } else {
-      headerTextDivElement && (headerTextDivElement.style.display = 'block');
+      headerTextDivElement &&
+        ((headerTextDivElement.style.display = 'block'),
+        (headerTextDivElement.style.transition = ' 2s ease-out'));
     }
   }, [isOpen]);
 
@@ -129,7 +133,11 @@ const Header: FunctionComponent<IHeaderProps> = () => {
                   alt='logo'
                 ></img>
               </div>
-              <div className={styles['header-txt-cont']} id='header-navtxt'>
+              <div
+                className={styles['header-txt-cont']}
+                id='header-navtxt'
+                style={{ transition: ' all 2s ease-out 0s' }}
+              >
                 <nav>
                   <span className={styles['header-nav-txt']}>
                     <a href='#home' className='active'>
