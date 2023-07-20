@@ -46,11 +46,11 @@
     @include mainScreen-center;
     text-align: left;
     height: 50vh;
+    padding-top: 3rem;
   }
   .banner-left-txt-cont {
     width: 100%;
     margin-left: 1.5rem;
-    margin-top: 2rem;
   }
   .banner-title-txt {
     font-family: variables.$font-family-Montserrat;

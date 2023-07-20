@@ -124,35 +124,40 @@ const Header: FunctionComponent<IHeaderProps> = () => {
       <div className={styles['headerContainer-main']}>
         <header className={styles['header-cont']} id='headerContDesktop'>
           <div className={styles['header-mainflex']}>
-            <div className={styles['header-img-cont']}>
-              <img
-                className={styles['header-logo']}
-                id='img-logo-desktop'
-                src={headerLogo}
-                alt='logo'
-              ></img>
-            </div>
-            <div
-              className={styles['header-txt-cont']}
-              id='header-navtxt'
-              style={{ transition: ' all 2s ease-out 0s' }}
-            >
-              <nav className={styles['header-nav']}>
-                <span className={styles['header-nav-txt']}>
-                  <a href='#home' className='active'>
-                    Home
-                  </a>
-                </span>
-                <span className={styles['header-nav-txt']}>
-                  <a href='#services'>Services</a>
-                </span>
-                <span className={styles['header-nav-txt']}>
-                  <a href='#portfolio'>Portfolio</a>
-                </span>
-                <span className={styles['header-nav-txt']}>
-                  <a href='#contact'>Contact</a>
-                </span>
-              </nav>
+            <div className={styles['header-submainflex']}>
+              <div className={styles['header-img-cont']}>
+                <img
+                  className={styles['header-logo']}
+                  id='img-logo-desktop'
+                  src={headerLogo}
+                  alt='logo'
+                ></img>
+              </div>
+              <div
+                className={styles['header-txt-cont']}
+                id='header-navtxt'
+                style={{ transition: ' all 2s ease-out 0s' }}
+              >
+                <nav>
+                  <span className={styles['header-nav-txt']}>
+                    <a href='#home' className='active'>
+                      Home
+                    </a>
+                  </span>
+                  <span className={styles['header-nav-txt']}>
+                    <a href='#services'>Services</a>
+                  </span>
+                  <span className={styles['header-nav-txt']}>
+                    <a href='#portfolio'>Portfolio</a>
+                  </span>
+                  <span className={styles['header-nav-txt']}>
+                    <a href='#contact'>Contact</a>
+                  </span>
+                  <span className={styles['header-nav-txt']} id='about-txt'>
+                    <a href='#about'>About</a>
+                  </span>
+                </nav>
+              </div>
             </div>
             <div className={styles['header-about-cont']}>
               <div className={styles['header-desktop']}>

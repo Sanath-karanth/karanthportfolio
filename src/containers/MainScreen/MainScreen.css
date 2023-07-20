@@ -98,12 +98,16 @@ section .text-container .text-box h3 {
         transition: 0.5s ease-out;
         letter-spacing: 2px;
         text-decoration: none;
-        border-bottom: 4px solid #FF0000;
-        padding-bottom: 1px;
+        border-bottom: 5px solid #FF0000;
+        padding-bottom: 2px;
     }
 
     #header-navtxt {
         display: none;
+    }
+
+    #about-txt {
+        display: inline;
     }
 
 }
@@ -128,6 +132,10 @@ section .text-container .text-box h3 {
     #header-navtxt {
         display: block;
     }
+
+    #about-txt {
+        display: none;
+    }
 }
 
 /* Desktop View */
@@ -149,5 +157,9 @@ section .text-container .text-box h3 {
 
     #header-navtxt {
         display: block;
+    }
+
+    #about-txt {
+        display: none;
     }
 }
