@@ -60,8 +60,14 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             <div className={styles['header-cont']}>
               <Header />
             </div>
-            <div className='container-fluid mt-5'>
-              <div>
+            <div className='container-fluid mt-3'>
+              <div
+                style={{
+                  clipPath: 'polygon(78% 0, 100% 0%, 24% 100%, 0% 100%)',
+                  height: '86vh',
+                  background: 'red',
+                }}
+              >
                 <h1>Banner</h1>
               </div>
             </div>

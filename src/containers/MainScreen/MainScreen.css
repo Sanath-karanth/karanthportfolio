@@ -35,7 +35,6 @@ section {
     --bs-gutter-y: 0;
 }
 
-
 header nav a:hover {
     transition: 0.5s ease-out;
     letter-spacing: 2px;
@@ -43,26 +42,19 @@ header nav a:hover {
     padding-bottom: 5px;
 }
 
-
-
-
 section:nth-child(2) {
-    /* color: #42455a; */
     background: #e0ffff;
 }
 
 section:nth-child(3) {
-    /* color: #e0ffff; */
     background: #e0ffff;
 }
 
 section:nth-child(4) {
-    /* color: #42455a; */
     background: #e0ffff;
 }
 
 section:nth-child(5) {
-    /* color: #e0ffff; */
     background: #e0ffff;
 }
 
