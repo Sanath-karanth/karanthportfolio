@@ -7,6 +7,16 @@
   align-items: center;
   justify-content: center;
 }
+.mainScreen-center-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+}
+.banner-sub-cont {
+  @extend .mainScreen-center-flex;
+}
 .parallax {
   height: 90vh;
   width: 100%;
@@ -25,10 +35,10 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    padding-top: 6rem;
+    // padding-top: 6rem;
   }
 }
 
@@ -41,10 +51,10 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    padding-top: 4rem;
+    // padding-top: 4rem;
   }
 }
 
@@ -57,10 +67,10 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    padding-top: 4rem;
+    // padding-top: 4rem;
   }
 }
 
