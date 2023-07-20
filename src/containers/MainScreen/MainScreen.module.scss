@@ -2,20 +2,24 @@
 
 /* --------------    parent container styles    ------------------- */
 
-.mainScreen-center {
-  display: flex;
+@mixin mainScreen-center {
+  display: grid;
   align-items: center;
   justify-content: center;
 }
 .mainScreen-center-flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
 }
-.banner-sub-cont {
-  @extend .mainScreen-center-flex;
+
+.banner-left-Col {
+  width: 40% !important;
+}
+.banner-right-Col {
+  width: 60% !important;
 }
 .parallax {
   height: 90vh;
@@ -35,10 +39,43 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    // padding-top: 6rem;
+  }
+  .banner-left-cont {
+    @include mainScreen-center;
+    text-align: left;
+    height: 70vh;
+  }
+  .banner-left-txt-cont {
+    width: 100%;
+    margin-left: 1.5rem;
+  }
+  .banner-title-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+  }
+  .banner-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+  }
+  .banner-right-cont {
+    height: 70vh;
+    width: 100%;
+  }
+  .banner-img {
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+  }
+  .banner-clip {
+    height: 70vh;
+    width: 30vw;
+    clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+    background: rgba(255, 0, 0, 0.342);
   }
 }
 
@@ -51,10 +88,42 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    // padding-top: 4rem;
+  }
+  .banner-left-cont {
+    @include mainScreen-center;
+    text-align: left;
+    height: 100vh;
+  }
+  .banner-left-txt-cont {
+    width: 100%;
+  }
+  .banner-title-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-32;
+  }
+  .banner-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-22;
+  }
+  .banner-right-cont {
+    height: 100vh;
+    width: 100%;
+  }
+  .banner-img {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+  }
+  .banner-clip {
+    height: 100vh;
+    width: 35vw;
+    clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+    background: rgba(255, 0, 0, 0.342);
   }
 }
 
@@ -67,10 +136,42 @@
   .banner-cont {
     position: relative;
     width: 100%;
-    // height: 100vh;
     background: variables.$color-palepink;
     text-align: center;
-    // padding-top: 4rem;
+  }
+  .banner-left-cont {
+    @include mainScreen-center;
+    text-align: left;
+    height: 100vh;
+  }
+  .banner-left-txt-cont {
+    width: 100%;
+  }
+  .banner-title-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-34;
+  }
+  .banner-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
+  }
+  .banner-right-cont {
+    height: 100vh;
+    width: 100%;
+  }
+  .banner-img {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+  }
+  .banner-clip {
+    height: 100vh;
+    width: 30vw;
+    clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+    background: rgba(255, 0, 0, 0.342);
   }
 }
 

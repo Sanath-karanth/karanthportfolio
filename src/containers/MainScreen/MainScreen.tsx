@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
+import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider1.jpg';
 import parallaxBackground2 from '../../images/banner/slide3.jpg';
 
@@ -60,28 +61,36 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             <div className={styles['header-cont']}>
               <Header />
             </div>
-            <div className='container-fluid'>
-              <div className={styles['banner-sub-cont']}>
-                <div style={{ marginTop: '5rem' }}>
-                  <h1>
-                    <strong>Hi,</strong>{' '}
-                    <b>
-                      <i>I am Sanath</i>
-                    </b>
-                  </h1>
-                  <h4>Web Designer</h4>
-                </div>
-                <div
-                  style={{
-                    clipPath: 'polygon(71% 0, 31% 39%, 63% 100%, 32% 100%, 0 36%, 39% 0)',
-                    height: '100vh',
-                    width: '40vw',
-                    background: 'red',
-                  }}
-                >
-                  {/* <h1>Banner</h1> */}
-                </div>
-              </div>
+            <div className='container-fluid gx-0'>
+              <Row className='gx-0'>
+                <Col sm='6' md='6' lg='6' className={styles['banner-left-Col']}>
+                  <div className={styles['banner-left-cont']}>
+                    <div className={styles['banner-left-txt-cont']}>
+                      <div>
+                        <h1 className={styles['banner-title-txt']}>
+                          <strong>
+                            Hi<span>&#44;</span>
+                          </strong>{' '}
+                          <b>I am Sanath</b>
+                        </h1>
+                      </div>
+                      <div>
+                        <h4 className={styles['banner-desp-txt']}>Web Designer</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+                <Col sm='6' md='6' lg='6' className={styles['banner-right-Col']}>
+                  <div className={styles['banner-right-cont']}>
+                    <div
+                      className={styles['banner-img']}
+                      style={{ backgroundImage: `url(${bannerImg})` }}
+                    >
+                      <div className={styles['banner-clip']}></div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </div>
           </section>
         </div>

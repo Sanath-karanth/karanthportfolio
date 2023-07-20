@@ -26,6 +26,9 @@
   }
   .header-mobile {
     display: block;
+    position: fixed;
+    right: 1rem;
+    color: variables.$color-707070;
   }
   .header-mainflex {
     display: flex;
@@ -66,8 +69,9 @@
   }
   .header-nav-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
+    font-size: variables.$font-size-10;
     margin-bottom: 2px;
+    font-weight: 600;
   }
   .header-about-txt {
     font-family: variables.$font-family-Montserrat;
@@ -106,7 +110,7 @@
     align-items: center;
   }
   .header-img-cont {
-    margin-right: 7rem;
+    margin-right: 1rem;
   }
   .header-txt-cont {
     display: block;
@@ -130,7 +134,8 @@
   }
   .header-nav-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-16;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
   }
   .header-about-txt {
     font-family: variables.$font-family-Montserrat;
@@ -182,7 +187,7 @@
     align-items: center;
   }
   .header-img-cont {
-    margin-right: 17rem;
+    margin-right: 8rem;
   }
   .header-txt-cont {
     display: block;
@@ -207,6 +212,7 @@
   .header-nav-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-24;
+    font-weight: 600;
   }
   .header-about-txt {
     font-family: variables.$font-family-Montserrat;
