@@ -90,15 +90,19 @@ section .text-container .text-box h3 {
     header nav a {
         letter-spacing: 0.5px;
         letter-spacing: 0.5px;
-        margin: 10px 7px;
-        color: #000000;
+        margin: 10px 3px;
+        padding: 4px;
+        color: #ffffff;
+        background: #000000;
+        border-radius: 10px;
+        opacity: 0.8;
     }
 
     header nav a.active {
         transition: 0.5s ease-out;
         letter-spacing: 2px;
         text-decoration: none;
-        border-bottom: 5px solid #FF0000;
+        border-bottom: 5px solid #ff7171;
         padding-bottom: 2px;
     }
 
@@ -117,7 +121,7 @@ section .text-container .text-box h3 {
     header nav a {
         letter-spacing: 0.5px;
         letter-spacing: 0.5px;
-        margin: 10px 20px;
+        margin: 10px 15px;
         color: #000000;
     }
 
@@ -143,7 +147,7 @@ section .text-container .text-box h3 {
     header nav a {
         letter-spacing: 0.5px;
         letter-spacing: 0.5px;
-        margin: 10px 20px;
+        margin: 10px 15px;
         color: #000000;
     }
 
