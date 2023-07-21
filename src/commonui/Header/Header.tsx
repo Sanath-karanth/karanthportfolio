@@ -19,11 +19,11 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     if (isOpen) {
       headerTextDivElement &&
         ((headerTextDivElement.style.display = 'none'),
-        (headerTextDivElement.style.transition = ' 2s ease-out'));
+        (headerTextDivElement.style.transition = 'all 8s ease'));
     } else {
       headerTextDivElement &&
         ((headerTextDivElement.style.display = 'block'),
-        (headerTextDivElement.style.transition = ' 2s ease-out'));
+        (headerTextDivElement.style.transition = 'all 8s ease'));
     }
   }, [isOpen]);
 
@@ -106,7 +106,7 @@ const Header: FunctionComponent<IHeaderProps> = () => {
               <div
                 className={styles['header-txt-cont']}
                 id='header-navtxt'
-                style={{ transition: ' all 2s ease-out 0s' }}
+                style={{ transition: ' all 1.2s ease-out 0s' }}
               >
                 <nav>
                   <span className={styles['header-nav-txt']}>

@@ -65,6 +65,7 @@ section .container {
 
 section .text-container {
     display: flex;
+    justify-content: center;
 }
 
 section .text-container .text-box {
@@ -134,7 +135,7 @@ section .text-container .text-box h3 {
     }
 
     #header-navtxt {
-        display: block;
+        display: inline;
     }
 
     #about-txt {
@@ -160,7 +161,7 @@ section .text-container .text-box h3 {
     }
 
     #header-navtxt {
-        display: block;
+        display: inline;
     }
 
     #about-txt {
