@@ -8,6 +8,7 @@ const Loading: FunctionComponent = () => <Fragment>Loading...</Fragment>;
 ////  Actual Screens
 const SplashScreenComponent = lazy(() => import('../containers/SplashScreen/SplashScreen'));
 const MainScreenComponent = lazy(() => import('../containers/MainScreen/MainScreen'));
+const ProfileScreenComponent = lazy(() => import('../containers/ProfileScreen/ProfileScreen'));
 
 const Routers: FunctionComponent = () => {
   return (
@@ -24,6 +25,7 @@ const Routers: FunctionComponent = () => {
               />
               <Route path='/design-technician/:route' element={<DesignTechnicianComponent />} />
               <Route path='/admin' element={<AdminComponent />} /> */}
+              <Route path='/profile' element={<ProfileScreenComponent />} />
               <Route path='/mainpage' element={<MainScreenComponent />} />
               <Route path='/' element={<SplashScreenComponent />} />
               <Route path='*' element={<NotFound />} />

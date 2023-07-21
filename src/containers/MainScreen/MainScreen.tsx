@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
+import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,13 +9,36 @@ import { Header } from '../../commonui';
 import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider1.jpg';
 import parallaxBackground2 from '../../images/banner/slide3.jpg';
+import { useNavigate } from 'react-router-dom';
 
 interface IMainScreenProps {
   classname?: string;
 }
 
 const MainScreen: FunctionComponent<IMainScreenProps> = () => {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
+
+  const profileClick = useCallback(() => {
+    const profileIconDivElement: HTMLElement | null = document.querySelector(
+      `.${styles['banner-profile-icon']}`,
+    );
+    if (window.innerWidth < 767) {
+      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(4.5rem)');
+    } else if (window.innerWidth > 767 || window.innerWidth < 1023) {
+      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(6rem)');
+    } else if (window.innerWidth > 1024) {
+      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(7rem)');
+    }
+    setViewprofileShow(false);
+    let timer: any = null;
+    timer = window.setTimeout(() => {
+      navigate('/profile', { replace: false });
+    }, 2000);
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [viewprofileShow, navigate]);
 
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
@@ -91,7 +114,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                         </p>
                       </div>
                       <div className={styles['banner-profile-icon-cont']}>
-                        <div className={styles['banner-profile-icon']}>
+                        <div className={styles['banner-profile-icon']} onClick={profileClick}>
                           <FontAwesomeIcon
                             icon={faUser}
                             size='lg'
@@ -99,7 +122,11 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                           />
                         </div>
                         <div className={styles['banner-profile-outer-cont']}>
-                          <div className={styles['banner-profile-txt']}>View Profile</div>
+                          {viewprofileShow ? (
+                            <div className={styles['banner-profile-txt']}>View Profile</div>
+                          ) : (
+                            <div className={styles['banner-profile-txt']}></div>
+                          )}
                         </div>
                       </div>
                     </div>

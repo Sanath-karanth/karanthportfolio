@@ -1,8 +1,7 @@
 import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Lottie from 'lottie-react';
-import styles from './SplashScreen.module.scss';
-import animation from '../../lotties/animation_web1.json';
+import styles from './ProfileScreen.module.scss';
 
 interface ISplashScreenProps {
   classname?: string;
@@ -15,20 +14,11 @@ const splashStyle = {
 const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      navigate('/mainpage', { replace: false });
-    }, 2500);
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [navigate]);
-
   return (
     <Fragment>
-      <div className={styles['MainContainer-splash']}>
-        <div className={styles['AppLottie-cont']}>
-          <Lottie style={splashStyle} animationData={animation} />
+      <div className={styles['ProfileContainer-splash']}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <h1>Profile</h1>
         </div>
       </div>
     </Fragment>
