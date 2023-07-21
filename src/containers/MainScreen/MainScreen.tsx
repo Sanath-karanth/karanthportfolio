@@ -75,7 +75,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                         </h1>
                       </div>
                       <div>
-                        <h4 className={styles['banner-desp-txt']}>Web Designer</h4>
+                        <h4 className={styles['banner-desp-txt']}>Web Designer & Developer</h4>
                       </div>
                     </div>
                   </div>
