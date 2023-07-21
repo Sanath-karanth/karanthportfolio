@@ -55,7 +55,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 8rem;
     padding: 12px 20px 12px 20px;
     text-align: center;
     display: block;
@@ -68,9 +67,9 @@
   }
   .header-nav-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-10;
+    font-size: variables.$font-size-12;
     margin-bottom: 2px;
-    font-weight: 600;
+    font-weight: 800;
   }
   .header-about-txt {
     font-family: variables.$font-family-Montserrat;
@@ -120,7 +119,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 6rem;
     padding: 12px 20px 12px 20px;
     text-align: center;
     display: block;
@@ -134,7 +132,7 @@
   .header-nav-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-14;
-    font-weight: 600;
+    font-weight: 700;
   }
   .header-about-txt {
     font-family: variables.$font-family-Montserrat;

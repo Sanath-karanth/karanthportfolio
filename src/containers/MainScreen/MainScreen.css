@@ -91,9 +91,10 @@ section .text-container .text-box h3 {
         letter-spacing: 0.5px;
         letter-spacing: 0.5px;
         margin: 10px 3px;
-        padding: 4px;
+        padding: 6px;
         color: #ffffff;
-        background: linear-gradient(to right, rgb(0 0 0/0.9), rgb(0 0 0/0));
+        background: linear-gradient(to right, rgb(0 0 0/1), rgb(0 0 0/0.2));
+        /* background: #000000; */
         border-radius: 10px;
         opacity: 0.8;
     }

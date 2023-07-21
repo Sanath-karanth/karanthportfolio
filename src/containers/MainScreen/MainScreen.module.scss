@@ -59,26 +59,26 @@
   }
   .banner-title-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-18;
+    font-size: variables.$font-size-20;
   }
   .banner-subtitle-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-10;
+    font-size: variables.$font-size-12;
   }
   .banner-desp-cont {
     width: 35vw;
   }
   .banner-desp-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-6;
-    margin-bottom: 0.4rem;
+    font-size: variables.$font-size-8;
+    margin-bottom: 0.5rem;
   }
   .banner-profile-icon-cont {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     border-radius: 40px;
-    width: 6rem;
+    width: 7rem;
     padding: 0.3rem;
     background: variables.$color-danger;
     opacity: 1;
@@ -92,14 +92,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
     border-radius: 40px;
     background: variables.$color-danger;
   }
   .banner-profile-icon {
     @include profileContent-center;
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.8rem;
+    width: 1.8rem;
     border-radius: 30px;
     background: variables.$color-palepink;
     transition: 2s all ease;
@@ -114,10 +113,11 @@
   }
   .banner-profile-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-6;
+    font-size: variables.$font-size-8;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: variables.$color-palepink;
+    margin-left: 4px;
   }
   .banner-right-cont {
     height: 50vh;
