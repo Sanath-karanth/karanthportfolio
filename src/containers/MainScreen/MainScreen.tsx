@@ -121,7 +121,9 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
         </div>
         <section id='services'>
           <div className='container-fluid unreveal mt-5'>
-            <h2>Services</h2>
+            <div className={styles['section-title']}>
+              <h2>Services</h2>
+            </div>
             <div
               className={styles['parallax-center']}
               style={{
