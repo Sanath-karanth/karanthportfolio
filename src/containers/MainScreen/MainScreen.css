@@ -103,7 +103,7 @@ section .text-container .text-box h3 {
         transition: 0.5s ease-out;
         letter-spacing: 2px;
         text-decoration: none;
-        border-bottom: 5px solid #ff7171;
+        border-bottom: 5px solid #FF0000;
         padding-bottom: 2px;
     }
 
