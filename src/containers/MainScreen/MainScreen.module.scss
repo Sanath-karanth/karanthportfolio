@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
 }
+@mixin profileContent-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .mainScreen-center-flex {
   display: flex;
   flex-direction: row;
@@ -46,7 +51,7 @@
     @include mainScreen-center;
     text-align: left;
     height: 50vh;
-    padding-top: 3rem;
+    padding-top: 6rem;
   }
   .banner-left-txt-cont {
     width: 100%;
@@ -56,9 +61,63 @@
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-18;
   }
+  .banner-subtitle-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+  }
+  .banner-desp-cont {
+    width: 35vw;
+  }
   .banner-desp-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-14;
+    font-size: variables.$font-size-6;
+    margin-bottom: 0.4rem;
+  }
+  .banner-profile-icon-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 40px;
+    width: 6rem;
+    padding: 0.3rem;
+    background: variables.$color-danger;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .banner-profile-icon-cont:hover {
+    transform: scale(1.1);
+  }
+  .banner-profile-outer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    border-radius: 40px;
+    background: variables.$color-danger;
+  }
+  .banner-profile-icon {
+    @include profileContent-center;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 30px;
+    background: variables.$color-palepink;
+    transition: 2s all ease;
+  }
+  .banner-profile-icon:hover {
+    transform: scale(1.2);
+  }
+  .profile-icon {
+    height: 0.8rem;
+    width: 0.8rem;
+    color: variables.$color-danger;
+  }
+  .banner-profile-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: variables.$color-palepink;
   }
   .banner-right-cont {
     height: 50vh;
@@ -78,58 +137,24 @@
     clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
     background: rgba(255, 0, 0, 0.342);
   }
+  @keyframes openclose {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 4.8rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
 }
 
 /* Tablet View */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .MainContainer-main {
-    margin: 0 auto;
-    width: auto;
-  }
-  .banner-cont {
-    position: relative;
-    width: 100%;
-    background: variables.$color-palepink;
-    text-align: center;
-  }
-  .banner-left-cont {
-    @include mainScreen-center;
-    text-align: left;
-    height: 100vh;
-  }
-  .banner-left-txt-cont {
-    width: 100%;
-  }
-  .banner-title-txt {
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-32;
-  }
-  .banner-desp-txt {
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-22;
-  }
-  .banner-right-cont {
-    height: 100vh;
-    width: 100%;
-  }
-  .banner-img {
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 24% 100%, 0 27%, 20% 0);
-  }
-  .banner-clip {
-    height: 100vh;
-    width: 35vw;
-    clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
-    background: rgba(255, 0, 0, 0.342);
-  }
-}
-
-/* Desktop View */
-@media (min-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .MainContainer-main {
     margin: 0 auto;
     width: auto;
@@ -151,10 +176,183 @@
   .banner-title-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-34;
+    letter-spacing: 1px;
+  }
+  .banner-subtitle-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-22;
+    margin: 0;
+  }
+  .banner-desp-cont {
+    width: 30vw;
   }
   .banner-desp-txt {
     font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+  .banner-profile-icon-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 40px;
+    width: 10.5rem;
+    padding: 0.4rem;
+    background: variables.$color-danger;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .banner-profile-icon-cont:hover {
+    transform: scale(1.1);
+  }
+  .banner-profile-outer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    border-radius: 40px;
+    background: variables.$color-danger;
+  }
+  .banner-profile-icon {
+    @include profileContent-center;
+    height: 3.5rem;
+    width: 4.5rem;
+    border-radius: 30px;
+    background: variables.$color-palepink;
+    transition: 2s all ease;
+  }
+  .banner-profile-icon:hover {
+    transform: scale(1.2);
+  }
+  .profile-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: variables.$color-danger;
+  }
+  .banner-profile-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: variables.$color-palepink;
+  }
+  .banner-right-cont {
+    height: 100vh;
+    width: 100%;
+  }
+  .banner-img {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+  }
+  .banner-clip {
+    height: 100vh;
+    width: 35vw;
+    clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
+    background: rgba(255, 0, 0, 0.342);
+  }
+  @keyframes openclose {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 8.5rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .MainContainer-main {
+    margin: 0 auto;
+    width: auto;
+  }
+  .banner-cont {
+    position: relative;
+    width: 100%;
+    background: variables.$color-palepink;
+    text-align: center;
+  }
+  .banner-left-cont {
+    @include mainScreen-center;
+    text-align: left;
+    height: 100vh;
+  }
+  .banner-left-txt-cont {
+    width: 100%;
+  }
+  .banner-title-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-54;
+    letter-spacing: 1px;
+  }
+  .banner-subtitle-txt {
+    font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-24;
+  }
+  .banner-desp-cont {
+    width: 35vw;
+  }
+  .banner-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+  }
+  .banner-profile-icon-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 40px;
+    width: 12rem;
+    padding: 0.4rem;
+    background: variables.$color-danger;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .banner-profile-icon-cont:hover {
+    transform: scale(1.1);
+  }
+  .banner-profile-outer-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    border-radius: 40px;
+    background: variables.$color-danger;
+  }
+  .banner-profile-icon {
+    @include profileContent-center;
+    height: 4rem;
+    width: 4.5rem;
+    border-radius: 30px;
+    background: variables.$color-palepink;
+    transition: 2s all ease;
+  }
+  .banner-profile-icon:hover {
+    transform: scale(1.2);
+  }
+  .profile-icon {
+    height: 2rem;
+    width: 2rem;
+    color: variables.$color-danger;
+  }
+  .banner-profile-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: variables.$color-palepink;
   }
   .banner-right-cont {
     height: 100vh;
@@ -174,6 +372,20 @@
     clip-path: polygon(100% 0, 54% 27%, 100% 100%, 24% 100%, 0 27%, 20% 0);
     background: rgba(255, 0, 0, 0.342);
   }
+  @keyframes openclose {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 12.2rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
 }
 
 /* Large Desktop View */
@@ -190,4 +402,15 @@
     width: auto;
     max-width: 2000px;
   }
+}
+
+////// Animation Styles text
+
+.banner-name-txt {
+  background: variables.$color-danger;
+  color: variables.$color-palepink;
+  display: inline-flex;
+  overflow: hidden;
+  animation: openclose 2.5s ease-in-out infinite;
+  padding: 0.2rem;
 }

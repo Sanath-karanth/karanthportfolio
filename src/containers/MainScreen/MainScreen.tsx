@@ -1,6 +1,8 @@
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faBriefcase, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
@@ -66,16 +68,39 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                 <Col sm='6' md='6' lg='6' className={styles['banner-left-Col']}>
                   <div className={styles['banner-left-cont']}>
                     <div className={styles['banner-left-txt-cont']}>
-                      <div>
+                      <div className='mb-2'>
                         <h1 className={styles['banner-title-txt']}>
                           <strong>
                             Hi<span>&#44;</span>
                           </strong>{' '}
-                          <b>I am Sanath</b>
+                          <b>
+                            I’m{' '}
+                            <span className={styles['banner-name-txt']}>
+                              <span>Sanath</span>
+                            </span>
+                          </b>
                         </h1>
                       </div>
                       <div>
-                        <h4 className={styles['banner-desp-txt']}>Web Designer & Developer</h4>
+                        <h4 className={styles['banner-subtitle-txt']}>Web Designer & Developer</h4>
+                      </div>
+                      <div className={styles['banner-desp-cont']}>
+                        <p className={styles['banner-desp-txt']}>
+                          with knowledge in web design and development, I offer the best projects
+                          resulting in quality work.
+                        </p>
+                      </div>
+                      <div className={styles['banner-profile-icon-cont']}>
+                        <div className={styles['banner-profile-icon']}>
+                          <FontAwesomeIcon
+                            icon={faUser}
+                            size='lg'
+                            className={styles['profile-icon']}
+                          />
+                        </div>
+                        <div className={styles['banner-profile-outer-cont']}>
+                          <div className={styles['banner-profile-txt']}>View Profile</div>
+                        </div>
                       </div>
                     </div>
                   </div>
