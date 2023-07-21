@@ -43,19 +43,19 @@ header nav a:hover {
 }
 
 section:nth-child(2) {
-    background: #e0ffff;
+    background: #feebeb;
 }
 
 section:nth-child(3) {
-    background: #e0ffff;
+    background: #feebeb;
 }
 
 section:nth-child(4) {
-    background: #e0ffff;
+    background: #feebeb;
 }
 
 section:nth-child(5) {
-    background: #e0ffff;
+    background: #feebeb;
 }
 
 section .container {
@@ -94,7 +94,6 @@ section .text-container .text-box h3 {
         padding: 6px;
         color: #ffffff;
         background: linear-gradient(to right, rgb(0 0 0/1), rgb(0 0 0/0.2));
-        /* background: #000000; */
         border-radius: 10px;
         opacity: 0.8;
     }

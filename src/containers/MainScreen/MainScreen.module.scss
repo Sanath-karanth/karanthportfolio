@@ -34,6 +34,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.parallax-center {
+  @include profileContent-center;
+  height: 90vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Mobile View */
 @media (max-width: 767px) {

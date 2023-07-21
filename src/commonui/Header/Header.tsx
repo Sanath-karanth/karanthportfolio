@@ -1,5 +1,4 @@
 import React, { FunctionComponent, Fragment, useEffect, useCallback, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
 import '../../containers/MainScreen/MainScreen.css';
 import styles from './Header.module.scss';
 import headerLogo from '../../images/header/header.png';
@@ -11,10 +10,9 @@ interface IHeaderProps {
 
 const Header: FunctionComponent<IHeaderProps> = () => {
   const [scrollTop, setScrollTop] = useState<number>(0);
-  const [colDeskShow, setColDeskShow] = useState<boolean>(true);
-  const [colMobileShow, setColMobileShow] = useState<boolean>(true);
   const [isOpen, setOpen] = useState<boolean>(false);
 
+  // function for toggle menu
   const toggleMenu = useCallback(() => {
     setOpen(!isOpen);
     const headerTextDivElement: HTMLElement | null = document.querySelector('#header-navtxt');
@@ -29,12 +27,12 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     }
   }, [isOpen]);
 
-  // UseEffect code for onScroll top bottom header color change for Desktop
+  // UseEffect code for onScroll top bottom header color change
   useEffect(() => {
     function onScroll() {
       const currentPosition = window.scrollY;
       const imgLogoElement: HTMLElement | null = document.querySelector('#img-logo-desktop');
-      const headerElement: HTMLElement | null = document.querySelector('#headerContDesktop');
+      const headerElement: HTMLElement | null = document.querySelector('#headerContDisplay');
       if (currentPosition !== 0) {
         headerElement && (headerElement.style.background = '#FFF');
       } else {
@@ -65,64 +63,11 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollTop]);
-
-  // UseEffect code for onScroll top bottom header color change for Mobile
-  useEffect(() => {
-    function onScroll() {
-      const currentPosition = window.scrollY;
-      const imgLogoElement: HTMLElement | null = document.querySelector('#img-logo-mobile');
-      const headerElement: HTMLElement | null = document.querySelector('#headerContMobile');
-      if (currentPosition !== 0) {
-        headerElement && (headerElement.style.background = '#FFF');
-      } else {
-        headerElement && (headerElement.style.background = 'transparent');
-      }
-      if (currentPosition > scrollTop) {
-        // downscroll code
-
-        imgLogoElement &&
-          ((imgLogoElement.style.transform = 'scale(1.2)'),
-          (imgLogoElement.style.transition = ' 0.6s ease-out'));
-
-        headerElement &&
-          ((headerElement.style.boxShadow = 'rgba(0, 0, 0, 0.45) 0px 15px 20px -10px'),
-          (headerElement.style.transition = ' 0.6s ease-out'));
-      } else {
-        // upscroll code
-        imgLogoElement &&
-          ((imgLogoElement.style.transform = 'scale(1)'),
-          (imgLogoElement.style.transition = ' 0.6s ease-out'));
-        headerElement &&
-          ((headerElement.style.boxShadow = 'rgba(0, 0, 0, 0.45) 0px 0px 0px -10px'),
-          (headerElement.style.transition = ' 0.6s ease-out'));
-      }
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    }
-
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollTop]);
-
-  // UseEffect code to put condition for window size for mobile
-  // useEffect(() => {
-  //   function handleResize() {
-  //     if (window.innerWidth < 767) {
-  //       setColDeskShow(false);
-  //       setColMobileShow(true);
-  //     } else if (window.innerWidth > 767) {
-  //       setColDeskShow(true);
-  //       setColMobileShow(false);
-  //     }
-  //     return window.innerWidth;
-  //   }
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize, false);
-  // }, [colDeskShow, colMobileShow]);
 
   return (
     <Fragment>
       <div className={styles['headerContainer-main']}>
-        <header className={styles['header-cont']} id='headerContDesktop'>
+        <header className={styles['header-cont']} id='headerContDisplay'>
           <div className={styles['header-mainflex']}>
             <div className={styles['header-submainflex']}>
               <div className={styles['header-img-cont']}>

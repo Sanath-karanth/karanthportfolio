@@ -123,11 +123,15 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
           <div className='container-fluid unreveal mt-5'>
             <h2>Services</h2>
             <div
-              className={styles['parallax']}
+              className={styles['parallax-center']}
               style={{
                 backgroundImage: `url(${parallaxBackground1})`,
               }}
-            ></div>
+            >
+              <div style={{ background: '#feebeb' }}>
+                <h1>Services</h1>
+              </div>
+            </div>
             <div style={{ height: '400px', background: 'red' }}>
               <p>
                 Scroll Up and Down this page to see the parallax scrolling effect. This div is just
