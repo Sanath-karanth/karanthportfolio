@@ -153,6 +153,18 @@
   }
 }
 
+@media (min-width: 500px) and (max-width: 767px) {
+  .banner-left-cont {
+    height: 60vh;
+  }
+  .banner-img {
+    height: 60vh;
+  }
+  .banner-clip {
+    height: 60vh;
+  }
+}
+
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
   .MainContainer-main {
