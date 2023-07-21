@@ -113,8 +113,8 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
                           resulting in quality work.
                         </p>
                       </div>
-                      <div className={styles['banner-profile-icon-cont']}>
-                        <div className={styles['banner-profile-icon']} onClick={profileClick}>
+                      <div className={styles['banner-profile-icon-cont']} onClick={profileClick}>
+                        <div className={styles['banner-profile-icon']}>
                           <FontAwesomeIcon
                             icon={faUser}
                             size='lg'
