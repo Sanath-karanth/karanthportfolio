@@ -64,6 +64,29 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollTop]);
 
+  // UseEffect code for window resize Show/Hide content
+
+  const [colDeskShow, setColDeskShow] = useState<boolean>(true);
+  const [colMobileShow, setColMobileShow] = useState<boolean>(false);
+
+  function handleResize() {
+    if (window.innerWidth < 767) {
+      setColDeskShow(false);
+      setColMobileShow(true);
+    } else if (window.innerWidth > 767) {
+      setColDeskShow(true);
+      setColMobileShow(false);
+    }
+    return window.innerWidth;
+  }
+  window.addEventListener('resize', () => {
+    handleResize();
+  });
+
+  useEffect(() => {
+    handleResize();
+  }, [colDeskShow, colMobileShow]);
+
   return (
     <Fragment>
       <div className={styles['headerContainer-main']}>
@@ -78,6 +101,8 @@ const Header: FunctionComponent<IHeaderProps> = () => {
                   alt='logo'
                 ></img>
               </div>
+              {/* {colDeskShow && <p>Desktop display</p>}
+              {colMobileShow && <p>Mobile display</p>} */}
               <div
                 className={styles['header-txt-cont']}
                 id='header-navtxt'
