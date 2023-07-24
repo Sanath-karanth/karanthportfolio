@@ -2,20 +2,31 @@ import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } 
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 import { faUser, faBriefcase, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import ArrowUpwardTwoToneIcon from '@mui/icons-material/ArrowUpwardTwoTone';
+import Zoom from '@mui/material/Zoom';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
 import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider1.jpg';
 import parallaxBackground2 from '../../images/banner/slide3.jpg';
-import { useNavigate } from 'react-router-dom';
 
 interface IMainScreenProps {
   classname?: string;
 }
 
-const MainScreen: FunctionComponent<IMainScreenProps> = () => {
+interface IScrollProps {
+  window?: () => Window;
+  children: React.ReactElement;
+}
+
+const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   const navigate = useNavigate();
   const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
 
@@ -26,7 +37,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
     if (window.innerWidth < 767) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(4.5rem)');
     } else if (window.innerWidth > 767 || window.innerWidth < 1023) {
-      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(6rem)');
+      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(7rem)');
     } else if (window.innerWidth > 1024) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(7rem)');
     }
@@ -39,6 +50,46 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
       window.clearTimeout(timer);
     };
   }, [viewprofileShow, navigate]);
+
+  // Scroll to top function
+  function ScrollTop(props: IScrollProps) {
+    const { children, window } = props;
+    const trigger = useScrollTrigger({
+      target: window ? window() : undefined,
+      disableHysteresis: true,
+      threshold: 100,
+    });
+
+    const scrollHandleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+      const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+        '#backtoTop-anchor',
+      );
+
+      if (anchor) {
+        anchor.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      }
+    };
+
+    return (
+      <Zoom in={trigger}>
+        <Box
+          onClick={scrollHandleClick}
+          role='presentation'
+          sx={{ position: 'fixed', bottom: 20, right: 20 }}
+        >
+          {children}
+        </Box>
+      </Zoom>
+    );
+  }
+
+  ScrollTop.propTypes = {
+    children: PropTypes.element.isRequired,
+    window: PropTypes.func,
+  };
 
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
@@ -86,6 +137,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             <div className={styles['header-cont']}>
               <Header />
             </div>
+            <div id='backtoTop-anchor'></div>
             <div className='container-fluid gx-0'>
               <Row className='gx-0'>
                 <Col sm='6' md='6' lg='6' className={styles['banner-left-Col']}>
@@ -263,6 +315,11 @@ const MainScreen: FunctionComponent<IMainScreenProps> = () => {
             </div>
           </div>
         </section>
+        <ScrollTop {...props}>
+          <Fab color='error' size='medium' aria-label='scroll back to top'>
+            <ArrowUpwardTwoToneIcon />
+          </Fab>
+        </ScrollTop>
       </div>
     </Fragment>
   );
