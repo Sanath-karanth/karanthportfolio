@@ -184,11 +184,14 @@
     z-index: 1000;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     padding: 15px 20px 15px 20px;
     text-align: center;
+    margin: 0 auto;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 0px -10px;
+    // max-width: 2000px;
   }
   .header-mainflex {
     display: flex;
@@ -245,21 +248,5 @@
     color: variables.$color-FFFFFF;
     font-weight: bold;
     line-height: 25px;
-  }
-}
-
-/* Large Desktop View */
-@media (min-width: 1367px) {
-  .headerContainer-main {
-    margin: 0 auto;
-    width: auto;
-  }
-}
-
-@media (min-width: 1729px) {
-  .headerContainer-main {
-    margin: 0 auto;
-    width: auto;
-    max-width: auto;
   }
 }

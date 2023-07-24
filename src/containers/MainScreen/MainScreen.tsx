@@ -13,9 +13,12 @@ import Zoom from '@mui/material/Zoom';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
+import ServicesScreen from '../ServicesScreen/ServicesScreen';
+
+// Image imports
 import bannerImg from '../../images/profile/Sanath2.jpg';
-import parallaxBackground1 from '../../images/banner/slider1.jpg';
-import parallaxBackground2 from '../../images/banner/slide3.jpg';
+import parallaxBackground1 from '../../images/banner/slider2.jpg';
+import parallaxBackground2 from '../../images/banner/banner01.jpg';
 
 interface IMainScreenProps {
   classname?: string;
@@ -200,32 +203,9 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </div>
         <section id='services'>
           <div className='container-fluid unreveal mt-5'>
-            <div className={styles['section-title']}>
-              <h2>Services</h2>
+            <div>
+              <ServicesScreen />
             </div>
-            <div
-              className={styles['parallax-center']}
-              style={{
-                backgroundImage: `url(${parallaxBackground1})`,
-              }}
-            >
-              <div style={{ background: '#feebeb' }}>
-                <h1>Services</h1>
-              </div>
-            </div>
-            <div style={{ height: '400px', background: 'red' }}>
-              <p>
-                Scroll Up and Down this page to see the parallax scrolling effect. This div is just
-                here to enable scrolling. Tip: Try to remove the background-attachment property to
-                remove the scrolling effect.
-              </p>
-            </div>
-            <div
-              className={styles['parallax']}
-              style={{
-                backgroundImage: `url(${parallaxBackground2})`,
-              }}
-            ></div>
             <div className='text-container'>
               <div className='text-box'>
                 <h3>Section Text</h3>
@@ -243,10 +223,44 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                   facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
                   tempora non repellat?
                 </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
+                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
+                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
+                  tempora non repellat?
+                </p>
               </div>
             </div>
           </div>
         </section>
+        {/* Parallax code */}
+        <div className='container-fluid unreveal'>
+          <div
+            className={styles['parallax-center']}
+            style={{
+              backgroundImage: `url(${parallaxBackground1})`,
+            }}
+          >
+            <div style={{ background: '#ffffff' }}>
+              <h1>Services</h1>
+            </div>
+          </div>
+          <div style={{ height: '400px', background: 'red' }}>
+            <p>
+              Scroll Up and Down this page to see the parallax scrolling effect. This div is just
+              here to enable scrolling. Tip: Try to remove the background-attachment property to
+              remove the scrolling effect.
+            </p>
+          </div>
+          <div
+            className={styles['parallax']}
+            style={{
+              backgroundImage: `url(${parallaxBackground2})`,
+            }}
+          ></div>
+        </div>
+        {/* Parallax code ends */}
         <section id='portfolio'>
           <div className='container-fluid reveal'>
             <h2>Portfolio</h2>

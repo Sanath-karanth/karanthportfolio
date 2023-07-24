@@ -48,6 +48,16 @@
   background-size: cover;
 }
 
+////// Animation Styles text
+.banner-name-txt {
+  background: variables.$color-danger;
+  color: variables.$color-palepink;
+  display: inline-flex;
+  overflow: hidden;
+  animation: openclose 2.5s ease-in-out infinite;
+  padding: 0.2rem;
+}
+
 /* Mobile View */
 @media (max-width: 767px) {
   .MainContainer-main {
@@ -427,15 +437,4 @@
     width: auto;
     max-width: auto;
   }
-}
-
-////// Animation Styles text
-
-.banner-name-txt {
-  background: variables.$color-danger;
-  color: variables.$color-palepink;
-  display: inline-flex;
-  overflow: hidden;
-  animation: openclose 2.5s ease-in-out infinite;
-  padding: 0.2rem;
 }
