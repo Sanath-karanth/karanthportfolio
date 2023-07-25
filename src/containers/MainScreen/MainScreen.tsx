@@ -39,8 +39,8 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
     );
     if (window.innerWidth < 767) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(4.5rem)');
-    } else if (window.innerWidth > 767 || window.innerWidth < 1023) {
-      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(7rem)');
+    } else if (window.innerWidth > 767 && window.innerWidth < 1023) {
+      profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(6rem)');
     } else if (window.innerWidth > 1024) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(7rem)');
     }
@@ -143,7 +143,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             <div id='backtoTop-anchor'></div>
             <div className='container-fluid gx-0'>
               <Row className='gx-0'>
-                <Col sm='6' md='6' lg='6' className={styles['banner-left-Col']}>
+                <Col xs={6} md={6} lg={6} xl={6} className={styles['banner-left-Col']}>
                   <div className={styles['banner-left-cont']}>
                     <div className={styles['banner-left-txt-cont']}>
                       <div className='mb-2'>
@@ -187,7 +187,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                     </div>
                   </div>
                 </Col>
-                <Col sm='6' md='6' lg='6' className={styles['banner-right-Col']}>
+                <Col xs={6} md={6} lg={6} xl={6} className={styles['banner-right-Col']}>
                   <div className={styles['banner-right-cont']}>
                     <div
                       className={styles['banner-img']}
@@ -261,7 +261,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           ></div>
         </div>
         {/* Parallax code ends */}
-        <section id='portfolio'>
+        {/* <section id='portfolio'>
           <div className='container-fluid reveal'>
             <h2>Portfolio</h2>
             <div className='text-container'>
@@ -328,7 +328,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <ScrollTop {...props}>
           <Fab color='error' size='medium' aria-label='scroll back to top'>
             <ArrowUpwardTwoToneIcon />
