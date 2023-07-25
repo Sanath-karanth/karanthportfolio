@@ -33,6 +33,10 @@
 .serviceCardContainer:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+.serviceCard-img-cont:hover {
+  transition: all 1s ease;
+  transform: scale(0.9);
+}
 .serviceCardContainer-border {
   background: linear-gradient(to right, #feebeb, #de6262);
   border-bottom-left-radius: 0.8rem;

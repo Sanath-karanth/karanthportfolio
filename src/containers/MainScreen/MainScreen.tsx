@@ -202,7 +202,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </section>
         </div>
         <section id='services'>
-          <div className='container-fluid reveal mt-3'>
+          <div className='container-fluid unreveal mt-3'>
             <div>
               <ServicesScreen />
             </div>

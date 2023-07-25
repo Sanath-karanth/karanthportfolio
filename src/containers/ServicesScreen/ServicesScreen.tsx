@@ -1,19 +1,45 @@
 import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
-import Lottie from 'lottie-react';
 import styles from './ServicesScreen.module.scss';
-import serviceIcon1 from '../../images/frameIcons/services/services2.png';
-import serviceIcon2 from '../../images/frameIcons/services/services5.png';
-import serviceIcon3 from '../../images/frameIcons/services/services4.png';
+import Modal from '../../commonui/Modal/Modal';
+import serviceIcon1 from '../../images/frameIcons/services/services1.png';
+import serviceIcon2 from '../../images/frameIcons/services/services2.png';
+import serviceIcon3 from '../../images/frameIcons/services/services3.png';
 
 interface IServicesScreenProps {
   classname?: string;
 }
 
+interface IModalUIUXProps {
+  showprop?: boolean;
+  onHideprop: () => void;
+  styleprop?: any;
+  backdropprop?: any;
+  sizeprop?: any;
+  alignprop?: boolean;
+}
+
 const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
-  const navigate = useNavigate();
+  const [showUIUX, setShowUIUX] = useState<boolean>(false);
+  const [showWebDesign, setShowWebDesign] = useState<boolean>(false);
+  const [showWebDev, setShowWebDev] = useState<boolean>(false);
+
+  const handleCloseUIUX = () => setShowUIUX(false);
+  const handleShowUIUX = () => setShowUIUX(true);
+
+  const ModalUIUX: FunctionComponent<IModalUIUXProps> = (props) => {
+    return (
+      <Fragment>
+        <Modal {...props} aria-labelledby='contained-modal-title-vcenter'>
+          <div className={styles['fullScreen-cont']}>
+            <h1>Modal</h1>
+            <p>Description</p>
+          </div>
+        </Modal>
+      </Fragment>
+    );
+  };
 
   // UseEffect code for onScroll to appear service text
   // useEffect(() => {
@@ -66,6 +92,12 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
 
   return (
     <Fragment>
+      <ModalUIUX
+        showprop={showUIUX}
+        onHideprop={() => setShowUIUX(false)}
+        sizeprop={'xl'}
+        alignprop={true}
+      />
       <div className={styles['ServicesContainer-service']}>
         <div className={styles['serviceTitle-cont']}>
           <Row className='gx-0'>
@@ -82,7 +114,7 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
         <div className={styles['serviceCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>
-              <div className={styles['serviceCardContainer']}>
+              <div className={styles['serviceCardContainer']} onClick={handleShowUIUX}>
                 <div className={styles['serviceCard-img-cont']}>
                   <img className={styles['serviceCard-img']} src={serviceIcon1} alt='image'></img>
                 </div>
