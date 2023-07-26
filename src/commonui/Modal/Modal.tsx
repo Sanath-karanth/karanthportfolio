@@ -1,5 +1,5 @@
 import React, { FunctionComponent, Fragment } from 'react';
-import { Modal as ModalUI } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 import styles from './Modal.module.scss';
 
 interface ICommonModalProps {
@@ -8,6 +8,7 @@ interface ICommonModalProps {
   onHideprop: () => void;
   styleprop?: any;
   sizeprop?: any;
+  scrollableprop?: boolean;
   alignprop?: boolean;
 }
 
@@ -16,14 +17,21 @@ const CommonModal: FunctionComponent<ICommonModalProps> = ({
   showprop,
   onHideprop,
   sizeprop,
+  scrollableprop,
   alignprop,
 }) => {
   return (
     <Fragment>
       <div data-testid='CommonModal-item'>
-        <ModalUI show={showprop} onHide={onHideprop} size={sizeprop} centered={alignprop}>
+        <Modal
+          show={showprop}
+          onHide={onHideprop}
+          size={sizeprop}
+          scrollable={scrollableprop}
+          centered={alignprop}
+        >
           {children}
-        </ModalUI>
+        </Modal>
       </div>
     </Fragment>
   );

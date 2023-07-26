@@ -119,6 +119,66 @@
     font-weight: 500;
     margin: 0;
   }
+  // Modal styles
+  .fullScreen-header {
+    @include servicescreen-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-img-cont {
+    @include servicescreen-center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-img {
+    height: auto;
+    width: 30%;
+  }
+  .fullScreen-mywork-img {
+    height: auto;
+    width: 70%;
+  }
+  .fullScreen-cont {
+    max-height: 60vh;
+    overflow-y: scroll;
+    padding: 0rem 2rem 1rem 2rem;
+  }
+  .fullScreen-title {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  .fullScreen-title-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-desp {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  .fullScreen-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-8;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 0.4rem;
+  }
 }
 
 /* Tablet View */
@@ -189,6 +249,67 @@
     font-weight: 500;
     margin: 0;
   }
+
+  // Modal styles
+  .fullScreen-header {
+    @include servicescreen-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-28;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-img-cont {
+    @include servicescreen-center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-img {
+    height: auto;
+    width: 30%;
+  }
+  .fullScreen-mywork-img {
+    height: auto;
+    width: 70%;
+  }
+  .fullScreen-cont {
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 0rem 2rem 1rem 2rem;
+  }
+  .fullScreen-title {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-title-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-desp {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 0.4rem;
+  }
 }
 
 /* Desktop View */
@@ -258,5 +379,66 @@
     font-size: variables.$font-size-14;
     font-weight: 500;
     margin: 0;
+  }
+
+  // Modal styles
+  .fullScreen-header {
+    @include servicescreen-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-32;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-img-cont {
+    @include servicescreen-center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-img {
+    height: auto;
+    width: 30%;
+  }
+  .fullScreen-mywork-img {
+    height: auto;
+    width: 70%;
+  }
+  .fullScreen-cont {
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 0rem 2rem 1rem 2rem;
+  }
+  .fullScreen-title {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-title-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-28;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-desp {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .fullScreen-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 0.4rem;
   }
 }

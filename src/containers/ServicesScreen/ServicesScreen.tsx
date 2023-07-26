@@ -1,11 +1,16 @@
 import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
+import { faUser, faXmark, faXmarkCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './ServicesScreen.module.scss';
 import Modal from '../../commonui/Modal/Modal';
 import serviceIcon1 from '../../images/frameIcons/services/services1.png';
 import serviceIcon2 from '../../images/frameIcons/services/services2.png';
 import serviceIcon3 from '../../images/frameIcons/services/services3.png';
+import UIUXImg1 from '../../images/frameIcons/services/UIUXImg1.jpg';
+import myworkservice1 from '../../images/frameIcons/services/myworkservice1.png';
+import myworkservice2 from '../../images/frameIcons/services/myworkservice2.png';
 
 interface IServicesScreenProps {
   classname?: string;
@@ -17,6 +22,7 @@ interface IModalUIUXProps {
   styleprop?: any;
   backdropprop?: any;
   sizeprop?: any;
+  scrollableprop?: boolean;
   alignprop?: boolean;
 }
 
@@ -32,9 +38,73 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
     return (
       <Fragment>
         <Modal {...props} aria-labelledby='contained-modal-title-vcenter'>
+          <div className={styles['fullScreen-header']}>
+            <h1 className={styles['fullScreen-header-txt']}>UI/UX DESIGN</h1>
+            <FontAwesomeIcon
+              icon={faXmarkCircle}
+              size='lg'
+              className={styles['close-icon']}
+              onClick={handleCloseUIUX}
+            />
+          </div>
+          <hr className={styles['fullScreen-hr']}></hr>
           <div className={styles['fullScreen-cont']}>
-            <h1>Modal</h1>
-            <p>Description</p>
+            <div className={styles['fullScreen-title']}>
+              <h2 className={styles['fullScreen-title-txt']}>What is UX / UI Design?</h2>
+            </div>
+            <div className={styles['fullScreen-img-cont']}>
+              <img className={styles['fullScreen-img']} src={UIUXImg1} alt='image'></img>
+            </div>
+            <div className={styles['fullScreen-desp']}>
+              <ul>
+                <li>
+                  <p className={styles['fullScreen-desp-txt']}>
+                    UX design is all about identifying and solving user problems; UI design is all
+                    about creating intuitive, aesthetically-pleasing, interactive interfaces.
+                  </p>
+                </li>
+                <li>
+                  <p className={styles['fullScreen-desp-txt']}>
+                    UX design focuses on the interaction that a human user has with everyday
+                    products and services. The goal of UX design is to make using these products and
+                    services, both digital or physical, easy, logical, and fun.
+                  </p>
+                </li>
+                <li>
+                  <p className={styles['fullScreen-desp-txt']}>
+                    User interface design or user interface engineering is the design of user
+                    interfaces for machines and software, such as computers, home appliances, mobile
+                    devices, and other electronic devices, with the focus on maximizing usability
+                    and the user experience.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className={styles['fullScreen-title']}>
+              <h2 className={styles['fullScreen-title-txt']}>My Work:</h2>
+            </div>
+            <div>
+              <Row className='gx-0'>
+                <Col xs={6} md={6} lg={6} xl={6}>
+                  <div className={styles['fullScreen-img-cont']}>
+                    <img
+                      className={styles['fullScreen-mywork-img']}
+                      src={myworkservice1}
+                      alt='image'
+                    ></img>
+                  </div>
+                </Col>
+                <Col xs={6} md={6} lg={6} xl={6}>
+                  <div className={styles['fullScreen-img-cont']}>
+                    <img
+                      className={styles['fullScreen-mywork-img']}
+                      src={myworkservice2}
+                      alt='image'
+                    ></img>
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </div>
         </Modal>
       </Fragment>
@@ -96,6 +166,7 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
         showprop={showUIUX}
         onHideprop={() => setShowUIUX(false)}
         sizeprop={'xl'}
+        scrollableprop={true}
         alignprop={true}
       />
       <div className={styles['ServicesContainer-service']}>
