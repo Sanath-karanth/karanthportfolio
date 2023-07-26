@@ -119,6 +119,14 @@
     font-weight: 500;
     margin: 0;
   }
+  .button-explore {
+    height: 5vh;
+    width: 10vw;
+    padding: 1vw;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+  }
+
   // Modal styles
   .fullScreen-header {
     @include servicescreen-center;
@@ -226,7 +234,7 @@
   .serviceCard-desp-cont {
     display: flex;
     justify-content: flex-start;
-    height: 7rem;
+    height: 7.5rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -248,6 +256,13 @@
     font-size: variables.$font-size-10;
     font-weight: 500;
     margin: 0;
+  }
+  .button-explore {
+    height: 5vh;
+    width: 6vw;
+    padding: 1vw;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
   }
 
   // Modal styles
@@ -379,6 +394,13 @@
     font-size: variables.$font-size-14;
     font-weight: 500;
     margin: 0;
+  }
+  .button-explore {
+    height: 5vh;
+    width: 6vw;
+    padding: 1vw;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
   }
 
   // Modal styles

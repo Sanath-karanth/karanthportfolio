@@ -1,6 +1,5 @@
 import React, { FunctionComponent, Fragment } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import styles from './Modal.module.scss';
 
 interface ICommonModalProps {
   children?: any;

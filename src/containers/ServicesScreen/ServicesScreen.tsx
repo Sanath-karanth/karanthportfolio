@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import { faUser, faXmark, faXmarkCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './ServicesScreen.module.scss';
-import Modal from '../../commonui/Modal/Modal';
+// import Modal from '../../commonui';
+import { Button as ButtonUI, ModalCommon } from '../../commonui';
 import serviceIcon1 from '../../images/frameIcons/services/services1.png';
 import serviceIcon2 from '../../images/frameIcons/services/services2.png';
 import serviceIcon3 from '../../images/frameIcons/services/services3.png';
@@ -37,7 +38,7 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
   const ModalUIUX: FunctionComponent<IModalUIUXProps> = (props) => {
     return (
       <Fragment>
-        <Modal {...props} aria-labelledby='contained-modal-title-vcenter'>
+        <ModalCommon {...props} aria-labelledby='contained-modal-title-vcenter'>
           <div className={styles['fullScreen-header']}>
             <h1 className={styles['fullScreen-header-txt']}>UI/UX DESIGN</h1>
             <FontAwesomeIcon
@@ -106,7 +107,7 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
               </Row>
             </div>
           </div>
-        </Modal>
+        </ModalCommon>
       </Fragment>
     );
   };
@@ -185,7 +186,7 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
         <div className={styles['serviceCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>
-              <div className={styles['serviceCardContainer']} onClick={handleShowUIUX}>
+              <div className={styles['serviceCardContainer']}>
                 <div className={styles['serviceCard-img-cont']}>
                   <img className={styles['serviceCard-img']} src={serviceIcon1} alt='image'></img>
                 </div>
@@ -201,6 +202,14 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
                     projects effectively.
                   </span>
                 </div>
+                <ButtonUI
+                  varientprop={'outline-danger'}
+                  classnameprop={styles['button-explore']}
+                  styleprop={{ padding: '0px' }}
+                  click={handleShowUIUX}
+                  disableButtonprop={false}
+                  buttonnameprop={'Explore'}
+                ></ButtonUI>
               </div>
               <div className={styles['serviceCardContainer-border']}></div>
             </Col>
@@ -220,6 +229,14 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
                     navigation and quick access to the projects.
                   </span>
                 </div>
+                <ButtonUI
+                  varientprop={'outline-danger'}
+                  classnameprop={styles['button-explore']}
+                  styleprop={{ padding: '0px' }}
+                  click={handleShowUIUX}
+                  disableButtonprop={false}
+                  buttonnameprop={'Explore'}
+                ></ButtonUI>
               </div>
               <div className={styles['serviceCardContainer-border']}></div>
             </Col>
@@ -240,6 +257,14 @@ const ServicesScreen: FunctionComponent<IServicesScreenProps> = () => {
                     functionality across devices.
                   </span>
                 </div>
+                <ButtonUI
+                  varientprop={'outline-danger'}
+                  classnameprop={styles['button-explore']}
+                  styleprop={{ padding: '0px' }}
+                  click={handleShowUIUX}
+                  disableButtonprop={false}
+                  buttonnameprop={'Explore'}
+                ></ButtonUI>
               </div>
               <div className={styles['serviceCardContainer-border']}></div>
             </Col>
