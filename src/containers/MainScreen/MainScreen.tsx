@@ -13,7 +13,8 @@ import Zoom from '@mui/material/Zoom';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
-import ServicesScreen from '../ServicesScreen/ServicesScreen';
+import ServicesComponent from '../../components/ServicesComponent/ServicesComponent';
+import PortfolioComponent from '../../components/PortfolioComponent/PortfolioComponent';
 
 // Image imports
 import bannerImg from '../../images/profile/Sanath2.jpg';
@@ -204,7 +205,43 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         <section id='services'>
           <div className='container-fluid unreveal mt-3'>
             <div>
-              <ServicesScreen />
+              <ServicesComponent />
+            </div>
+          </div>
+        </section>
+
+        {/* Parallax code */}
+        {/* <div className='container-fluid unreveal'>
+          <div
+            className={styles['parallax-center']}
+            style={{
+              backgroundImage: `url(${parallaxBackground1})`,
+            }}
+          >
+            <div style={{ background: '#ffffff' }}>
+              <h1>Services</h1>
+            </div>
+          </div>
+          <div style={{ height: '400px', background: 'red' }}>
+            <p>
+              Scroll Up and Down this page to see the parallax scrolling effect. This div is just
+              here to enable scrolling. Tip: Try to remove the background-attachment property to
+              remove the scrolling effect.
+            </p>
+          </div>
+          <div
+            className={styles['parallax']}
+            style={{
+              backgroundImage: `url(${parallaxBackground2})`,
+            }}
+          ></div>
+        </div> */}
+        {/* Parallax code ends */}
+
+        <section id='portfolio'>
+          <div className='container-fluid reveal mt-4'>
+            <div>
+              <PortfolioComponent />
             </div>
             <div className='text-container'>
               <div className='text-box'>
@@ -234,62 +271,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             </div>
           </div>
         </section>
-        {/* Parallax code */}
-        <div className='container-fluid unreveal'>
-          <div
-            className={styles['parallax-center']}
-            style={{
-              backgroundImage: `url(${parallaxBackground1})`,
-            }}
-          >
-            <div style={{ background: '#ffffff' }}>
-              <h1>Services</h1>
-            </div>
-          </div>
-          <div style={{ height: '400px', background: 'red' }}>
-            <p>
-              Scroll Up and Down this page to see the parallax scrolling effect. This div is just
-              here to enable scrolling. Tip: Try to remove the background-attachment property to
-              remove the scrolling effect.
-            </p>
-          </div>
-          <div
-            className={styles['parallax']}
-            style={{
-              backgroundImage: `url(${parallaxBackground2})`,
-            }}
-          ></div>
-        </div>
-        {/* Parallax code ends */}
-        {/* <section id='portfolio'>
-          <div className='container-fluid reveal'>
-            <h2>Portfolio</h2>
-            <div className='text-container'>
-              <div className='text-box'>
-                <h3>Section text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste.
-                </p>
-              </div>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste.
-                </p>
-              </div>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/*
         <section id='contact'>
           <div className='container reveal'>
             <h2>Contact</h2>

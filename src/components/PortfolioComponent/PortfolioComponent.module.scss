@@ -2,21 +2,21 @@
 
 /* --------------    parent container styles    ------------------- */
 
-@mixin servicescreen-center {
+@mixin portfolioComp-center {
   display: flex;
   align-items: center;
 }
-.serviceTitle-left-cont {
-  @include servicescreen-center;
-  justify-content: flex-end;
+.portfolio-left-cont {
+  @include portfolioComp-center;
+  justify-content: flex-start;
   background: variables.$color-FFFFFF;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px,
     rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  border-top-right-radius: 8rem;
-  border-bottom-right-radius: 8rem;
+  border-top-left-radius: 8rem;
+  border-bottom-left-radius: 8rem;
   padding: 0.3rem;
 }
-.serviceTitle-txt-border {
+.portfolio-txt-border {
   background-color: variables.$color-palepink;
   border-radius: 8rem;
   padding: 0.5rem;
@@ -53,23 +53,23 @@
 
 /* Mobile View */
 @media (max-width: 767px) {
-  .ServicesContainer-service {
+  .PortfolioContainer {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .serviceTitle-left-Col {
-    width: 70% !important;
-  }
-  .serviceTitle-right-Col {
+  .portfolio-left-Col {
     width: 30% !important;
   }
-  .serviceTitle-cont {
+  .portfolio-right-Col {
+    width: 70% !important;
+  }
+  .portfolio-cont {
     margin-bottom: 1rem;
   }
   .serviceCard-cont {
     margin-bottom: 1rem;
   }
-  .services-txt {
+  .portfolio-txt {
     color: variables.$color-danger;
     background-color: variables.$color-palepink;
     font-family: variables.$font-family-Montserrat;
@@ -80,7 +80,7 @@
     padding: 0.6rem;
   }
   .serviceCard-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin: 1rem auto;
     height: 6rem;
@@ -89,7 +89,7 @@
     background-color: transparent;
   }
   .serviceCard-title-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin-bottom: 0.5rem;
   }
@@ -129,7 +129,7 @@
 
   // Modal styles
   .fullScreen-header {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     flex-direction: row;
     justify-content: space-between;
     margin: 1rem 2rem 0rem 2rem;
@@ -147,7 +147,7 @@
     margin: 0;
   }
   .fullScreen-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     padding-bottom: 1rem;
   }
@@ -191,23 +191,23 @@
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .ServicesContainer-service {
+  .PortfolioContainer {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .serviceTitle-left-Col {
+  .portfolio-left-Col {
     width: 50% !important;
   }
-  .serviceTitle-right-Col {
+  .portfolio-right-Col {
     width: 50% !important;
   }
-  .serviceTitle-cont {
+  .portfolio-cont {
     margin-bottom: 2rem;
   }
   .serviceCard-cont {
     margin-bottom: 1rem;
   }
-  .services-txt {
+  .portfolio-txt {
     color: variables.$color-danger;
     background-color: variables.$color-palepink;
     font-family: variables.$font-family-Montserrat;
@@ -218,7 +218,7 @@
     padding: 0.6rem;
   }
   .serviceCard-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin: 1rem auto;
     height: 6rem;
@@ -227,7 +227,7 @@
     background-color: transparent;
   }
   .serviceCard-title-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin-bottom: 0.5rem;
   }
@@ -267,7 +267,7 @@
 
   // Modal styles
   .fullScreen-header {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     flex-direction: row;
     justify-content: space-between;
     margin: 1rem 2rem 0rem 2rem;
@@ -285,7 +285,7 @@
     margin: 0;
   }
   .fullScreen-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     padding-bottom: 1rem;
   }
@@ -329,23 +329,23 @@
 
 /* Desktop View */
 @media (min-width: 1024px) {
-  .ServicesContainer-service {
+  .PortfolioContainer {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .serviceTitle-left-Col {
+  .portfolio-left-Col {
     width: 50% !important;
   }
-  .serviceTitle-right-Col {
+  .portfolio-right-Col {
     width: 50% !important;
   }
-  .serviceTitle-cont {
+  .portfolio-cont {
     margin-bottom: 2rem;
   }
   .serviceCard-cont {
     margin-bottom: 1rem;
   }
-  .services-txt {
+  .portfolio-txt {
     color: variables.$color-danger;
     background-color: variables.$color-palepink;
     font-family: variables.$font-family-Montserrat;
@@ -356,7 +356,7 @@
     padding: 0.6rem;
   }
   .serviceCard-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin: 1rem auto;
     height: 10rem;
@@ -365,7 +365,7 @@
     background-color: transparent;
   }
   .serviceCard-title-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     margin-bottom: 0.5rem;
   }
@@ -405,7 +405,7 @@
 
   // Modal styles
   .fullScreen-header {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     flex-direction: row;
     justify-content: space-between;
     margin: 1rem 2rem 0rem 2rem;
@@ -423,7 +423,7 @@
     margin: 0;
   }
   .fullScreen-img-cont {
-    @include servicescreen-center;
+    @include portfolioComp-center;
     justify-content: center;
     padding-bottom: 1rem;
   }
