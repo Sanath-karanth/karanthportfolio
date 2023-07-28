@@ -21,34 +21,40 @@
   border-radius: 8rem;
   padding: 0.5rem;
 }
-.serviceCardContainer {
-  background: variables.$color-FFFFFF;
-  margin: 2rem 2rem 0rem 2rem;
-  padding: 1rem;
-  transition: 0.3s all ease-in-out;
-  // filter: drop-shadow(16px 16px 20px blue) invert(95%);
-  // filter: drop-shadow(0 0.2rem 0.25rem rgba(255, 0, 0, 0.2));
-  cursor: pointer;
-}
-.serviceCardContainer:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.serviceCard-img-cont:hover {
-  transition: all 1s ease;
-  transform: scale(0.9);
-}
-.serviceCardContainer-border {
+.portfolioCont-border {
   background: linear-gradient(to right, #feebeb, #de6262);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
   height: 0.5rem;
   margin: 0rem 2rem 0rem 2rem;
 }
-.serviceCardContainer-line {
+.portfolioCont-line {
   background: linear-gradient(to right, #de6262, #feebeb);
   height: 0.4rem;
   margin: 0 auto;
   width: 5rem;
+}
+.card-overlay {
+  display: none;
+}
+.portfolio-image img {
+  object-fit: cover;
+  display: block;
+  height: 20rem;
+  width: 100%;
+  max-width: 100%;
+  transition: all 1s ease-in-out;
+}
+.portfolio-image:hover .card-overlay {
+  @include portfolioComp-center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  backdrop-filter: blur(0px) brightness(40%);
 }
 
 /* Mobile View */
@@ -63,10 +69,10 @@
   .portfolio-right-Col {
     width: 70% !important;
   }
-  .portfolio-cont {
+  .portfolio-Title-cont {
     margin-bottom: 1rem;
   }
-  .serviceCard-cont {
+  .portfolioCard-cont {
     margin-bottom: 1rem;
   }
   .portfolio-txt {
@@ -79,44 +85,28 @@
     border-radius: 8rem;
     padding: 0.6rem;
   }
-  .serviceCard-img-cont {
+  .portfolio-image {
     @include portfolioComp-center;
     justify-content: center;
-    margin: 1rem auto;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 5rem;
-    background-color: transparent;
+    background-color: variables.$color-FFFFFF;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    transform: scale(0.8);
+    transition: all 1s ease-in-out;
   }
-  .serviceCard-title-cont {
-    @include portfolioComp-center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
+  .portfolio-image:hover img {
+    -webkit-transform: scale(1.14); /* Safari and Chrome */
+    -moz-transform: scale(1.14); /* Firefox */
+    -ms-transform: scale(1.14); /* IE 9 */
+    -o-transform: scale(1.14); /* Opera */
+    transform: scale(1.15);
   }
-  .serviceCard-desp-cont {
-    display: flex;
-    justify-content: flex-start;
-    height: 7rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .serviceCard-img {
-    height: 7rem;
-    width: 7rem;
-  }
-  .serviceCard-title-txt {
-    color: variables.$color-000000;
+  .portfolio-card-txt {
+    color: variables.$color-FFFFFF;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-18;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .serviceCard-desp-txt {
-    color: variables.$color-000000;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
-    font-weight: 500;
+    font-size: variables.$font-size-26;
+    letter-spacing: 1px;
     margin: 0;
   }
   .button-explore {
@@ -152,10 +142,12 @@
     padding-bottom: 1rem;
   }
   .fullScreen-img {
+    object-fit: cover;
     height: auto;
     width: 30%;
   }
   .fullScreen-mywork-img {
+    object-fit: cover;
     height: auto;
     width: 70%;
   }
@@ -201,10 +193,10 @@
   .portfolio-right-Col {
     width: 50% !important;
   }
-  .portfolio-cont {
+  .portfolio-Title-cont {
     margin-bottom: 2rem;
   }
-  .serviceCard-cont {
+  .portfolioCard-cont {
     margin-bottom: 1rem;
   }
   .portfolio-txt {
@@ -217,44 +209,28 @@
     border-radius: 8rem;
     padding: 0.6rem;
   }
-  .serviceCard-img-cont {
+  .portfolio-image {
     @include portfolioComp-center;
     justify-content: center;
-    margin: 1rem auto;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 5rem;
-    background-color: transparent;
+    background-color: variables.$color-FFFFFF;
+    position: relative;
+    width: 100%;
+    padding: 1.2rem;
+    transform: scale(0.9);
+    transition: all 2s ease-in-out;
   }
-  .serviceCard-title-cont {
-    @include portfolioComp-center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
+  .portfolio-image:hover img {
+    -webkit-transform: scale(1.14); /* Safari and Chrome */
+    -moz-transform: scale(1.14); /* Firefox */
+    -ms-transform: scale(1.14); /* IE 9 */
+    -o-transform: scale(1.14); /* Opera */
+    transform: scale(1.18);
   }
-  .serviceCard-desp-cont {
-    display: flex;
-    justify-content: flex-start;
-    height: 8rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .serviceCard-img {
-    height: 7rem;
-    width: 7rem;
-  }
-  .serviceCard-title-txt {
-    color: variables.$color-000000;
+  .portfolio-card-txt {
+    color: variables.$color-FFFFFF;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-16;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .serviceCard-desp-txt {
-    color: variables.$color-000000;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-10;
-    font-weight: 500;
+    font-size: variables.$font-size-26;
+    letter-spacing: 1px;
     margin: 0;
   }
   .button-explore {
@@ -290,10 +266,12 @@
     padding-bottom: 1rem;
   }
   .fullScreen-img {
+    object-fit: cover;
     height: auto;
     width: 30%;
   }
   .fullScreen-mywork-img {
+    object-fit: cover;
     height: auto;
     width: 70%;
   }
@@ -339,10 +317,10 @@
   .portfolio-right-Col {
     width: 50% !important;
   }
-  .portfolio-cont {
+  .portfolio-Title-cont {
     margin-bottom: 2rem;
   }
-  .serviceCard-cont {
+  .portfolioCard-cont {
     margin-bottom: 1rem;
   }
   .portfolio-txt {
@@ -355,46 +333,31 @@
     border-radius: 8rem;
     padding: 0.6rem;
   }
-  .serviceCard-img-cont {
+  .portfolio-image {
     @include portfolioComp-center;
     justify-content: center;
-    margin: 1rem auto;
-    height: 10rem;
-    width: 10rem;
-    border-radius: 5rem;
-    background-color: transparent;
+    background-color: variables.$color-FFFFFF;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    transform: scale(0.9);
+    transition: all 2s ease-in-out;
   }
-  .serviceCard-title-cont {
-    @include portfolioComp-center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
+  .portfolio-image:hover img {
+    -webkit-transform: scale(1.14); /* Safari and Chrome */
+    -moz-transform: scale(1.14); /* Firefox */
+    -ms-transform: scale(1.14); /* IE 9 */
+    -o-transform: scale(1.14); /* Opera */
+    transform: scale(1.15);
   }
-  .serviceCard-desp-cont {
-    display: flex;
-    justify-content: flex-start;
-    height: 8rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .serviceCard-img {
-    height: 10rem;
-    width: 10rem;
-  }
-  .serviceCard-title-txt {
-    color: variables.$color-000000;
+  .portfolio-card-txt {
+    color: variables.$color-FFFFFF;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-24;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: variables.$font-size-26;
+    letter-spacing: 1px;
     margin: 0;
   }
-  .serviceCard-desp-txt {
-    color: variables.$color-000000;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-14;
-    font-weight: 500;
-    margin: 0;
-  }
+
   .button-explore {
     height: 5vh;
     width: 20%;
@@ -428,10 +391,12 @@
     padding-bottom: 1rem;
   }
   .fullScreen-img {
+    object-fit: cover;
     height: auto;
     width: 30%;
   }
   .fullScreen-mywork-img {
+    object-fit: cover;
     height: auto;
     width: 70%;
   }

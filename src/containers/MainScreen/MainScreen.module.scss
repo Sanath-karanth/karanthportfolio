@@ -147,6 +147,7 @@
     width: 100%;
   }
   .banner-img {
+    object-fit: cover;
     height: 50vh;
     background-attachment: fixed;
     background-position: center;
@@ -182,6 +183,7 @@
   }
   .banner-img {
     height: 60vh;
+    object-fit: cover;
   }
   .banner-clip {
     height: 60vh;
@@ -278,6 +280,7 @@
     width: 100%;
   }
   .banner-img {
+    object-fit: cover;
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -394,6 +397,7 @@
     width: 100%;
   }
   .banner-img {
+    object-fit: cover;
     height: 100vh;
     background-attachment: fixed;
     background-position: top;

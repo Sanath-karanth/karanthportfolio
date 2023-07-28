@@ -250,7 +250,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
         alignprop={true}
       />
       <div className={styles['PortfolioContainer']}>
-        <div className={styles['portfolio-cont']}>
+        <div className={styles['portfolio-Title-cont']}>
           <Row className='gx-0'>
             <Col xs={8} md={6} lg={6} xl={4} className={styles['portfolio-left-Col']}></Col>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['portfolio-right-Col']}>
@@ -262,90 +262,31 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
             </Col>
           </Row>
         </div>
-        <div className={styles['serviceCard-cont']}>
+        <div className={styles['portfolioCard-cont']}>
           <Row className='gx-0'>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>
-              <div className={styles['serviceCardContainer']}>
-                <div className={styles['serviceCard-img-cont']}>
-                  <img className={styles['serviceCard-img']} src={serviceIcon1} alt='image'></img>
+            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard1-Col']}>
+              <div className={styles['portfolio-image']}>
+                <img src={UIUXImg} alt='Cardimage'></img>
+                <div className={`${styles['maincard-title-content']} ${styles['card-overlay']}`}>
+                  <h3 className={styles['portfolio-card-txt']}>Card 1</h3>
                 </div>
-
-                <div className={styles['serviceCard-title-cont']}>
-                  <h2 className={styles['serviceCard-title-txt']}>UI/UX DESIGN</h2>
-                </div>
-                <div className={styles['serviceCardContainer-line']}></div>
-                <div className={styles['serviceCard-desp-cont']}>
-                  <span className={styles['serviceCard-desp-txt']}>
-                    Providing you a best <b>UI/UX</b> wireframe designs using <b>Figma</b> tool for
-                    the websites featuring a clean interface with easy navigation to highlight my
-                    projects effectively.
-                  </span>
-                </div>
-                <ButtonUI
-                  varientprop={'outline-danger'}
-                  classnameprop={styles['button-explore']}
-                  styleprop={{ padding: '0px' }}
-                  click={handleShowUIUX}
-                  disableButtonprop={false}
-                  buttonnameprop={'Explore'}
-                ></ButtonUI>
               </div>
-              <div className={styles['serviceCardContainer-border']}></div>
             </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard2-Col']}>
-              <div className={styles['serviceCardContainer']}>
-                <div className={styles['serviceCard-img-cont']}>
-                  <img className={styles['serviceCard-img']} src={serviceIcon2} alt='image'></img>
+            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard2-Col']}>
+              <div className={styles['portfolio-image']}>
+                <img src={webdevImg} alt='Cardimage'></img>
+                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
+                  <h3 className={styles['portfolio-card-txt']}>Card 2</h3>
                 </div>
-                <div className={styles['serviceCard-title-cont']}>
-                  <h2 className={styles['serviceCard-title-txt']}>WEB DESIGN</h2>
-                </div>
-                <div className={styles['serviceCardContainer-line']}></div>
-                <div className={styles['serviceCard-desp-cont']}>
-                  <span className={styles['serviceCard-desp-txt']}>
-                    My web design for the websites showcases a modern and captivating layout that
-                    reflects my creative style.The design features a modern interface, offering easy
-                    navigation and quick access to the projects.
-                  </span>
-                </div>
-                <ButtonUI
-                  varientprop={'outline-danger'}
-                  classnameprop={styles['button-explore']}
-                  styleprop={{ padding: '0px' }}
-                  click={handleShowWebDesign}
-                  disableButtonprop={false}
-                  buttonnameprop={'Explore'}
-                ></ButtonUI>
               </div>
-              <div className={styles['serviceCardContainer-border']}></div>
             </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard3-Col']}>
-              <div className={styles['serviceCardContainer']}>
-                <div className={styles['serviceCard-img-cont']}>
-                  <img className={styles['serviceCard-img']} src={serviceIcon3} alt='image'></img>
+            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard3-Col']}>
+              <div className={styles['portfolio-image']}>
+                <img src={UIUXImg} alt='Cardimage'></img>
+                <div className={`${styles['maincard-title-content']} ${styles['card-overlay']}`}>
+                  <h3 className={styles['portfolio-card-txt']}>Card 3</h3>
                 </div>
-                <div className={styles['serviceCard-title-cont']}>
-                  <h2 className={styles['serviceCard-title-txt']}>WEB DEVELOPMENT</h2>
-                </div>
-                <div className={styles['serviceCardContainer-line']}></div>
-                <div className={styles['serviceCard-desp-cont']}>
-                  <span className={styles['serviceCard-desp-txt']}>
-                    For Web Development, I have utilized cutting-edge front-end technologies like
-                    <b> ReactJS</b> framework to craft a visually appealing and user-friendly
-                    interface. The website is fully <b>responsive</b>, ensuring optimal viewing and
-                    functionality across devices.
-                  </span>
-                </div>
-                <ButtonUI
-                  varientprop={'outline-danger'}
-                  classnameprop={styles['button-explore']}
-                  styleprop={{ padding: '0px' }}
-                  click={handleShowWebDev}
-                  disableButtonprop={false}
-                  buttonnameprop={'Explore'}
-                ></ButtonUI>
               </div>
-              <div className={styles['serviceCardContainer-border']}></div>
             </Col>
           </Row>
         </div>
