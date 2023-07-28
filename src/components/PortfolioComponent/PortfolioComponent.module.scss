@@ -92,15 +92,15 @@
     position: relative;
     width: 100%;
     padding: 1rem;
-    transform: scale(0.8);
+    transform: scale(0.9);
     transition: all 1s ease-in-out;
   }
   .portfolio-image:hover img {
-    -webkit-transform: scale(1.14); /* Safari and Chrome */
-    -moz-transform: scale(1.14); /* Firefox */
-    -ms-transform: scale(1.14); /* IE 9 */
-    -o-transform: scale(1.14); /* Opera */
-    transform: scale(1.15);
+    -webkit-transform: scale(1.12); /* Safari and Chrome */
+    -moz-transform: scale(1.12); /* Firefox */
+    -ms-transform: scale(1.12); /* IE 9 */
+    -o-transform: scale(1.12); /* Opera */
+    transform: scale(1.12);
   }
   .portfolio-card-txt {
     color: variables.$color-FFFFFF;
@@ -220,10 +220,10 @@
     transition: all 2s ease-in-out;
   }
   .portfolio-image:hover img {
-    -webkit-transform: scale(1.14); /* Safari and Chrome */
-    -moz-transform: scale(1.14); /* Firefox */
-    -ms-transform: scale(1.14); /* IE 9 */
-    -o-transform: scale(1.14); /* Opera */
+    -webkit-transform: scale(1.18); /* Safari and Chrome */
+    -moz-transform: scale(1.18); /* Firefox */
+    -ms-transform: scale(1.18); /* IE 9 */
+    -o-transform: scale(1.18); /* Opera */
     transform: scale(1.18);
   }
   .portfolio-card-txt {
@@ -344,10 +344,10 @@
     transition: all 2s ease-in-out;
   }
   .portfolio-image:hover img {
-    -webkit-transform: scale(1.14); /* Safari and Chrome */
-    -moz-transform: scale(1.14); /* Firefox */
-    -ms-transform: scale(1.14); /* IE 9 */
-    -o-transform: scale(1.14); /* Opera */
+    -webkit-transform: scale(1.15); /* Safari and Chrome */
+    -moz-transform: scale(1.15); /* Firefox */
+    -ms-transform: scale(1.15); /* IE 9 */
+    -o-transform: scale(1.15); /* Opera */
     transform: scale(1.15);
   }
   .portfolio-card-txt {
