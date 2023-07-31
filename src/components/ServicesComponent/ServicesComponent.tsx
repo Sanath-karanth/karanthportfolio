@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import styles from './ServicesComponent.module.scss';
 import { Button as ButtonUI, ModalCommon } from '../../commonui';
-import serviceIcon1 from '../../images/frameIcons/services/services1.png';
-import serviceIcon2 from '../../images/frameIcons/services/services2.png';
-import serviceIcon3 from '../../images/frameIcons/services/services3.png';
-import UIUXImg from '../../images/frameIcons/services/UIUXImg.jpg';
-import webdesignImg from '../../images/frameIcons/services/webdesignImg.png';
-import webdevImg from '../../images/frameIcons/services/webdevImg.png';
-import myworkservice1 from '../../images/frameIcons/services/myworkservice1.png';
-import myworkservice2 from '../../images/frameIcons/services/myworkservice2.png';
+import serviceIcon1 from '../../images/mainscreenImages/services/services1.png';
+import serviceIcon2 from '../../images/mainscreenImages/services/services2.png';
+import serviceIcon3 from '../../images/mainscreenImages/services/services3.png';
+import UIUXImg from '../../images/mainscreenImages/services/UIUXImg.jpg';
+import webdesignImg from '../../images/mainscreenImages/services/webdesignImg.png';
+import webdevImg from '../../images/mainscreenImages/services/webdevImg.png';
+import myworkservice1 from '../../images/mainscreenImages/services/myworkservice1.png';
+import myworkservice2 from '../../images/mainscreenImages/services/myworkservice2.png';
 
 interface IServicesComponentProps {
   classname?: string;

@@ -4,14 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI, ModalCommon } from '../../commonui';
-import serviceIcon1 from '../../images/frameIcons/services/services1.png';
-import serviceIcon2 from '../../images/frameIcons/services/services2.png';
-import serviceIcon3 from '../../images/frameIcons/services/services3.png';
-import UIUXImg from '../../images/frameIcons/services/UIUXImg.jpg';
-import webdesignImg from '../../images/frameIcons/services/webdesignImg.png';
-import webdevImg from '../../images/frameIcons/services/webdevImg.png';
-import myworkservice1 from '../../images/frameIcons/services/myworkservice1.png';
-import myworkservice2 from '../../images/frameIcons/services/myworkservice2.png';
+
+// Images import
+import ArtgalleryImg from '../../images/mainscreenImages/portfolio/artgallery.png';
+import ResumebuilderImg from '../../images/mainscreenImages/portfolio/resumebuilder.png';
+import MygymImg from '../../images/mainscreenImages/portfolio/mygym.png';
+import UIUXImg from '../../images/mainscreenImages/services/UIUXImg.jpg';
+import webdesignImg from '../../images/mainscreenImages/services/webdesignImg.png';
+import webdevImg from '../../images/mainscreenImages/services/webdevImg.png';
+import myworkservice1Img from '../../images/mainscreenImages/services/myworkservice1.png';
+import myworkservice2Img from '../../images/mainscreenImages/services/myworkservice2.png';
 
 interface IPortfolioComponentProps {
   classname?: string;
@@ -99,7 +101,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                   <div className={styles['fullScreen-img-cont']}>
                     <img
                       className={styles['fullScreen-mywork-img']}
-                      src={myworkservice1}
+                      src={myworkservice1Img}
                       alt='image'
                     ></img>
                   </div>
@@ -108,7 +110,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                   <div className={styles['fullScreen-img-cont']}>
                     <img
                       className={styles['fullScreen-mywork-img']}
-                      src={myworkservice2}
+                      src={myworkservice2Img}
                       alt='image'
                     ></img>
                   </div>
@@ -265,26 +267,57 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
         <div className={styles['portfolioCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard1-Col']}>
-              <div className={styles['portfolio-image']}>
-                <img src={UIUXImg} alt='Cardimage'></img>
-                <div className={`${styles['maincard-title-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Card 1</h3>
+              <div className={styles['portfolio-image-card']}>
+                <div className={styles['portfolio-image-cont']}>
+                  <img src={ArtgalleryImg} alt='Cardimage'></img>
+                </div>
+
+                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
+                  <h3 className={styles['portfolio-card-txt']}>Karanth Art Gallery</h3>
+                  <ButtonUI
+                    varientprop={'danger'}
+                    classnameprop={styles['button-visit']}
+                    styleprop={{ padding: '0px' }}
+                    click={handleShowWebDesign}
+                    disableButtonprop={false}
+                    buttonnameprop={'Visit'}
+                  ></ButtonUI>
                 </div>
               </div>
             </Col>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard2-Col']}>
-              <div className={styles['portfolio-image']}>
-                <img src={webdevImg} alt='Cardimage'></img>
+              <div className={styles['portfolio-image-card']}>
+                <div className={styles['portfolio-image-cont']}>
+                  <img src={ResumebuilderImg} alt='Cardimage'></img>
+                </div>
                 <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Card 2</h3>
+                  <h3 className={styles['portfolio-card-txt']}>Karanth Resume Builder</h3>
+                  <ButtonUI
+                    varientprop={'danger'}
+                    classnameprop={styles['button-visit']}
+                    styleprop={{ padding: '0px' }}
+                    click={handleShowWebDesign}
+                    disableButtonprop={false}
+                    buttonnameprop={'Visit'}
+                  ></ButtonUI>
                 </div>
               </div>
             </Col>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard3-Col']}>
-              <div className={styles['portfolio-image']}>
-                <img src={UIUXImg} alt='Cardimage'></img>
-                <div className={`${styles['maincard-title-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Card 3</h3>
+              <div className={styles['portfolio-image-card']}>
+                <div className={styles['portfolio-image-cont']}>
+                  <img src={MygymImg} alt='Cardimage'></img>
+                </div>
+                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
+                  <h3 className={styles['portfolio-card-txt']}>My Gym Fitness</h3>
+                  <ButtonUI
+                    varientprop={'danger'}
+                    classnameprop={styles['button-visit']}
+                    styleprop={{ padding: '0px' }}
+                    click={handleShowWebDesign}
+                    disableButtonprop={false}
+                    buttonnameprop={'Visit'}
+                  ></ButtonUI>
                 </div>
               </div>
             </Col>
