@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmarkCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI, ModalCommon } from '../../commonui';
 
@@ -283,11 +283,11 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     buttonnameprop={'visit'}
                   ></ButtonUI>
                   <FontAwesomeIcon
-                    icon={faArrowRight}
+                    icon={faArrowUp}
                     size='lg'
                     className={styles['link-icon']}
                     color='red'
-                    shake
+                    bounce
                   />
                 </div>
               </div>
@@ -308,11 +308,11 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     buttonnameprop={'visit'}
                   ></ButtonUI>
                   <FontAwesomeIcon
-                    icon={faArrowRight}
+                    icon={faArrowUp}
                     size='lg'
                     className={styles['link-icon']}
                     color='red'
-                    shake
+                    bounce
                   />
                 </div>
               </div>
@@ -333,11 +333,11 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     buttonnameprop={'visit'}
                   ></ButtonUI>
                   <FontAwesomeIcon
-                    icon={faArrowRight}
+                    icon={faArrowUp}
                     size='lg'
                     className={styles['link-icon']}
                     color='red'
-                    shake
+                    bounce
                   />
                 </div>
               </div>
