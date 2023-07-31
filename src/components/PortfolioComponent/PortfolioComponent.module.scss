@@ -66,6 +66,10 @@
   gap: 1rem;
   display: none;
 }
+.button-visit:hover {
+  color: variables.$color-palepink !important;
+  background: variables.$color-danger !important;
+}
 
 /* Mobile View */
 @media (max-width: 767px) {
@@ -122,19 +126,18 @@
     letter-spacing: 1px;
     margin: 0;
   }
-  .button-explore {
-    height: 4vh;
-    width: 25%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
-  }
   .button-visit {
-    height: 5vh;
-    width: 15%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-14;
+    @include portfolioComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    width: 3.5rem !important;
+    height: 1rem !important;
+    padding: 0.8rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles
@@ -147,6 +150,11 @@
   .close-icon {
     height: 2rem;
     width: 2rem;
+    cursor: pointer;
+  }
+  .link-icon {
+    height: 2.5rem;
+    width: 2.5rem;
     cursor: pointer;
   }
   .fullScreen-header-txt {
@@ -256,19 +264,18 @@
     letter-spacing: 1px;
     margin: 0;
   }
-  .button-explore {
-    height: 5vh;
-    width: 40%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-10;
-  }
   .button-visit {
-    height: 5vh;
-    width: 20%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
+    @include portfolioComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    width: 3.5rem !important;
+    height: 1rem !important;
+    padding: 0.8rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles
@@ -390,20 +397,18 @@
     letter-spacing: 1px;
     margin: 0;
   }
-
-  .button-explore {
-    height: 5vh;
-    width: 20%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
-  }
   .button-visit {
-    height: 6vh;
-    width: 15%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-18;
+    @include portfolioComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-16 !important;
+    width: 5rem !important;
+    height: 2rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles

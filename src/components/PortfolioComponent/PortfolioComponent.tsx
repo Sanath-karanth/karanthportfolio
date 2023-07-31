@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI, ModalCommon } from '../../commonui';
 
@@ -280,8 +280,15 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     styleprop={{ padding: '0px' }}
                     click={handleShowWebDesign}
                     disableButtonprop={false}
-                    buttonnameprop={'Visit'}
+                    buttonnameprop={'visit'}
                   ></ButtonUI>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    size='lg'
+                    className={styles['link-icon']}
+                    color='red'
+                    shake
+                  />
                 </div>
               </div>
             </Col>
@@ -298,8 +305,15 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     styleprop={{ padding: '0px' }}
                     click={handleShowWebDesign}
                     disableButtonprop={false}
-                    buttonnameprop={'Visit'}
+                    buttonnameprop={'visit'}
                   ></ButtonUI>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    size='lg'
+                    className={styles['link-icon']}
+                    color='red'
+                    shake
+                  />
                 </div>
               </div>
             </Col>
@@ -316,8 +330,15 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     styleprop={{ padding: '0px' }}
                     click={handleShowWebDesign}
                     disableButtonprop={false}
-                    buttonnameprop={'Visit'}
+                    buttonnameprop={'visit'}
                   ></ButtonUI>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    size='lg'
+                    className={styles['link-icon']}
+                    color='red'
+                    shake
+                  />
                 </div>
               </div>
             </Col>

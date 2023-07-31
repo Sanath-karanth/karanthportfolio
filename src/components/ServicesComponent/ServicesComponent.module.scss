@@ -50,6 +50,10 @@
   margin: 0 auto;
   width: 5rem;
 }
+.button-explore:hover {
+  color: variables.$color-palepink !important;
+  background: variables.$color-danger !important;
+}
 
 /* Mobile View */
 @media (max-width: 767px) {
@@ -121,11 +125,17 @@
     margin: 0;
   }
   .button-explore {
-    height: 4vh;
-    width: 25%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
+    @include servicescreen-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-12 !important;
+    width: 4rem !important;
+    height: 1rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles
@@ -262,11 +272,17 @@
     margin: 0;
   }
   .button-explore {
-    height: 5vh;
-    width: 40%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-10;
+    @include servicescreen-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-12 !important;
+    width: 4rem !important;
+    height: 1.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles
@@ -378,7 +394,7 @@
   .serviceCard-desp-cont {
     display: flex;
     justify-content: flex-start;
-    height: 8rem;
+    height: 10rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -404,14 +420,20 @@
   }
   // .serviceCard-desp-txt::first-letter {
   //   initial-letter: 2;
-  //   padding-right: 4px;
+  //   padding-right: 0.5rem;
   // }
   .button-explore {
-    height: 5vh;
-    width: 20%;
-    padding: 1vw;
-    font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-12;
+    @include servicescreen-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-12 !important;
+    width: 5rem !important;
+    height: 2rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 
   // Modal styles
