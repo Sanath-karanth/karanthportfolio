@@ -38,6 +38,15 @@
   color: variables.$color-palepink !important;
   transition: all 0.4s ease-in-out;
 }
+.contact-form-header-cont {
+  @include contactComp-center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.button-submit:hover {
+  color: variables.$color-palepink !important;
+  background: variables.$color-danger !important;
+}
 
 /* Mobile View */
 @media (max-width: 767px) {
@@ -113,9 +122,6 @@
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-12;
     margin: 0;
-  }
-  .contact-form-header-cont {
-    margin-bottom: 1rem;
   }
   .contact-form-header-txt {
     font-family: variables.$font-family-Montserrat;
@@ -200,9 +206,6 @@
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-12;
     margin: 0;
-  }
-  .contact-form-header-cont {
-    margin-bottom: 1rem;
   }
   .contact-form-header-txt {
     font-family: variables.$font-family-Montserrat;
@@ -289,14 +292,25 @@
     font-size: variables.$font-size-14;
     margin: 0;
   }
-  .contact-form-header-cont {
-    margin-bottom: 1rem;
-  }
   .contact-form-header-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-24;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0;
+  }
+  .button-submit {
+    @include contactComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-16 !important;
+    text-transform: uppercase !important;
+    width: 6rem !important;
+    height: 3rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 }

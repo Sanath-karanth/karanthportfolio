@@ -108,27 +108,46 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                   <div>
                     <Form>
                       <Form.Group className='mb-3' controlId='formBasicEmail'>
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type='email' placeholder='Enter email' />
+                        <Form.Label>User Name</Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter Full name'
+                          autoComplete='off'
+                          id='placeholdertext'
+                          name='username'
+                        />
                         <Form.Text className='text-muted'>
                           We'll never share your email with anyone else.
                         </Form.Text>
                       </Form.Group>
 
                       <Form.Group className='mb-3' controlId='formBasicPassword'>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type='password' placeholder='Password' />
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control
+                          type='email'
+                          placeholder='Enter Email'
+                          autoComplete='off'
+                          id='placeholdertext'
+                          name='email'
+                        />
                       </Form.Group>
-                      <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-                        <Form.Check type='checkbox' label='Check me out' />
+                      <Form.Group className='mb-3' controlId='formBasicPassword'>
+                        <Form.Label>Phone Number</Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter Phone number'
+                          autoComplete='off'
+                          id='placeholdertext'
+                          name='phone'
+                        />
                       </Form.Group>
                       <ButtonUI
                         varientprop={'outline-danger'}
-                        classnameprop={styles['button-explore']}
+                        classnameprop={styles['button-submit']}
                         styleprop={{ padding: '0px' }}
                         click={() => console.log('clicked')}
                         disableButtonprop={false}
-                        buttonnameprop={'Explore'}
+                        buttonnameprop={'Submit'}
                       ></ButtonUI>
                     </Form>
                   </div>
