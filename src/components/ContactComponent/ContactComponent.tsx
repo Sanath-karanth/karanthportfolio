@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
@@ -10,11 +10,11 @@ import ArtgalleryImg from '../../images/mainscreenImages/portfolio/artgallery.pn
 import ResumebuilderImg from '../../images/mainscreenImages/portfolio/resumebuilder.png';
 import MygymImg from '../../images/mainscreenImages/portfolio/mygym.png';
 
-interface IPortfolioComponentProps {
+interface IContactComponentProps {
   classname?: string;
 }
 
-const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
+const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
   // functions for navigate to my websites
   const handleportfolioartClick = () => {
     const url = 'https://karantharts.netlify.app';
@@ -31,94 +31,71 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
 
   return (
     <Fragment>
-      <div className={styles['PortfolioContainer']}>
-        <div className={styles['portfolio-Title-cont']}>
+      <div className={styles['ContactContainer']}>
+        <div className={styles['contact-Title-cont']}>
           <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['portfolio-left-Col']}></Col>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['portfolio-right-Col']}>
-              <div className={styles['portfolio-left-cont']}>
-                <div className={styles['portfolio-txt-border']} id='portfolio-txt-cont'>
-                  <h1 className={styles['portfolio-txt']}>Portfolios</h1>
+            <Col xs={8} md={6} lg={6} xl={8} className={styles['contact-right-Col']}>
+              <div className={styles['contact-left-cont']}>
+                <div className={styles['contact-txt-background']} id='contact-txt-cont'>
+                  <h1 className={styles['contact-txt']}>Contact</h1>
                 </div>
               </div>
             </Col>
+            <Col xs={8} md={6} lg={6} xl={4} className={styles['contact-left-Col']}></Col>
           </Row>
         </div>
-        <div className={styles['portfolioCard-cont']}>
-          <Row className='gx-0'>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard1-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={ArtgalleryImg} alt='Cardimage'></img>
+        <div className={styles['contactCard-cont']}>
+          <Row className={`${'gx-0'} ${styles['contact-main-Row']}`}>
+            <Col xs={12} md={5} lg={5} xl={5} className={styles['contactcard-left-Col']}>
+              <div className={styles['contact-info-card']}>
+                <div className={styles['contact-info-cont']}>
+                  <div className={styles['contact-icon-cont']}>
+                    <FontAwesomeIcon
+                      icon={faLocationDot}
+                      size='lg'
+                      className={styles['info-icon']}
+                    />
+                  </div>
+                  <div className={styles['contact-txt-cont']}>
+                    <h4 className={styles['contact-header-txt']}>Location</h4>
+                    <p className={styles['contact-desp-txt']}>Shivamogga, Karnataka, IN</p>
+                    <p className={styles['contact-desp-txt']}>577204</p>
+                  </div>
                 </div>
-
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Karanth Art Gallery</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfolioartClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
+                {/* <div className={styles['contact-border-line']}></div> */}
+                <div className={styles['contact-info-cont']}>
+                  <div className={styles['contact-icon-cont']}>
+                    <FontAwesomeIcon
+                      icon={faPaperPlane}
+                      size='lg'
+                      className={styles['info-icon']}
+                    />
+                  </div>
+                  <div className={styles['contact-txt-cont']}>
+                    <h4 className={styles['contact-header-txt']}>EMail</h4>
+                    <p className={styles['contact-desp-txt']}>sanathsk97@gmail.com</p>
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard2-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={ResumebuilderImg} alt='Cardimage'></img>
+                {/* <div className={styles['contact-border-line']}></div> */}
+                <div className={styles['contact-info-cont']}>
+                  <div className={styles['contact-icon-cont']}>
+                    <FontAwesomeIcon icon={faPhone} size='lg' className={styles['info-icon']} />
+                  </div>
+                  <div className={styles['contact-txt-cont']}>
+                    <h4 className={styles['contact-header-txt']}>Phone</h4>
+                    <p className={styles['contact-desp-txt']}>+91 9449685219</p>
+                  </div>
                 </div>
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Karanth Resume Builder</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfolioresumeClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
+                <div className={styles['contact-border-line']}></div>
+                <div className={styles['contact-map-cont']}>
+                  <h3>Map</h3>
                 </div>
               </div>
             </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard3-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={MygymImg} alt='Cardimage'></img>
-                </div>
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>My Gym Fitness</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfoliomygymClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
+            <Col xs={12} md={7} lg={7} xl={7} className={styles['contactcard-right-Col']}>
+              <div className={styles['contact-form-card']}>
+                <div className={styles['contact-form-cont']}>
+                  <h3>Karanth Art Gallery</h3>
                 </div>
               </div>
             </Col>
@@ -129,4 +106,4 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   );
 };
 
-export default React.memo(PortfolioComponent);
+export default React.memo(ContactComponent);
