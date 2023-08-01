@@ -1,5 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { GoogleMap, Marker } from 'react-google-maps';
+import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactComponent.module.scss';
@@ -88,14 +91,47 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                 </div>
                 <div className={styles['contact-border-line']}></div>
                 <div className={styles['contact-map-cont']}>
-                  <h3>Map</h3>
+                  <iframe
+                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.0800676103717!2d75.5450567824406!3d13.939526218919912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba8b481d062fd%3A0x65160ff564158c45!2s215%2C%20Tank%20Mohalla%2C%20Shivamogga%2C%20Karnataka%20577205!5e0!3m2!1sen!2sin!4v1690899766386!5m2!1sen!2sin'
+                    aria-hidden='false'
+                    id={styles['map-iframe']}
+                  ></iframe>
                 </div>
               </div>
             </Col>
             <Col xs={12} md={7} lg={7} xl={7} className={styles['contactcard-right-Col']}>
               <div className={styles['contact-form-card']}>
                 <div className={styles['contact-form-cont']}>
-                  <h3>Karanth Art Gallery</h3>
+                  <div className={styles['contact-form-header-cont']}>
+                    <h4 className={styles['contact-form-header-txt']}>Let's Get In Touch!</h4>
+                  </div>
+                  <div>
+                    <Form>
+                      <Form.Group className='mb-3' controlId='formBasicEmail'>
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type='email' placeholder='Enter email' />
+                        <Form.Text className='text-muted'>
+                          We'll never share your email with anyone else.
+                        </Form.Text>
+                      </Form.Group>
+
+                      <Form.Group className='mb-3' controlId='formBasicPassword'>
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type='password' placeholder='Password' />
+                      </Form.Group>
+                      <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+                        <Form.Check type='checkbox' label='Check me out' />
+                      </Form.Group>
+                      <ButtonUI
+                        varientprop={'outline-danger'}
+                        classnameprop={styles['button-explore']}
+                        styleprop={{ padding: '0px' }}
+                        click={() => console.log('clicked')}
+                        disableButtonprop={false}
+                        buttonnameprop={'Explore'}
+                      ></ButtonUI>
+                    </Form>
+                  </div>
                 </div>
               </div>
             </Col>

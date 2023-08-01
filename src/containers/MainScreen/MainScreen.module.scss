@@ -47,6 +47,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.scroll-up {
+  position: fixed;
+  bottom: 20;
+  right: 20;
+}
 // .banner-subtitle-txt::first-letter {
 //   initial-letter: 2;
 //   padding-right: 0.5rem;
