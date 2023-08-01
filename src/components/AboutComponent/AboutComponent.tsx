@@ -2,7 +2,7 @@ import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import styles from './PortfolioComponent.module.scss';
+import styles from './AboutComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
 // Images import

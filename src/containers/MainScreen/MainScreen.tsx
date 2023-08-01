@@ -13,8 +13,12 @@ import Zoom from '@mui/material/Zoom';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
+
+// Components import
 import ServicesComponent from '../../components/ServicesComponent/ServicesComponent';
 import PortfolioComponent from '../../components/PortfolioComponent/PortfolioComponent';
+import ContactComponent from '../../components/ContactComponent/ContactComponent';
+import AboutComponent from '../../components/AboutComponent/AboutComponent';
 
 // Image imports
 import bannerImg from '../../images/profile/Sanath2.jpg';
@@ -210,8 +214,16 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </div>
         </section>
 
+        <section id='portfolio'>
+          <div className='container-fluid reveal mt-4 mb-4'>
+            <div>
+              <PortfolioComponent />
+            </div>
+          </div>
+        </section>
+
         {/* Parallax code */}
-        {/* <div className='container-fluid unreveal'>
+        <div className='container-fluid unreveal'>
           <div
             className={styles['parallax-center']}
             style={{
@@ -235,13 +247,12 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               backgroundImage: `url(${parallaxBackground2})`,
             }}
           ></div>
-        </div> */}
-        {/* Parallax code ends */}
+        </div>
 
-        <section id='portfolio'>
+        <section id='contact'>
           <div className='container-fluid reveal mt-4'>
             <div>
-              <PortfolioComponent />
+              <ContactComponent />
             </div>
             <div className='text-container'>
               <div className='text-box'>
@@ -271,30 +282,8 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             </div>
           </div>
         </section>
-        {/*
-        <section id='contact'>
-          <div className='container reveal'>
-            <h2>Contact</h2>
-            <div className='text-container'>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section id='about'>
+        {/* <section id='about'>
           <div className='container reveal'>
             <h2>About</h2>
             <div className='text-container'>
