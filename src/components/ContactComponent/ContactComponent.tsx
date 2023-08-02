@@ -107,44 +107,74 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                   </div>
                   <div>
                     <Form>
-                      <Form.Group className='mb-3' controlId='formBasicEmail'>
-                        <Form.Label>User Name</Form.Label>
-                        <Form.Control
-                          type='text'
-                          placeholder='Enter Full name'
-                          autoComplete='off'
-                          id='placeholdertext'
-                          name='username'
-                        />
-                        <Form.Text className='text-muted'>
-                          We'll never share your email with anyone else.
-                        </Form.Text>
-                      </Form.Group>
+                      <Row className='gx-0'>
+                        <Col xs={12} md={5} lg={5} xl={5}>
+                          <Form.Group className='mb-3' controlId='formBasicEmail'>
+                            <Form.Label className={styles['contact-form-label-txt']}>
+                              Name
+                            </Form.Label>
+                            <Form.Control
+                              type='text'
+                              placeholder='Enter your full name'
+                              className={styles['contact-form-txt']}
+                              autoComplete='off'
+                              id='placeholdertext'
+                              name='username'
+                            />
+                          </Form.Group>
+                        </Col>
+                        <Col xs={12} md={1} lg={1} xl={1}></Col>
+                        <Col xs={12} md={6} lg={6} xl={6}>
+                          <Form.Group className='mb-3' controlId='formBasicPassword'>
+                            <Form.Label className={styles['contact-form-label-txt']}>
+                              Phone No
+                            </Form.Label>
+                            <Form.Control
+                              type='text'
+                              placeholder='Enter your 10-digit phone number'
+                              className={styles['contact-form-txt']}
+                              autoComplete='off'
+                              id='placeholdertext'
+                              name='phoneno'
+                            />
+                          </Form.Group>
+                        </Col>
+                      </Row>
 
                       <Form.Group className='mb-3' controlId='formBasicPassword'>
-                        <Form.Label>Email Address</Form.Label>
+                        <Form.Label className={styles['contact-form-label-txt']}>
+                          EmailID
+                        </Form.Label>
                         <Form.Control
                           type='email'
-                          placeholder='Enter Email'
+                          placeholder='Enter your email id'
+                          className={styles['contact-form-txt']}
                           autoComplete='off'
                           id='placeholdertext'
                           name='email'
                         />
                       </Form.Group>
+
                       <Form.Group className='mb-3' controlId='formBasicPassword'>
-                        <Form.Label>Phone Number</Form.Label>
+                        <Form.Label className={styles['contact-form-label-txt']}>
+                          Message
+                        </Form.Label>
                         <Form.Control
+                          as='textarea'
+                          rows={4}
                           type='text'
-                          placeholder='Enter Phone number'
+                          placeholder='Enter your message'
+                          className={styles['contact-form-txt']}
                           autoComplete='off'
                           id='placeholdertext'
-                          name='phone'
+                          name='text'
                         />
                       </Form.Group>
+
                       <ButtonUI
                         varientprop={'outline-danger'}
                         classnameprop={styles['button-submit']}
-                        styleprop={{ padding: '0px' }}
+                        styleprop={{ marginTop: '2rem' }}
                         click={() => console.log('clicked')}
                         disableButtonprop={false}
                         buttonnameprop={'Submit'}

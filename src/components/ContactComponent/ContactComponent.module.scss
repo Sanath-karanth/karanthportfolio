@@ -41,7 +41,7 @@
 .contact-form-header-cont {
   @include contactComp-center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .button-submit:hover {
   color: variables.$color-palepink !important;
@@ -82,7 +82,7 @@
   }
   .contact-form-card {
     background: variables.$color-FFFFFF;
-    padding: 1rem;
+    padding: 2rem;
   }
   .contact-info-cont {
     @include contactComp-center;
@@ -130,6 +130,32 @@
     letter-spacing: 1px;
     margin: 0;
   }
+  .contact-form-label-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .contact-form-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    letter-spacing: 0;
+    padding: 0.5rem;
+  }
+  .button-submit {
+    @include contactComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
+  }
 }
 
 /* Tablet View */
@@ -166,7 +192,7 @@
   }
   .contact-form-card {
     background: variables.$color-FFFFFF;
-    padding: 1rem;
+    padding: 2rem;
   }
   .contact-info-cont {
     @include contactComp-center;
@@ -214,6 +240,32 @@
     letter-spacing: 1px;
     margin: 0;
   }
+  .contact-form-label-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .contact-form-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-8;
+    letter-spacing: 0;
+    padding: 0.5rem;
+  }
+  .button-submit {
+    @include contactComp-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
+  }
 }
 
 /* Desktop View */
@@ -250,7 +302,7 @@
   }
   .contact-form-card {
     background: variables.$color-FFFFFF;
-    padding: 1rem;
+    padding: 2rem;
   }
   .contact-info-cont {
     @include contactComp-center;
@@ -294,10 +346,22 @@
   }
   .contact-form-header-txt {
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-24;
+    font-size: variables.$font-size-26;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0;
+  }
+  .contact-form-label-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .contact-form-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    letter-spacing: 0;
+    padding: 0.5rem;
   }
   .button-submit {
     @include contactComp-center;
