@@ -6,9 +6,7 @@ import styles from './AboutComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
 // Images import
-import ArtgalleryImg from '../../images/mainscreenImages/portfolio/artgallery.png';
-import ResumebuilderImg from '../../images/mainscreenImages/portfolio/resumebuilder.png';
-import MygymImg from '../../images/mainscreenImages/portfolio/mygym.png';
+import AboutSanathImg from '../../images/profile/SanathIMG20.jpg';
 
 interface IPortfolioComponentProps {
   classname?: string;
@@ -31,94 +29,39 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
 
   return (
     <Fragment>
-      <div className={styles['PortfolioContainer']}>
-        <div className={styles['portfolio-Title-cont']}>
+      <div className={styles['AboutContainer']}>
+        <div className={styles['about-Title-cont']}>
           <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['portfolio-left-Col']}></Col>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['portfolio-right-Col']}>
-              <div className={styles['portfolio-left-cont']}>
-                <div className={styles['portfolio-txt-border']} id='portfolio-txt-cont'>
-                  <h1 className={styles['portfolio-txt']}>Portfolios</h1>
+            <Col xs={8} md={6} lg={6} xl={4} className={styles['about-left-Col']}></Col>
+            <Col xs={8} md={6} lg={6} xl={8} className={styles['about-right-Col']}>
+              <div className={styles['about-left-cont']}>
+                <div className={styles['about-txt-background']} id='about-txt-cont'>
+                  <h1 className={styles['about-txt']}>About</h1>
                 </div>
               </div>
             </Col>
           </Row>
         </div>
-        <div className={styles['portfolioCard-cont']}>
-          <Row className='gx-0'>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard1-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={ArtgalleryImg} alt='Cardimage'></img>
-                </div>
-
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Karanth Art Gallery</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfolioartClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
+        <div className={styles['aboutCard-cont']}>
+          <Row className={`${'gx-0'} ${styles['about-main-Row']}`}>
+            <Col xs={12} md={4} lg={4} xl={4} className={styles['aboutCard-left-Col']}>
+              <div className={styles['about-img-card']}>
+                <div className={styles['about-pic-container']}>
+                  <img
+                    src={AboutSanathImg}
+                    alt='sanath image'
+                    className={styles['about-pic-img']}
+                  ></img>
+                  <div className={styles['about-overlay']}>
+                    <div className={styles['text-abt']}>My Profile</div>
+                  </div>
                 </div>
               </div>
             </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard2-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={ResumebuilderImg} alt='Cardimage'></img>
-                </div>
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>Karanth Resume Builder</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfolioresumeClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
-                </div>
-              </div>
-            </Col>
-            <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard3-Col']}>
-              <div className={styles['portfolio-image-card']}>
-                <div className={styles['portfolio-image-cont']}>
-                  <img src={MygymImg} alt='Cardimage'></img>
-                </div>
-                <div className={`${styles['card-overlay-content']} ${styles['card-overlay']}`}>
-                  <h3 className={styles['portfolio-card-txt']}>My Gym Fitness</h3>
-                  <ButtonUI
-                    varientprop={'danger'}
-                    classnameprop={styles['button-visit']}
-                    styleprop={{ padding: '0px' }}
-                    click={handleportfoliomygymClick}
-                    disableButtonprop={false}
-                    buttonnameprop={'visit'}
-                  ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
+            <Col xs={12} md={8} lg={8} xl={8} className={styles['aboutCard-right-Col']}>
+              <div className={styles['about-details-card']}>
+                <div className={styles['about-header-cont']}>
+                  <h4 className={styles['about-header-txt']}>About Me</h4>
                 </div>
               </div>
             </Col>

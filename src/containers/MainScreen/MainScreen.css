@@ -15,6 +15,13 @@ section {
     justify-content: center;
 }
 
+.ServiceSection,
+.PortfolioSection,
+.ContactSection,
+.AboutSection {
+    background: #feebeb;
+}
+
 .reveal {
     position: relative;
     transform: translateY(150px);
@@ -42,21 +49,7 @@ header nav a:hover {
     padding-bottom: 5px;
 }
 
-section:nth-child(2) {
-    background: #feebeb;
-}
 
-section:nth-child(3) {
-    background: #feebeb;
-}
-
-section:nth-child(4) {
-    background: #feebeb;
-}
-
-section:nth-child(5) {
-    background: #feebeb;
-}
 
 section .container {
     margin: 100px;

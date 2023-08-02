@@ -206,7 +206,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             </div>
           </section>
         </div>
-        <section id='services'>
+        <section id='services' className='ServiceSection'>
           <div className='container-fluid unreveal mt-3'>
             <div>
               <ServicesComponent />
@@ -214,8 +214,8 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </div>
         </section>
 
-        <section id='portfolio'>
-          <div className='container-fluid reveal mt-4 mb-4'>
+        <section id='portfolio' className='PortfolioSection'>
+          <div className='container-fluid reveal mt-3 mb-4'>
             <div>
               <PortfolioComponent />
             </div>
@@ -249,44 +249,20 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           ></div>
         </div>
 
-        <section id='contact'>
-          <div className='container-fluid reveal mt-4'>
+        <section id='contact' className='ContactSection'>
+          <div className='container-fluid reveal mt-3'>
             <div>
               <ContactComponent />
-            </div>
-            <div className='text-container'>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
-                  quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
-                  accusamus doloremque.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                  tempora non repellat?
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                  tempora non repellat?
-                </p>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* <section id='about'>
-          <div className='container reveal'>
-            <h2>About</h2>
-            <div className='text-container'>
+        <section id='about' className='AboutSection'>
+          <div className='container-fluid reveal mt-3'>
+            <div>
+              <AboutComponent />
+            </div>
+            {/* <div className='text-container'>
               <div className='text-box'>
                 <h3>Section Text</h3>
                 <p>
@@ -296,10 +272,24 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                   quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
                   accusamus doloremque.
                 </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
+                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
+                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
+                  tempora non repellat?
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
+                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
+                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
+                  tempora non repellat?
+                </p>
               </div>
-            </div>
+            </div> */}
           </div>
-        </section> */}
+        </section>
         <ScrollTop {...props}>
           <Fab color='error' size='medium' aria-label='scroll back to top'>
             <ArrowUpwardTwoToneIcon />

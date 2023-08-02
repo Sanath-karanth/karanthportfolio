@@ -303,7 +303,7 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
           <Row className='gx-0'>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['serviceTitle-left-Col']}>
               <div className={styles['serviceTitle-left-cont']}>
-                <div className={styles['serviceTitle-txt-border']} id='service-txt-cont'>
+                <div className={styles['serviceTitle-txt-background']} id='service-txt-cont'>
                   <h1 className={styles['services-txt']}>Services</h1>
                 </div>
               </div>

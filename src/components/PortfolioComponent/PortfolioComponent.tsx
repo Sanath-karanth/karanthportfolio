@@ -37,7 +37,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
             <Col xs={8} md={6} lg={6} xl={4} className={styles['portfolio-left-Col']}></Col>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['portfolio-right-Col']}>
               <div className={styles['portfolio-left-cont']}>
-                <div className={styles['portfolio-txt-border']} id='portfolio-txt-cont'>
+                <div className={styles['portfolio-txt-background']} id='portfolio-txt-cont'>
                   <h1 className={styles['portfolio-txt']}>Portfolios</h1>
                 </div>
               </div>
