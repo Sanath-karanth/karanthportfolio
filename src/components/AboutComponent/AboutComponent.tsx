@@ -1,7 +1,6 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FaInstagram, FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
@@ -14,15 +13,15 @@ interface IPortfolioComponentProps {
 
 const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   // functions for navigate to my websites
-  const handleportfolioartClick = () => {
+  const handleInstagramClick = () => {
     const url = 'https://karantharts.netlify.app';
     window.open(url, '_blank');
   };
-  const handleportfolioresumeClick = () => {
+  const handleLinkedinClick = () => {
     const url = 'https://karanthresumebuilder.netlify.app';
     window.open(url, '_blank');
   };
-  const handleportfoliomygymClick = () => {
+  const handleFacebookClick = () => {
     const url = 'https://mygymfitness.netlify.app';
     window.open(url, '_blank');
   };
@@ -53,7 +52,23 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     className={styles['about-pic-img']}
                   ></img>
                   <div className={styles['about-overlay']}>
-                    <div className={styles['text-abt']}>My Profile</div>
+                    <div className={styles['about-overlay-content']}>
+                      <div className={styles['about-icon-cont']}>
+                        <div className={styles['about-icon-bg']} onClick={handleInstagramClick}>
+                          <FaInstagram className={styles['media-icon']} />
+                        </div>
+                        <div className={styles['about-icon-bg']} onClick={handleLinkedinClick}>
+                          <FaLinkedin className={styles['media-icon']} />
+                        </div>
+                        <div className={styles['about-icon-bg']}>
+                          <FaFacebookF
+                            className={styles['media-icon']}
+                            onClick={handleFacebookClick}
+                          />
+                        </div>
+                      </div>
+                      <div className={styles['aboutCont-border-line']}></div>
+                    </div>
                   </div>
                 </div>
               </div>

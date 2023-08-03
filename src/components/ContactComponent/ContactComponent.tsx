@@ -18,20 +18,6 @@ interface IContactComponentProps {
 }
 
 const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
-  // functions for navigate to my websites
-  const handleportfolioartClick = () => {
-    const url = 'https://karantharts.netlify.app';
-    window.open(url, '_blank');
-  };
-  const handleportfolioresumeClick = () => {
-    const url = 'https://karanthresumebuilder.netlify.app';
-    window.open(url, '_blank');
-  };
-  const handleportfoliomygymClick = () => {
-    const url = 'https://mygymfitness.netlify.app';
-    window.open(url, '_blank');
-  };
-
   return (
     <Fragment>
       <div className={styles['ContactContainer']}>
@@ -92,10 +78,15 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                 <div className={styles['contact-border-line']}></div>
                 <div className={styles['contact-map-cont']}>
                   <iframe
-                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.0800676103717!2d75.5450567824406!3d13.939526218919912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba8b481d062fd%3A0x65160ff564158c45!2s215%2C%20Tank%20Mohalla%2C%20Shivamogga%2C%20Karnataka%20577205!5e0!3m2!1sen!2sin!4v1690899766386!5m2!1sen!2sin'
+                    src='https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d425.04830647426803!2d75.54522595122187!3d13.939460963989713!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDU2JzIyLjEiTiA3NcKwMzInNDMuNSJF!5e0!3m2!1sen!2sin!4v1691048731997!5m2!1sen!2sin'
                     aria-hidden='false'
                     id={styles['map-iframe']}
                   ></iframe>
+                  {/* <iframe
+                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.0800676103717!2d75.5450567824406!3d13.939526218919912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba8b481d062fd%3A0x65160ff564158c45!2s215%2C%20Tank%20Mohalla%2C%20Shivamogga%2C%20Karnataka%20577205!5e0!3m2!1sen!2sin!4v1690899766386!5m2!1sen!2sin'
+                    aria-hidden='false'
+                    id={styles['map-iframe']}
+                  ></iframe> */}
                 </div>
               </div>
             </Col>
