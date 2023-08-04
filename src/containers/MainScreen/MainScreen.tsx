@@ -42,6 +42,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(
       `.${styles['banner-profile-icon']}`,
     );
+    console.log('profileIconDivElement --->', profileIconDivElement);
     if (window.innerWidth < 767) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(4.5rem)');
     } else if (window.innerWidth > 767 && window.innerWidth < 1023) {

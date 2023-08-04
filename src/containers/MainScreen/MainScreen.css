@@ -24,7 +24,7 @@ section {
 
 .reveal {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity: 0;
     transition: 2s all ease;
     --bs-gutter-x: 0;
