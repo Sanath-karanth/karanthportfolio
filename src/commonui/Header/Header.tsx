@@ -123,11 +123,11 @@ const Header: FunctionComponent<IHeaderProps> = () => {
                   <span className={styles['header-nav-txt']}>
                     <a href='#portfolio'>Portfolio</a>
                   </span>
-                  <span className={styles['header-nav-txt']}>
-                    <a href='#contact'>Contact</a>
-                  </span>
                   <span className={styles['header-nav-txt']} id='about-txt'>
                     <a href='#about'>About</a>
+                  </span>
+                  <span className={styles['header-nav-txt']}>
+                    <a href='#contact'>Contact</a>
                   </span>
                 </nav>
               </div>

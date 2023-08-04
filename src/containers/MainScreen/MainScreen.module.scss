@@ -135,6 +135,17 @@
     border-radius: 30px;
     background: variables.$color-palepink;
     transition: 2s all ease;
+    animation: bounce 2s linear infinite;
+  }
+  @keyframes bounce {
+    0% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 10px rgba(177, 60, 70, 0.3),
+        0 0 0 0px rgba(177, 60, 70, 0.3), 0 0 0 20px rgba(177, 60, 70, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 20px rgba(177, 60, 70, 0.3),
+        0 0 0 10px rgba(177, 60, 70, 0.3), 0 0 0 0px rgba(177, 60, 70, 0.3);
+    }
   }
   .banner-profile-icon:hover {
     transform: scale(1.2);
@@ -269,6 +280,17 @@
     border-radius: 30px;
     background: variables.$color-palepink;
     transition: 2s all ease;
+    animation: bounce 2s linear infinite;
+  }
+  @keyframes bounce {
+    0% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 10px rgba(177, 60, 70, 0.3),
+        0 0 0 0px rgba(177, 60, 70, 0.3), 0 0 0 30px rgba(177, 60, 70, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 30px rgba(177, 60, 70, 0.3),
+        0 0 0 10px rgba(177, 60, 70, 0.3), 0 0 0 0px rgba(177, 60, 70, 0.3);
+    }
   }
   .banner-profile-icon:hover {
     transform: scale(1.2);
@@ -386,6 +408,17 @@
     border-radius: 30px;
     background: variables.$color-palepink;
     transition: 1.5s all ease;
+    animation: bounce 2s linear infinite;
+  }
+  @keyframes bounce {
+    0% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 10px rgba(177, 60, 70, 0.3),
+        0 0 0 0px rgba(177, 60, 70, 0.3), 0 0 0 30px rgba(177, 60, 70, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(177, 60, 70, 0.3), 0 0 0 30px rgba(177, 60, 70, 0.3),
+        0 0 0 10px rgba(177, 60, 70, 0.3), 0 0 0 0px rgba(177, 60, 70, 0.3);
+    }
   }
   .banner-profile-icon:hover {
     transform: scale(1.2);
