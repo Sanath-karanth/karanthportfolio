@@ -74,7 +74,6 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     if (window.innerWidth < 767) {
       setColDeskShow(false);
       setColMobileShow(true);
-      toggleMenu();
     } else if (window.innerWidth > 767) {
       setColDeskShow(true);
       setColMobileShow(false);
@@ -88,6 +87,10 @@ const Header: FunctionComponent<IHeaderProps> = () => {
   useEffect(() => {
     handleResize();
   }, [colDeskShow, colMobileShow]);
+
+  useEffect(() => {
+    toggleMenu();
+  }, []);
 
   return (
     <Fragment>
