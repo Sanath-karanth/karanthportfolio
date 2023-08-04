@@ -1,15 +1,4 @@
-.about-tab-cont {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
-    overflow: hidden;
-}
-
-.tablinks {
-    padding: 0.4rem;
-    cursor: pointer;
-}
+/* --------------    parent container styles    ------------------- */
 
 .tablinks.active::after {
     content: '';
@@ -22,12 +11,48 @@
     transition: 1s ease-in-out;
 }
 
+.tablinks {
+    cursor: pointer;
+}
+
 .tablinks.active {
     border-radius: 50px;
 }
 
 .tabContent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .about-tab-cont {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        gap: 1rem;
+        overflow: hidden;
+    }
+
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about-tab-cont {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        gap: 1rem;
+        overflow: hidden;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .about-tab-cont {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        gap: 1rem;
+        overflow: hidden;
+    }
 }

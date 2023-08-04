@@ -1,5 +1,6 @@
 import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import { FaInstagram, FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
@@ -13,62 +14,6 @@ interface IPortfolioComponentProps {
 }
 
 const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
-  const [skillTab, setSkillTab] = useState<boolean>(true);
-  const [experienceTab, setExperienceTab] = useState<boolean>(false);
-  const [educationTab, setEducationTab] = useState<boolean>(false);
-
-  const skillClick = () => {
-    setSkillTab(true);
-    setExperienceTab(false);
-    setEducationTab(false);
-  };
-
-  const experienceClick = () => {
-    setSkillTab(false);
-    setExperienceTab(true);
-    setEducationTab(false);
-  };
-
-  const educationClick = () => {
-    setSkillTab(false);
-    setExperienceTab(false);
-    setEducationTab(true);
-  };
-
-  // const tabsAction = useCallback(() => {
-  //   const getFresherColor: HTMLElement | null = document.querySelector(
-  //     `.${styles['about-skilltxt']}`,
-  //   );
-  //   const getExpColor: HTMLElement | null = document.querySelector(`.${styles['about-exptxt']}`);
-  //   const getEduColor: HTMLElement | null = document.querySelector(`.${styles['about-edutxt']}`);
-  //   const glider: HTMLElement | null = document.querySelector(`.${styles['tabglider']}`);
-
-  //   if (skillTab === true) {
-  //     glider && (glider.style.transform = 'translateX(0%)');
-  //     getFresherColor && (getFresherColor.style.color = '#185ee0');
-  //   } else {
-  //     getFresherColor && (getFresherColor.style.color = 'black');
-  //   }
-
-  //   if (experienceTab === true) {
-  //     glider && (glider.style.transform = 'translateX(50%)');
-  //     getExpColor && (getExpColor.style.color = '#185ee0');
-  //   } else {
-  //     getExpColor && (getExpColor.style.color = 'black');
-  //   }
-
-  //   if (educationTab === true) {
-  //     glider && (glider.style.transform = 'translateX(250%)');
-  //     getEduColor && (getEduColor.style.color = '#185ee0');
-  //   } else {
-  //     getEduColor && (getEduColor.style.color = 'black');
-  //   }
-  // }, [skillTab, experienceTab, educationTab]);
-
-  // useEffect(() => {
-  //   tabsAction();
-  // }, [tabsAction]);
-
   const tabsAction = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, tabName: string) => {
     const getTabElement = document.getElementsByClassName('tabContent');
     const getTabLinkElement = document.getElementsByClassName('tablinks');
@@ -114,9 +59,53 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   };
 
   const SkillDetails = () => {
+    const skillData = [
+      {
+        skilID: 10,
+        skillName: 'Html',
+        percentage: '100',
+      },
+      {
+        skilID: 11,
+        skillName: 'CSS',
+        percentage: '90',
+      },
+      {
+        skilID: 12,
+        skillName: 'Bootstrap',
+        percentage: '70',
+      },
+      {
+        skilID: 13,
+        skillName: 'JavaScript',
+        percentage: '40',
+      },
+      {
+        skilID: 14,
+        skillName: 'TypeScript',
+        percentage: '40',
+      },
+      {
+        skilID: 15,
+        skillName: 'ReactJS',
+        percentage: '50',
+      },
+    ];
     return (
       <Fragment>
-        <p>SkillDetails</p>
+        <div className={styles['SkillTabContainer']}>
+          {skillData.map((item: any) => {
+            return (
+              <div key={item.skilID} className={styles['Skill-Col-cont']}>
+                <div className={styles['Skill-text-cont']}>
+                  <span className={styles['Skill-txt']}>{item.skillName}</span>
+                  <span className={styles['Skill-percent-txt']}>{item.percentage}%</span>
+                </div>
+                <ProgressBar now={item.percentage} variant='warning' />
+              </div>
+            );
+          })}
+        </div>
       </Fragment>
     );
   };
@@ -189,13 +178,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                   <h4 className={styles['about-header-txt']}>About Me</h4>
                 </div>
                 <div className={styles['about-desp-cont']}>
-                  <p className={styles['about-desp-txt']}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                    voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Eum adipisci blanditiis assumenda atque officiis?
-                    Vel, fuga facilis quia reprehenderit nihil optio harum. Quo sapiente veniam
-                    atque corporis tempora non repellat?
-                  </p>
                   <p className={styles['about-desp-txt']}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
                     voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet

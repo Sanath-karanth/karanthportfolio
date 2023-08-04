@@ -27,17 +27,11 @@
   margin: 1.2rem auto;
   width: 6rem;
 }
-.about-img-card {
-  background: variables.$color-FFFFFF;
-  padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  transform: skewX(-4deg);
-}
 .about-header-cont {
   margin-bottom: 1rem;
 }
 .about-desp-cont {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 // card overlay style
 .about-pic-container {
@@ -103,7 +97,7 @@
   }
   .about-main-Row {
     --bs-gutter-x: 1rem !important;
-    --bs-gutter-y: 1rem !important;
+    --bs-gutter-y: 2rem !important;
     margin: 0;
   }
   .about-left-Col {
@@ -116,7 +110,7 @@
     width: 0% !important;
   }
   .aboutCard-right-Col {
-    width: 90% !important;
+    width: 100% !important;
   }
   .aboutCard-left-Col {
     width: 90% !important;
@@ -130,12 +124,16 @@
   .aboutCard-cont {
     margin-bottom: 1rem;
   }
+  .about-img-card {
+    background: variables.$color-FFFFFF;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: skewY(-4deg);
+  }
   .about-details-card {
     background: variables.$color-FFFFFF;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    transform: skewX(1deg);
-    margin-left: 0.4rem;
   }
   .about-txt {
     color: variables.$color-danger;
@@ -187,18 +185,31 @@
     width: 1.8rem;
     color: variables.$color-danger !important;
   }
-  .button-visit {
+  .SkillTabContainer {
+    display: grid;
+    gap: 0.1rem;
+  }
+  .Skill-text-cont {
     @include aboutComp-center;
-    justify-content: center !important;
-    font-family: variables.$font-family-Montserrat !important;
-    font-size: variables.$font-size-16 !important;
-    width: 4.5rem !important;
-    height: 1rem !important;
-    padding: 0.8rem !important;
-    color: variables.$color-danger !important;
-    background: variables.$color-palepink !important;
-    border-radius: 0px solid transparent !important;
-    border-color: transparent !important;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.3rem;
+  }
+  .Skill-Col-cont {
+    padding-top: 0.5rem;
+  }
+  .Skill-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin: 0;
+  }
+  .Skill-percent-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    letter-spacing: 0px;
+    margin: 0;
   }
 }
 
@@ -236,6 +247,12 @@
   }
   .aboutCard-cont {
     margin-bottom: 1rem;
+  }
+  .about-img-card {
+    background: variables.$color-FFFFFF;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: skewX(-4deg);
   }
   .about-details-card {
     background: variables.$color-FFFFFF;
@@ -293,18 +310,32 @@
     width: 1.4rem;
     color: variables.$color-danger !important;
   }
-  .button-visit {
+  .SkillTabContainer {
+    display: grid;
+    gap: 1rem 1rem;
+    grid-template-columns: auto auto;
+  }
+  .Skill-text-cont {
     @include aboutComp-center;
-    justify-content: center !important;
-    font-family: variables.$font-family-Montserrat !important;
-    font-size: variables.$font-size-14 !important;
-    width: 3.5rem !important;
-    height: 1rem !important;
-    padding: 0.8rem !important;
-    color: variables.$color-danger !important;
-    background: variables.$color-palepink !important;
-    border-radius: 0px solid transparent !important;
-    border-color: transparent !important;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.3rem;
+  }
+  .Skill-Col-cont {
+    padding-top: 0.5rem;
+  }
+  .Skill-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin: 0;
+  }
+  .Skill-percent-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    letter-spacing: 0px;
+    margin: 0;
   }
 }
 
@@ -342,6 +373,12 @@
   }
   .aboutCard-cont {
     margin-bottom: 1rem;
+  }
+  .about-img-card {
+    background: variables.$color-FFFFFF;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: skewX(-4deg);
   }
   .about-details-card {
     background: variables.$color-FFFFFF;
@@ -399,70 +436,31 @@
     width: 1.8rem;
     color: variables.$color-danger !important;
   }
-  .button-visit {
+  .SkillTabContainer {
+    display: grid;
+    gap: 1rem 3rem;
+    grid-template-columns: auto auto;
+  }
+  .Skill-text-cont {
     @include aboutComp-center;
-    justify-content: center !important;
-    font-family: variables.$font-family-Montserrat !important;
-    font-size: variables.$font-size-16 !important;
-    width: 5rem !important;
-    height: 2rem !important;
-    padding: 1rem !important;
-    color: variables.$color-danger !important;
-    background: variables.$color-palepink !important;
-    border-radius: 0px solid transparent !important;
-    border-color: transparent !important;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.3rem;
+  }
+  .Skill-Col-cont {
+    padding-top: 0.5rem;
+  }
+  .Skill-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin: 0;
+  }
+  .Skill-percent-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    letter-spacing: 0px;
+    margin: 0;
   }
 }
-
-// tab styles
-
-// .about-tab-cont {
-//   @include aboutComp-center;
-//   justify-content: flex-start;
-//   margin-bottom: 1rem;
-//   gap: 1rem;
-//   overflow: hidden;
-//   border: 1px solid #ccc;
-//   background-color: #f1f1f1;
-// }
-// .tablinks {
-//   padding: 0.5rem;
-// }
-// .tablinks:hover {
-//   background-color: #feebeb;
-// }
-// .tabcontent {
-//   display: none;
-//   padding: 6px 12px;
-//   border: 1px solid #ccc;
-//   border-top: none;
-// }
-// .about-tabtxt {
-//   @include aboutComp-center;
-//   flex-direction: row;
-//   gap: 2rem;
-//   transition: 2s ease-in-out;
-//   * {
-//     z-index: 2;
-//   }
-// }
-// .tabglider {
-//   position: absolute;
-//   display: flex;
-//   height: 30px;
-//   width: 100px;
-//   background-color: #feebeb;
-//   z-index: 1;
-//   border-radius: 99px;
-//   transition: 0.4s ease-out;
-// }
-// .about-skilltxt {
-//   background: variables.$color-palepink;
-//   padding: 0.5rem;
-//   border-radius: 0%;
-// }
-// .about-exptxt {
-//   background: variables.$color-palepink;
-//   padding: 0.5rem;
-//   border-radius: 0%;
-// }
