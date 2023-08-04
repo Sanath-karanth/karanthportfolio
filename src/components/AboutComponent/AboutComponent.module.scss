@@ -185,6 +185,8 @@
     width: 1.8rem;
     color: variables.$color-danger !important;
   }
+
+  // tab styles
   .SkillTabContainer {
     display: grid;
     gap: 0.1rem;
@@ -310,6 +312,8 @@
     width: 1.4rem;
     color: variables.$color-danger !important;
   }
+
+  // tab styles
   .SkillTabContainer {
     display: grid;
     gap: 1rem 1rem;
@@ -436,6 +440,8 @@
     width: 1.8rem;
     color: variables.$color-danger !important;
   }
+
+  // tab styles
   .SkillTabContainer {
     display: grid;
     gap: 1rem 3rem;
@@ -463,4 +469,9 @@
     letter-spacing: 0px;
     margin: 0;
   }
+}
+
+.ExperienceTabContainer {
+  @include aboutComp-center;
+  justify-content: flex-start;
 }

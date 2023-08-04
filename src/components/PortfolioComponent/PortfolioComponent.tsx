@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
@@ -62,13 +62,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     disableButtonprop={false}
                     buttonnameprop={'visit'}
                   ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
                 </div>
               </div>
             </Col>
@@ -87,13 +80,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     disableButtonprop={false}
                     buttonnameprop={'visit'}
                   ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
                 </div>
               </div>
             </Col>
@@ -112,13 +98,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                     disableButtonprop={false}
                     buttonnameprop={'visit'}
                   ></ButtonUI>
-                  <FontAwesomeIcon
-                    icon={faArrowUp}
-                    size='lg'
-                    className={styles['link-icon']}
-                    color='red'
-                    bounce
-                  />
                 </div>
               </div>
             </Col>

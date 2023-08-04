@@ -1,9 +1,12 @@
 import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+// import { Timeline, TimelineEvent } from 'react-event-timeline';
+import { Timeline } from 'rsuite';
 import { FaInstagram, FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
+import './AboutComponent.less';
 import { Button as ButtonUI } from '../../commonui';
 
 // Images import
@@ -112,14 +115,48 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   const ExperienceDetails = () => {
     return (
       <Fragment>
-        <p>ExperienceDetails</p>
+        <div className={styles['ExperienceTabContainer']}>
+          <ul className='fa-ul'>
+            <li>
+              <span>
+                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
+              </span>
+              <span className='fa-li'>
+                <i className='fa-solid fa-check-square'></i>
+              </span>
+              List icons can
+              <p>The package really waits for the company to pick up the goods</p>
+            </li>
+            <li>
+              <span>
+                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
+              </span>
+              <span className='fa-li'>
+                <i className='fa-solid fa-check-square'></i>
+              </span>
+              be used to
+              <p>The package really waits for the company to pick up the goods</p>
+            </li>
+            <li>
+              <span>
+                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
+              </span>
+              <span className='fa-li'>
+                <i className='fa-solid fa-spinner fa-pulse'></i>
+              </span>
+              replace bullets
+            </li>
+          </ul>
+        </div>
       </Fragment>
     );
   };
   const EducationDetails = () => {
     return (
       <Fragment>
-        <p>EducationDetails</p>
+        <div className={styles['EducationTabContainer']}>
+          <p>Edu</p>
+        </div>
       </Fragment>
     );
   };

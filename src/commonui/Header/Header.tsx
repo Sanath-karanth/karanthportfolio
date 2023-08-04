@@ -50,6 +50,7 @@ const Header: FunctionComponent<IHeaderProps> = () => {
           (headerElement.style.transition = ' 0.6s ease-out'));
       } else {
         // upscroll code
+
         imgLogoElement &&
           ((imgLogoElement.style.transform = 'scale(1)'),
           (imgLogoElement.style.transition = ' 0.6s ease-out'));
@@ -73,6 +74,7 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     if (window.innerWidth < 767) {
       setColDeskShow(false);
       setColMobileShow(true);
+      toggleMenu();
     } else if (window.innerWidth > 767) {
       setColDeskShow(true);
       setColMobileShow(false);
@@ -101,8 +103,6 @@ const Header: FunctionComponent<IHeaderProps> = () => {
                   alt='logo'
                 ></img>
               </div>
-              {/* {colDeskShow && <p>Desktop display</p>}
-              {colMobileShow && <p>Mobile display</p>} */}
               <div
                 className={styles['header-txt-cont']}
                 id='header-navtxt'
