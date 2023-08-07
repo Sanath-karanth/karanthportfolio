@@ -1,9 +1,10 @@
 import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import moment from 'moment';
 // import { Timeline, TimelineEvent } from 'react-event-timeline';
 import { Timeline } from 'rsuite';
-import { FaInstagram, FaFacebookF, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaLinkedin, FaBriefcase } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
 import './AboutComponent.less';
@@ -115,38 +116,46 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   const ExperienceDetails = () => {
     return (
       <Fragment>
-        <div className={styles['ExperienceTabContainer']}>
-          <ul className='fa-ul'>
-            <li>
-              <span>
-                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
-              </span>
-              <span className='fa-li'>
-                <i className='fa-solid fa-check-square'></i>
-              </span>
-              List icons can
-              <p>The package really waits for the company to pick up the goods</p>
-            </li>
-            <li>
-              <span>
-                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
-              </span>
-              <span className='fa-li'>
-                <i className='fa-solid fa-check-square'></i>
-              </span>
-              be used to
-              <p>The package really waits for the company to pick up the goods</p>
-            </li>
-            <li>
-              <span>
-                <FaFacebookF className={styles['media-icon']} onClick={handleFacebookClick} />
-              </span>
-              <span className='fa-li'>
-                <i className='fa-solid fa-spinner fa-pulse'></i>
-              </span>
-              replace bullets
-            </li>
-          </ul>
+        <div className={styles['ExperienceTabContainer-main']}>
+          <div className={styles['ExperienceTabContainer']}>
+            <div className={styles['about-timeline-cont']}>
+              <div className={styles['about-timeline-outer-img']}>
+                <div className={styles['about-timeline-inner-img']}>
+                  <FaBriefcase className={styles['timeline-icon']} onClick={handleFacebookClick} />
+                </div>
+              </div>
+              <div className={styles['about-vertical-line']}></div>
+            </div>
+            <div className={styles['about-horizontal-line']}></div>
+            <div className={styles['about-timeline-box']}>
+              <h4 className={styles['about-timeline-header-txt']}>Tata Consultancy Services</h4>
+              <p className={styles['about-timeline-desp-txt']}>Systems Engineer</p>
+              <hr className={styles['about-timeline-hr']}></hr>
+              <p className={styles['about-timeline-footer-txt']}>
+                {moment('Oct 11 2021').format('LL')} - Present
+              </p>
+            </div>
+          </div>
+          <div className={styles['ExperienceTabContainer']}>
+            <div className={styles['about-timeline-cont']}>
+              <div className={styles['about-timeline-outer-img']}>
+                <div className={styles['about-timeline-inner-img']}>
+                  <FaBriefcase className={styles['timeline-icon']} onClick={handleFacebookClick} />
+                </div>
+              </div>
+            </div>
+            <div className={styles['about-horizontal-line']}></div>
+            <div className={styles['about-timeline-box']}>
+              <h4 className={styles['about-timeline-header-txt']}>
+                SYNERGY Strategic Solutions Pvt Ltd
+              </h4>
+              <p className={styles['about-timeline-desp-txt']}>Associate Software Engineer</p>
+              <hr className={styles['about-timeline-hr']}></hr>
+              <p className={styles['about-timeline-footer-txt']}>
+                {moment('Jul 01 2019').format('LL')} - {moment('Sep 30 2021').format('LL')}
+              </p>
+            </div>
+          </div>
         </div>
       </Fragment>
     );
@@ -155,7 +164,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
     return (
       <Fragment>
         <div className={styles['EducationTabContainer']}>
-          <p>Edu</p>
+          <p>Education</p>
         </div>
       </Fragment>
     );
