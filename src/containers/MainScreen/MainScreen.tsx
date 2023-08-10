@@ -250,18 +250,18 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           ></div>
         </div>
 
-        <section id='contact' className='ContactSection'>
-          <div className='container-fluid reveal mt-3'>
-            <div>
-              <ContactComponent />
-            </div>
-          </div>
-        </section>
-
         <section id='about' className='AboutSection'>
           <div className='container-fluid reveal mt-3'>
             <div>
               <AboutComponent />
+            </div>
+          </div>
+        </section>
+
+        <section id='contact' className='ContactSection'>
+          <div className='container-fluid reveal mt-3'>
+            <div>
+              <ContactComponent />
             </div>
             {/* <div className='text-container'>
               <div className='text-box'>

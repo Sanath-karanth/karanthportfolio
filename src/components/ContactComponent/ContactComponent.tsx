@@ -23,6 +23,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
       <div className={styles['ContactContainer']}>
         <div className={styles['contact-Title-cont']}>
           <Row className='gx-0'>
+            <Col xs={8} md={6} lg={6} xl={4} className={styles['contact-left-Col']}></Col>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['contact-right-Col']}>
               <div className={styles['contact-left-cont']}>
                 <div className={styles['contact-txt-background']} id='contact-txt-cont'>
@@ -30,7 +31,6 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['contact-left-Col']}></Col>
           </Row>
         </div>
         <div className={styles['contactCard-cont']}>

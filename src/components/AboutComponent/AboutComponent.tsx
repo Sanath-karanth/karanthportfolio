@@ -195,7 +195,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
       <div className={styles['AboutContainer']}>
         <div className={styles['about-Title-cont']}>
           <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['about-left-Col']}></Col>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['about-right-Col']}>
               <div className={styles['about-left-cont']}>
                 <div className={styles['about-txt-background']} id='about-txt-cont'>
@@ -203,6 +202,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
                 </div>
               </div>
             </Col>
+            <Col xs={8} md={6} lg={6} xl={4} className={styles['about-left-Col']}></Col>
           </Row>
         </div>
         <div className={styles['aboutCard-cont']}>
