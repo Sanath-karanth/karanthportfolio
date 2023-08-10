@@ -181,7 +181,7 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
               <p className={styles['about-timeline-desp-txt']}>BE in Computer Science</p>
               <hr className={styles['about-timeline-hr']}></hr>
               <p className={styles['about-timeline-footer-txt']}>
-                {moment('Jul 01 2019').format('LL')} - {moment('Sep 30 2021').format('LL')}
+                {moment('June 01 2015').format('LL')} - {moment('June 01 2019').format('LL')}
               </p>
             </div>
           </div>
