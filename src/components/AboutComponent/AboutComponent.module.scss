@@ -221,12 +221,14 @@
     margin: 0;
   }
   // Experience Tab style
-  .ExperienceTabContainer-main {
+  .ExperienceTabContainer-main,
+  .EducationTabContainer-main {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
   }
-  .ExperienceTabContainer {
+  .ExperienceTabContainer,
+  .EducationTabContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -427,12 +429,14 @@
     margin: 0;
   }
   // Experience Tab style
-  .ExperienceTabContainer-main {
+  .ExperienceTabContainer-main,
+  .EducationTabContainer-main {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
   }
-  .ExperienceTabContainer {
+  .ExperienceTabContainer,
+  .EducationTabContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -634,12 +638,14 @@
   }
 
   // Experience Tab style
-  .ExperienceTabContainer-main {
+  .ExperienceTabContainer-main,
+  .EducationTabContainer-main {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
   }
-  .ExperienceTabContainer {
+  .ExperienceTabContainer,
+  .EducationTabContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

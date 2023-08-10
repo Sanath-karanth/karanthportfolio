@@ -4,7 +4,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import moment from 'moment';
 // import { Timeline, TimelineEvent } from 'react-event-timeline';
 import { Timeline } from 'rsuite';
-import { FaInstagram, FaFacebookF, FaLinkedin, FaBriefcase } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaLinkedin, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
 import './AboutComponent.less';
@@ -163,8 +163,28 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   const EducationDetails = () => {
     return (
       <Fragment>
-        <div className={styles['EducationTabContainer']}>
-          <p>Education</p>
+        <div className={styles['EducationTabContainer-main']}>
+          <div className={styles['EducationTabContainer']}>
+            <div className={styles['about-timeline-cont']}>
+              <div className={styles['about-timeline-outer-img']}>
+                <div className={styles['about-timeline-inner-img']}>
+                  <FaGraduationCap
+                    className={styles['timeline-icon']}
+                    onClick={handleFacebookClick}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={styles['about-horizontal-line']}></div>
+            <div className={styles['about-timeline-box']}>
+              <h4 className={styles['about-timeline-header-txt']}>PESITM, Shivamogga</h4>
+              <p className={styles['about-timeline-desp-txt']}>BE in Computer Science</p>
+              <hr className={styles['about-timeline-hr']}></hr>
+              <p className={styles['about-timeline-footer-txt']}>
+                {moment('Jul 01 2019').format('LL')} - {moment('Sep 30 2021').format('LL')}
+              </p>
+            </div>
+          </div>
         </div>
       </Fragment>
     );
