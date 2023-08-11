@@ -21,7 +21,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
   return (
     <Fragment>
       <div className={styles['ContactContainer']}>
-        <div className={styles['contact-Title-cont']}>
+        {/* <div className={styles['contact-Title-cont']}>
           <Row className='gx-0'>
             <Col xs={8} md={6} lg={6} xl={4} className={styles['contact-left-Col']}></Col>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['contact-right-Col']}>
@@ -32,7 +32,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
               </div>
             </Col>
           </Row>
-        </div>
+        </div> */}
         <div className={styles['contactCard-cont']}>
           <Row className={`${'gx-0'} ${styles['contact-main-Row']}`}>
             <Col xs={12} md={5} lg={5} xl={5} className={styles['contactcard-left-Col']}>

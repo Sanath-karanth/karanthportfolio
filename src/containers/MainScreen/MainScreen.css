@@ -21,19 +21,12 @@ section {
 .AboutSection,
 .FooterSection {
     background: #fddddd;
+    overflow: hidden;
 }
-
-/* .ServiceSection,
-.PortfolioSection,
-.ContactSection,
-.AboutSection,
-.FooterSection {
-    background: linear-gradient(180deg, #feebeb 0%, rgba(255, 255, 255, 0) 100%);
-} */
 
 .reveal {
     position: relative;
-    transform: translateY(100px);
+    /* transform: translateY(100px); */
     opacity: 0;
     transition: 2s all ease;
     --bs-gutter-x: 0;
@@ -41,12 +34,17 @@ section {
 }
 
 .reveal.active {
-    transform: translateY(0);
+    /* transform: translateY(0); */
     opacity: 1;
 }
 
 .unreveal {
     position: relative;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.custom-gutters {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
 }
@@ -84,6 +82,37 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Animation code for section */
+.reveal {
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-play-state: running;
+}
+
+.reveal.active.bounceIn {
+    animation-name: bounceIn;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 /* Mobile View */
 @media (max-width: 764px) {

@@ -299,7 +299,7 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
         alignprop={true}
       />
       <div className={styles['ServicesContainer-service']}>
-        <div className={styles['serviceTitle-cont']}>
+        {/* <div className={styles['serviceTitle-cont']}>
           <Row className='gx-0'>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['serviceTitle-left-Col']}>
               <div className={styles['serviceTitle-left-cont']}>
@@ -310,7 +310,7 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
             </Col>
             <Col xs={8} md={6} lg={6} xl={4} className={styles['serviceTitle-right-Col']}></Col>
           </Row>
-        </div>
+        </div> */}
         <div className={styles['serviceCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>

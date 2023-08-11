@@ -193,7 +193,7 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
   return (
     <Fragment>
       <div className={styles['AboutContainer']}>
-        <div className={styles['about-Title-cont']}>
+        {/* <div className={styles['about-Title-cont']}>
           <Row className='gx-0'>
             <Col xs={8} md={6} lg={6} xl={8} className={styles['about-right-Col']}>
               <div className={styles['about-left-cont']}>
@@ -204,7 +204,7 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
             </Col>
             <Col xs={8} md={6} lg={6} xl={4} className={styles['about-left-Col']}></Col>
           </Row>
-        </div>
+        </div> */}
         <div className={styles['aboutCard-cont']}>
           <Row className={`${'gx-0'} ${styles['about-main-Row']}`}>
             <Col xs={1} md={1} lg={1} xl={1} className={styles['aboutCard-empty-Col']}></Col>

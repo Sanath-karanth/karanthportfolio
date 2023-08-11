@@ -209,16 +209,52 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </section>
         </div>
         <section id='services' className='ServiceSection'>
-          <div className='container-fluid unreveal mt-3'>
-            <div>
+          <div className='container-fluid custom-gutters mt-4'>
+            <div className={styles['sectionBar-cont']}>
+              <Row className='gx-0'>
+                <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
+                  <div className={styles['sectionBar-left-cont']}>
+                    <div className={styles['sectionBar-txt-background']}>
+                      <h1 className={styles['sectionBar-txt']}>Services</h1>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  xs={8}
+                  md={6}
+                  lg={6}
+                  xl={4}
+                  className={styles['sectionBarRightSide-right-Col']}
+                ></Col>
+              </Row>
+            </div>
+            <div className='unreveal'>
               <ServicesComponent />
             </div>
           </div>
         </section>
 
         <section id='portfolio' className='PortfolioSection'>
-          <div className='container-fluid reveal mt-3 mb-4'>
-            <div>
+          <div className='container-fluid custom-gutters mt-3 mb-4'>
+            <div className={styles['sectionBar-cont']}>
+              <Row className='gx-0'>
+                <Col
+                  xs={8}
+                  md={6}
+                  lg={6}
+                  xl={4}
+                  className={styles['sectionBarRightSide-right-Col']}
+                ></Col>
+                <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
+                  <div className={styles['sectionBar-right-cont']}>
+                    <div className={styles['sectionBar-txt-background']}>
+                      <h1 className={styles['sectionBar-txt']}>Portfolio</h1>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+            <div className='reveal bounceIn'>
               <PortfolioComponent />
             </div>
           </div>
@@ -271,16 +307,52 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </div>
 
         <section id='about' className='AboutSection'>
-          <div className='container-fluid reveal mt-3'>
-            <div>
+          <div className='container-fluid custom-gutters mt-3'>
+            <div className={styles['sectionBar-cont']}>
+              <Row className='gx-0'>
+                <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
+                  <div className={styles['sectionBar-left-cont']}>
+                    <div className={styles['sectionBar-txt-background']}>
+                      <h1 className={styles['sectionBar-txt']}>About</h1>
+                    </div>
+                  </div>
+                </Col>
+                <Col
+                  xs={8}
+                  md={6}
+                  lg={6}
+                  xl={4}
+                  className={styles['sectionBarRightSide-right-Col']}
+                ></Col>
+              </Row>
+            </div>
+            <div className='reveal bounceIn'>
               <AboutComponent />
             </div>
           </div>
         </section>
 
         <section id='contact' className='ContactSection'>
-          <div className='container-fluid reveal mt-3'>
-            <div>
+          <div className='container-fluid custom-gutters mt-3'>
+            <div className={styles['sectionBar-cont']}>
+              <Row className='gx-0'>
+                <Col
+                  xs={8}
+                  md={6}
+                  lg={6}
+                  xl={4}
+                  className={styles['sectionBarRightSide-right-Col']}
+                ></Col>
+                <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
+                  <div className={styles['sectionBar-right-cont']}>
+                    <div className={styles['sectionBar-txt-background']}>
+                      <h1 className={styles['sectionBar-txt']}>Contact</h1>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+            <div className='reveal bounceIn'>
               <ContactComponent />
             </div>
           </div>
