@@ -18,9 +18,18 @@ section {
 .ServiceSection,
 .PortfolioSection,
 .ContactSection,
-.AboutSection {
-    background: #feebeb;
+.AboutSection,
+.FooterSection {
+    background: #fddddd;
 }
+
+/* .ServiceSection,
+.PortfolioSection,
+.ContactSection,
+.AboutSection,
+.FooterSection {
+    background: linear-gradient(180deg, #feebeb 0%, rgba(255, 255, 255, 0) 100%);
+} */
 
 .reveal {
     position: relative;
@@ -51,23 +60,24 @@ header nav a:hover {
 
 
 
-section .container {
+.container {
     margin: 100px;
 }
 
 
-section .text-container {
+.text-container {
     display: flex;
     justify-content: center;
+    background: #feebeb;
 }
 
-section .text-container .text-box {
+.text-container .text-box {
     margin: 20px;
     padding: 20px;
-    background: #00c2cb;
+    background: #feebeb;
 }
 
-section .text-container .text-box h3 {
+.text-container .text-box h3 {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -77,7 +87,7 @@ section .text-container .text-box h3 {
 
 /* Mobile View */
 @media (max-width: 764px) {
-    section .text-container {
+    .text-container {
         flex-direction: column;
     }
 

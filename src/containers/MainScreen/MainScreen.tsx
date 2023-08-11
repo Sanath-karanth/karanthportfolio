@@ -24,6 +24,7 @@ import AboutComponent from '../../components/AboutComponent/AboutComponent';
 import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider2.jpg';
 import parallaxBackground2 from '../../images/banner/banner01.jpg';
+import Footer from '../../commonui/Footer/Footer';
 
 interface IMainScreenProps {
   classname?: string;
@@ -235,12 +236,31 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               <h1>Services</h1>
             </div>
           </div>
-          <div style={{ height: '400px', background: 'red' }}>
-            <p>
-              Scroll Up and Down this page to see the parallax scrolling effect. This div is just
-              here to enable scrolling. Tip: Try to remove the background-attachment property to
-              remove the scrolling effect.
-            </p>
+          <div className='text-container'>
+            <div className='text-box'>
+              <h3>Section Text</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
+                perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
+                quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
+                accusamus doloremque.
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
+                voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
+                facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
+                tempora non repellat?
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
+                voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
+                facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
+                tempora non repellat?
+              </p>
+            </div>
           </div>
           <div
             className={styles['parallax']}
@@ -263,32 +283,14 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             <div>
               <ContactComponent />
             </div>
-            {/* <div className='text-container'>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
-                  quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
-                  accusamus doloremque.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                  tempora non repellat?
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                  voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                  facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                  tempora non repellat?
-                </p>
-              </div>
-            </div> */}
+          </div>
+        </section>
+
+        <section id='footer' className='FooterSection'>
+          <div className='container-fluid unreveal mt-3'>
+            <div>
+              <Footer />
+            </div>
           </div>
         </section>
         <ScrollTop {...props}>

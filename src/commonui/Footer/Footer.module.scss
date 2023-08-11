@@ -1,0 +1,247 @@
+@use '../../styles/variables';
+
+/* --------------    parent container styles    ------------------- */
+
+@mixin footerScreen-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon-cont {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-icon-bg:hover {
+  background-color: variables.$color-danger;
+  transition: all 0.6s ease-in-out;
+}
+.footer-icon-bg:hover .media-icon {
+  color: variables.$color-palepink !important;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .footerContainer-main {
+    width: auto;
+    padding: 0rem 2rem 0.5rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, #ffffff 100%);
+  }
+  .footer-cont {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 100%;
+    gap: 1.2rem;
+  }
+  .footer-Col1-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+  .footer-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-30;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+  }
+  .footer-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: variables.$color-808080;
+  }
+  .footer-about-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-30;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 0.4rem;
+  }
+  .footer-about-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .footer-social-icon-cont {
+    margin-top: 2rem;
+  }
+  .footer-icon-bg {
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: variables.$color-danger;
+  }
+  .footer-copyright-cont {
+    @include footerScreen-center;
+    margin-top: 1.5rem;
+  }
+  .footer-copyright-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footerContainer-main {
+    width: auto;
+    margin-top: 1rem;
+    padding: 2rem 2rem 0.5rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, #ffffff 100%);
+  }
+  .footer-cont {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 30% 60%;
+    gap: 4rem 4rem;
+  }
+  .footer-Col1-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  .footer-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-34;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+  .footer-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: variables.$color-808080;
+  }
+  .footer-about-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-34;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+  }
+  .footer-about-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .footer-social-icon-cont {
+    margin-top: 3rem;
+  }
+  .footer-icon-bg {
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 2rem;
+    width: 2rem;
+    color: variables.$color-danger;
+  }
+  .footer-copyright-cont {
+    @include footerScreen-center;
+    margin-top: 1rem;
+  }
+  .footer-copyright-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .footerContainer-main {
+    width: auto;
+    margin-top: 1rem;
+    padding: 2rem 2rem 0.5rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, #ffffff 100%);
+  }
+  .footer-cont {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 36% 60%;
+    gap: 4rem 4rem;
+  }
+  .footer-Col1-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  .footer-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-40;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+  .footer-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: variables.$color-808080;
+  }
+  .footer-about-header-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-40;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+  }
+  .footer-about-desp-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .footer-social-icon-cont {
+    margin-top: 4rem;
+  }
+  .footer-icon-bg {
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 2rem;
+    width: 2rem;
+    color: variables.$color-danger;
+  }
+  .footer-copyright-cont {
+    @include footerScreen-center;
+    margin-top: 1.5rem;
+  }
+  .footer-copyright-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0;
+  }
+}

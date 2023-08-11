@@ -13,11 +13,11 @@ import { Button as ButtonUI } from '../../commonui';
 // Images import
 import AboutSanathImg from '../../images/profile/SanathIMG20.jpg';
 
-interface IPortfolioComponentProps {
+interface IAboutComponentProps {
   classname?: string;
 }
 
-const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
+const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
   const tabsAction = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, tabName: string) => {
     const getTabElement = document.getElementsByClassName('tabContent');
     const getTabLinkElement = document.getElementsByClassName('tablinks');
@@ -288,4 +288,4 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   );
 };
 
-export default React.memo(PortfolioComponent);
+export default React.memo(AboutComponent);
