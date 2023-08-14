@@ -19,7 +19,8 @@ section {
 .PortfolioSection,
 .ContactSection,
 .AboutSection,
-.FooterSection {
+.FooterSection,
+.ParallaxSection {
     background: #fddddd;
     overflow: hidden;
 }
@@ -82,37 +83,6 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
-/* Animation code for section */
-.reveal {
-    visibility: visible;
-    animation-fill-mode: both;
-    animation-duration: 1s;
-    animation-play-state: running;
-}
-
-.reveal.active.bounceIn {
-    animation-name: bounceIn;
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(.3);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    70% {
-        transform: scale(.9);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 /* Mobile View */
 @media (max-width: 764px) {
@@ -198,5 +168,153 @@ header nav a:hover {
 
     #about-txt {
         display: none;
+    }
+}
+
+
+
+/* CSS Animations (extracted from http://glifo.uiparade.com/) */
+/* Animation code for section */
+
+.reveal {
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-play-state: running;
+}
+
+.reveal.active.animEffectBounce {
+    animation-name: bounceIn;
+}
+
+.reveal.active.animEffectBounceRight {
+    animation-name: bounceInRight;
+}
+
+.reveal.active.animEffectBounceLeft {
+    animation-name: bounceInLeft;
+}
+
+.reveal.active.animEffectFadeInDown {
+    animation-name: fadeInDown;
+}
+
+.reveal.active.animEffectMove {
+    animation-name: moveUp;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+
+    60% {
+        transform: translateX(20px);
+    }
+
+    80% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+
+    60% {
+        transform: translateX(-20px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -43,7 +43,6 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(
       `.${styles['banner-profile-icon']}`,
     );
-    console.log('profileIconDivElement --->', profileIconDivElement);
     if (window.innerWidth < 767) {
       profileIconDivElement && (profileIconDivElement.style.transform = 'translateX(4.5rem)');
     } else if (window.innerWidth > 767 && window.innerWidth < 1023) {
@@ -209,7 +208,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </section>
         </div>
         <section id='services' className='ServiceSection'>
-          <div className='container-fluid custom-gutters mt-4'>
+          <div className='container-fluid custom-gutters mt-3'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
@@ -235,7 +234,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </section>
 
         <section id='portfolio' className='PortfolioSection'>
-          <div className='container-fluid custom-gutters mt-3 mb-4'>
+          <div className='container-fluid custom-gutters mt-3'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col
@@ -254,57 +253,45 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                 </Col>
               </Row>
             </div>
-            <div className='reveal bounceIn'>
+            <div className='reveal animEffectBounce'>
               <PortfolioComponent />
             </div>
           </div>
         </section>
 
         {/* Parallax code */}
-        <div className='container-fluid unreveal'>
-          <div
-            className={styles['parallax-center']}
-            style={{
-              backgroundImage: `url(${parallaxBackground1})`,
-            }}
-          >
-            <div style={{ background: '#ffffff' }}>
-              <h1>Services</h1>
+        <section id='parallax' className='ParallaxSection'>
+          <div className='container-fluid unreveal mt-3 mb-3'>
+            <div
+              className={styles['parallax-center']}
+              style={{
+                backgroundImage: `url(${parallaxBackground1})`,
+              }}
+            >
+              <div style={{ background: '#ffffff' }}>
+                <h1>Services</h1>
+              </div>
             </div>
-          </div>
-          <div className='text-container'>
-            <div className='text-box'>
-              <h3>Section Text</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
-                quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
-                accusamus doloremque.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                tempora non repellat?
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eum adipisci blanditiis assumenda atque officiis? Vel, fuga
-                facilis quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis
-                tempora non repellat?
-              </p>
+            <div className='text-container'>
+              <div className='text-box'>
+                <h3>Section Text</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
+                  perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
+                  quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
+                  accusamus doloremque.
+                </p>
+              </div>
             </div>
+            <div
+              className={styles['parallax']}
+              style={{
+                backgroundImage: `url(${parallaxBackground2})`,
+              }}
+            ></div>
           </div>
-          <div
-            className={styles['parallax']}
-            style={{
-              backgroundImage: `url(${parallaxBackground2})`,
-            }}
-          ></div>
-        </div>
+        </section>
 
         <section id='about' className='AboutSection'>
           <div className='container-fluid custom-gutters mt-3'>
@@ -326,7 +313,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                 ></Col>
               </Row>
             </div>
-            <div className='reveal bounceIn'>
+            <div className='reveal animEffectFadeInDown'>
               <AboutComponent />
             </div>
           </div>
@@ -352,7 +339,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                 </Col>
               </Row>
             </div>
-            <div className='reveal bounceIn'>
+            <div className='reveal animEffectMove'>
               <ContactComponent />
             </div>
           </div>
