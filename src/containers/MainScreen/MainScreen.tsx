@@ -13,6 +13,7 @@ import Zoom from '@mui/material/Zoom';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
+import Footer from '../../commonui/Footer/Footer';
 
 // Components import
 import ServicesComponent from '../../components/ServicesComponent/ServicesComponent';
@@ -24,7 +25,10 @@ import AboutComponent from '../../components/AboutComponent/AboutComponent';
 import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider2.jpg';
 import parallaxBackground2 from '../../images/banner/banner01.jpg';
-import Footer from '../../commonui/Footer/Footer';
+import parallaxImg from '../../images/parallax/parallaxImg.jpg';
+import parallaxImg1 from '../../images/parallax/parallaxImg1.jpg';
+import parallaxImg2 from '../../images/parallax/parallaxImg2.jpg';
+import parallaxImg3 from '../../images/parallax/parallaxImg3.jpg';
 
 interface IMainScreenProps {
   classname?: string;
@@ -147,7 +151,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               <Header />
             </div>
             <div id='backtoTop-anchor'></div>
-            <div className='container-fluid gx-0'>
+            <div className='container-fluid gx-0 mb-3'>
               <Row className='gx-0'>
                 <Col xs={6} md={6} lg={6} xl={6} className={styles['banner-left-Col']}>
                   <div className={styles['banner-left-cont']}>
@@ -265,7 +269,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             <div
               className={styles['parallax-center']}
               style={{
-                backgroundImage: `url(${parallaxBackground1})`,
+                backgroundImage: `url(${parallaxImg3})`,
               }}
             >
               <div style={{ background: '#ffffff' }}>
