@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Fragment, useEffect, useCallback, useState } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
-import '../../containers/MainScreen/MainScreen.css';
 import styles from './Header.module.scss';
+import '../../containers/MainScreen/MainScreen.css';
 import headerLogo from '../../images/header/header.png';
 
 interface IHeaderProps {
@@ -11,8 +11,6 @@ interface IHeaderProps {
 const Header: FunctionComponent<IHeaderProps> = () => {
   const [scrollTop, setScrollTop] = useState<number>(0);
   const [isOpen, setOpen] = useState<boolean>(false);
-  const [colDeskShow, setColDeskShow] = useState<boolean>(true);
-  const [colMobileShow, setColMobileShow] = useState<boolean>(false);
 
   // function for toggle menu
   const toggleMenu = useCallback(() => {
@@ -66,29 +64,6 @@ const Header: FunctionComponent<IHeaderProps> = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollTop]);
-
-  // UseEffect code for window resize Show/Hide content
-
-  // function handleResize() {
-  //   if (window.innerWidth < 767) {
-  //     setColDeskShow(false);
-  //     setColMobileShow(true);
-  //   } else if (window.innerWidth > 767) {
-  //     setColDeskShow(true);
-  //     setColMobileShow(false);
-  //   }
-  //   return window.innerWidth;
-  // }
-  // window.addEventListener('resize', () => {
-  //   handleResize();
-  // });
-
-  // window.addEventListener('resize', handleResize);
-  // handleResize();
-
-  // useEffect(() => {
-  //   handleResize();
-  // }, [colDeskShow, colMobileShow]);
 
   useEffect(() => {
     toggleMenu();
