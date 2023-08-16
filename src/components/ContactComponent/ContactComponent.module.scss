@@ -61,8 +61,7 @@
 /* Mobile View */
 @media (max-width: 767px) {
   .ContactContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0rem;
   }
   .contact-left-Col {
     width: 30% !important;
@@ -72,9 +71,6 @@
   }
   .contact-Title-cont {
     margin-bottom: 2rem;
-  }
-  .contactCard-cont {
-    margin-bottom: 1rem;
   }
   .contact-txt {
     color: variables.$color-danger;
@@ -163,8 +159,7 @@
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
   .ContactContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 0rem 0rem;
   }
   .contact-left-Col {
     width: 50% !important;
@@ -174,9 +169,6 @@
   }
   .contact-Title-cont {
     margin-bottom: 2rem;
-  }
-  .contactCard-cont {
-    margin-bottom: 1rem;
   }
   .contact-txt {
     color: variables.$color-danger;
@@ -265,8 +257,7 @@
 /* Desktop View */
 @media (min-width: 1024px) {
   .ContactContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 0rem 0rem;
   }
   .contact-left-Col {
     width: 50% !important;
@@ -276,9 +267,6 @@
   }
   .contact-Title-cont {
     margin-bottom: 3rem;
-  }
-  .contactCard-cont {
-    margin-bottom: 1rem;
   }
   .contact-txt {
     color: variables.$color-danger;

@@ -1,17 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { GoogleMap, Marker } from 'react-google-maps';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp, faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
-
-// Images import
-import ArtgalleryImg from '../../images/mainscreenImages/portfolio/artgallery.png';
-import ResumebuilderImg from '../../images/mainscreenImages/portfolio/resumebuilder.png';
-import MygymImg from '../../images/mainscreenImages/portfolio/mygym.png';
 
 interface IContactComponentProps {
   classname?: string;
@@ -21,18 +15,6 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
   return (
     <Fragment>
       <div className={styles['ContactContainer']}>
-        {/* <div className={styles['contact-Title-cont']}>
-          <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['contact-left-Col']}></Col>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['contact-right-Col']}>
-              <div className={styles['contact-left-cont']}>
-                <div className={styles['contact-txt-background']} id='contact-txt-cont'>
-                  <h1 className={styles['contact-txt']}>Contact</h1>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </div> */}
         <div className={styles['contactCard-cont']}>
           <Row className={`${'gx-0'} ${styles['contact-main-Row']}`}>
             <Col xs={12} md={5} lg={5} xl={5} className={styles['contactcard-left-Col']}>
@@ -51,7 +33,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                     <p className={styles['contact-desp-txt']}>577204</p>
                   </div>
                 </div>
-                {/* <div className={styles['contact-border-line']}></div> */}
+
                 <div className={styles['contact-info-cont']}>
                   <div className={styles['contact-icon-cont']}>
                     <FontAwesomeIcon
@@ -65,7 +47,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = () => {
                     <p className={styles['contact-desp-txt']}>sanathsk97@gmail.com</p>
                   </div>
                 </div>
-                {/* <div className={styles['contact-border-line']}></div> */}
+
                 <div className={styles['contact-info-cont']}>
                   <div className={styles['contact-icon-cont']}>
                     <FontAwesomeIcon icon={faPhone} size='lg' className={styles['info-icon']} />

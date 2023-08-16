@@ -1,14 +1,10 @@
-import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
+import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import moment from 'moment';
-// import { Timeline, TimelineEvent } from 'react-event-timeline';
-import { Timeline } from 'rsuite';
 import { FaInstagram, FaFacebookF, FaLinkedin, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
-import './AboutComponent.less';
-import { Button as ButtonUI } from '../../commonui';
 
 // Images import
 import AboutSanathImg from '../../images/profile/SanathIMG20.jpg';
@@ -193,18 +189,6 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
   return (
     <Fragment>
       <div className={styles['AboutContainer']}>
-        {/* <div className={styles['about-Title-cont']}>
-          <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['about-right-Col']}>
-              <div className={styles['about-left-cont']}>
-                <div className={styles['about-txt-background']} id='about-txt-cont'>
-                  <h1 className={styles['about-txt']}>About</h1>
-                </div>
-              </div>
-            </Col>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['about-left-Col']}></Col>
-          </Row>
-        </div> */}
         <div className={styles['aboutCard-cont']}>
           <Row className={`${'gx-0'} ${styles['about-main-Row']}`}>
             <Col xs={1} md={1} lg={1} xl={1} className={styles['aboutCard-empty-Col']}></Col>
