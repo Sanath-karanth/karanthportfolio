@@ -260,7 +260,7 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
       />
       <div className={styles['ServicesContainer-service']}>
         <div className={styles['serviceCard-cont']}>
-          <Row className='gx-0'>
+          <Row className={styles['service-gutters']}>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>
               <div className={styles['serviceCardContainer']}>
                 <div className={styles['serviceCard-img-cont']}>

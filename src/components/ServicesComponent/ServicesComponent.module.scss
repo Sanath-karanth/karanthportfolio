@@ -42,9 +42,13 @@
 
 /* Mobile View */
 @media (max-width: 767px) {
+  .service-gutters {
+    --bs-gutter-x: 0rem !important;
+    --bs-gutter-y: 1.5rem !important;
+  }
   .serviceCardContainer {
     background: variables.$color-FFFFFF;
-    margin: 2rem 2rem 0rem 2rem;
+    margin: 0rem 2rem;
     padding: 1rem;
     transition: 0.3s all ease-in-out;
     cursor: pointer;
@@ -199,6 +203,10 @@
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .service-gutters {
+    --bs-gutter-x: 0rem !important;
+    --bs-gutter-y: 0rem !important;
+  }
   .serviceCardContainer {
     background: variables.$color-FFFFFF;
     margin: 0rem 1rem;
@@ -356,6 +364,10 @@
 
 /* Desktop View */
 @media (min-width: 1024px) {
+  .service-gutters {
+    --bs-gutter-x: 0rem !important;
+    --bs-gutter-y: 0rem !important;
+  }
   .serviceCardContainer {
     background: variables.$color-FFFFFF;
     margin: 0rem 2rem;

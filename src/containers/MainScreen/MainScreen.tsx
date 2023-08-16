@@ -151,7 +151,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               <Header />
             </div>
             <div id='backtoTop-anchor'></div>
-            <div className='container-fluid gx-0 mb-3'>
+            <div className='container-fluid gx-0'>
               <Row className='gx-0'>
                 <Col xs={6} md={6} lg={6} xl={6} className={styles['banner-left-Col']}>
                   <div className={styles['banner-left-cont']}>
@@ -212,7 +212,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
           </section>
         </div>
         <section id='services' className='ServiceSection'>
-          <div className='container-fluid custom-gutters mt-3'>
+          <div className='container-fluid custom-gutters'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
@@ -238,7 +238,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </section>
 
         <section id='portfolio' className='PortfolioSection'>
-          <div className='container-fluid custom-gutters mt-3'>
+          <div className='container-fluid custom-gutters'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col
@@ -298,7 +298,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </section>
 
         <section id='about' className='AboutSection'>
-          <div className='container-fluid custom-gutters mt-3'>
+          <div className='container-fluid custom-gutters'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col xs={8} md={6} lg={6} xl={8} className={styles['sectionBarRightSide-left-Col']}>
@@ -324,7 +324,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </section>
 
         <section id='contact' className='ContactSection'>
-          <div className='container-fluid custom-gutters mt-3'>
+          <div className='container-fluid custom-gutters'>
             <div className={styles['sectionBar-cont']}>
               <Row className='gx-0'>
                 <Col
@@ -350,7 +350,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
         </section>
 
         <section id='footer' className='FooterSection'>
-          <div className='container-fluid unreveal mt-3'>
+          <div className='container-fluid unreveal'>
             <div>
               <Footer />
             </div>
