@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
 }
+.PortfolioContainer {
+  margin: 1rem 0rem;
+}
 .portfolio-left-cont {
   @include portfolioComp-center;
   justify-content: flex-start;
@@ -66,20 +69,7 @@
 
 /* Mobile View */
 @media (max-width: 767px) {
-  .PortfolioContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .portfolio-left-Col {
-    width: 30% !important;
-  }
-  .portfolio-right-Col {
-    width: 70% !important;
-  }
   .portfolio-Title-cont {
-    margin-bottom: 1rem;
-  }
-  .portfolioCard-cont {
     margin-bottom: 1rem;
   }
   .portfolio-txt {
@@ -141,21 +131,8 @@
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .PortfolioContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .portfolio-left-Col {
-    width: 50% !important;
-  }
-  .portfolio-right-Col {
-    width: 50% !important;
-  }
   .portfolio-Title-cont {
     margin-bottom: 2rem;
-  }
-  .portfolioCard-cont {
-    margin-bottom: 1rem;
   }
   .portfolio-txt {
     color: variables.$color-danger;
@@ -216,21 +193,8 @@
 
 /* Desktop View */
 @media (min-width: 1024px) {
-  .PortfolioContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .portfolio-left-Col {
-    width: 50% !important;
-  }
-  .portfolio-right-Col {
-    width: 50% !important;
-  }
   .portfolio-Title-cont {
     margin-bottom: 2rem;
-  }
-  .portfolioCard-cont {
-    margin-bottom: 1rem;
   }
   .portfolio-txt {
     color: variables.$color-danger;

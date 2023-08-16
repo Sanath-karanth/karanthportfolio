@@ -1,7 +1,5 @@
 import React, { Fragment, FunctionComponent } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
@@ -32,18 +30,6 @@ const PortfolioComponent: FunctionComponent<IPortfolioComponentProps> = () => {
   return (
     <Fragment>
       <div className={styles['PortfolioContainer']}>
-        {/* <div className={styles['portfolio-Title-cont']}>
-          <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['portfolio-left-Col']}></Col>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['portfolio-right-Col']}>
-              <div className={styles['portfolio-left-cont']}>
-                <div className={styles['portfolio-txt-background']} id='portfolio-txt-cont'>
-                  <h1 className={styles['portfolio-txt']}>Portfolios</h1>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </div> */}
         <div className={styles['portfolioCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['portfolioCard1-Col']}>
