@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import styles from './ServicesComponent.module.scss';
 import { Button as ButtonUI, ModalCommon } from '../../commonui';
+
+// Images import
 import serviceIcon1 from '../../images/mainscreenImages/services/services1.png';
 import serviceIcon2 from '../../images/mainscreenImages/services/services2.png';
 import serviceIcon3 from '../../images/mainscreenImages/services/services3.png';
@@ -43,48 +45,6 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
   // functions for modal open/close for Web Development
   const handleCloseWebDev = () => setShowWebDev(false);
   const handleShowWebDev = () => setShowWebDev(true);
-
-  // UseEffect code for onScroll to appear service text
-  // useEffect(() => {
-  //   function onScroll() {
-  //     const currentPosition = window.scrollY;
-  //     const serviceTxtElement: HTMLElement | null = document.querySelector('#service-txt-cont');
-  //     if (currentPosition > 0) {
-  //       // downscroll code
-  //       if (window.innerWidth < 767) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(0rem)'),
-  //           (serviceTxtElement.style.transition = ' 3s ease-out'));
-  //       }
-  //       if (window.innerWidth > 767 && window.innerWidth < 1023) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(13rem)'),
-  //           (serviceTxtElement.style.transition = ' 3s ease-out'));
-  //       }
-  //       if (window.innerWidth > 1024) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(26rem)'),
-  //           (serviceTxtElement.style.transition = ' 2s ease-out'));
-  //       }
-  //     } else {
-  //       // upscroll code
-  //       if (window.innerWidth < 767) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(0rem)'),
-  //           (serviceTxtElement.style.transition = ' 3s ease-out'));
-  //       }
-  //       if (window.innerWidth > 767 && window.innerWidth < 1023) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(0rem)'),
-  //           (serviceTxtElement.style.transition = ' 3s ease-out'));
-  //       }
-  //       if (window.innerWidth > 1024) {
-  //         serviceTxtElement &&
-  //           (serviceTxtElement && (serviceTxtElement.style.transform = 'translateX(0rem)'),
-  //           (serviceTxtElement.style.transition = ' 2s ease-out'));
-  //       }
-  //     }
-  //   }
 
   //   window.addEventListener('scroll', onScroll);
   //   window.addEventListener('resize', () => {
@@ -299,18 +259,6 @@ const ServicesComponent: FunctionComponent<IServicesComponentProps> = () => {
         alignprop={true}
       />
       <div className={styles['ServicesContainer-service']}>
-        {/* <div className={styles['serviceTitle-cont']}>
-          <Row className='gx-0'>
-            <Col xs={8} md={6} lg={6} xl={8} className={styles['serviceTitle-left-Col']}>
-              <div className={styles['serviceTitle-left-cont']}>
-                <div className={styles['serviceTitle-txt-background']} id='service-txt-cont'>
-                  <h1 className={styles['services-txt']}>Services</h1>
-                </div>
-              </div>
-            </Col>
-            <Col xs={8} md={6} lg={6} xl={4} className={styles['serviceTitle-right-Col']}></Col>
-          </Row>
-        </div> */}
         <div className={styles['serviceCard-cont']}>
           <Row className='gx-0'>
             <Col xs={12} md={4} lg={4} xl={4} className={styles['serviceCard1-Col']}>

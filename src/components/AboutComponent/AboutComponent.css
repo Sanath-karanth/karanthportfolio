@@ -25,7 +25,7 @@
 }
 
 /* Timeline styles */
-ul:before {
+/* ul:before {
     font-family: 'FontAwesome';
     content: '';
     margin: 0 50px 0 15px;
@@ -37,7 +37,7 @@ ul li:before {
     content: '';
     margin: 0 50px 0 15px;
     color: #f00;
-}
+} */
 
 
 /* Mobile View */
