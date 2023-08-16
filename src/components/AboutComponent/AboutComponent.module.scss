@@ -103,6 +103,8 @@
   .about-main-Row {
     --bs-gutter-x: 0rem !important;
     --bs-gutter-y: 2rem !important;
+    @include aboutComp-center;
+    justify-content: center;
   }
   .about-left-Col {
     width: 30% !important;
