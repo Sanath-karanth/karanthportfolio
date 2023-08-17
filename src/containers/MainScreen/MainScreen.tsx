@@ -1,4 +1,11 @@
-import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
+import React, {
+  Fragment,
+  FunctionComponent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +17,10 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import ArrowUpwardTwoToneIcon from '@mui/icons-material/ArrowUpwardTwoTone';
 import Zoom from '@mui/material/Zoom';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
@@ -40,6 +51,7 @@ interface IScrollProps {
 const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   const navigate = useNavigate();
   const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
+  const swiperRef = useRef<SwiperRef>(null);
 
   const profileClick = useCallback(() => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(
@@ -276,15 +288,26 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
               </div>
             </div>
             <div className={styles['parallax-center-container']}>
-              <div className='text-box'>
-                <h3>Section Text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                  perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis est,
-                  quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui. Odit,
-                  accusamus doloremque.
-                </p>
+              <div className={styles['parallax-scroll-container']}>
+                {/* <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
+                    perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis
+                    est, quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui.
+                    Odit, accusamus doloremque.
+                  </p>
+                </div> */}
+                <div className={styles['parallax-scroll-container']}>
+                  <div className={styles['parallax-scroll-box']}>item 1</div>
+                  <div className={styles['parallax-scroll-box']}>item 2</div>
+                  <div className={styles['parallax-scroll-box']}>item 3</div>
+                  <div className={styles['parallax-scroll-box']}>item 4</div>
+                  <div className={styles['parallax-scroll-box']}>item 5</div>
+                  <div className={styles['parallax-scroll-box']}>item 6</div>
+                  <div className={styles['parallax-scroll-box']}>item 7</div>
+                  <div className={styles['parallax-scroll-box']}>item 8</div>
+                </div>
               </div>
             </div>
             <div

@@ -56,6 +56,13 @@
 .parallax-react-cont {
   padding: 1rem;
 }
+.parallax-scroll-container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.parallax-scroll-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
 //////////////////////////////// Animation Styles text
 .banner-name-txt {
   background: variables.$color-danger;
@@ -256,7 +263,20 @@
     @include profileContent-center;
     background: variables.$color-palepink-dark;
     margin: 2rem;
-    height: 30vh;
+  }
+  .parallax-scroll-container {
+    @include profileContent-center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .parallax-scroll-box {
+    background: variables.$color-danger;
+    width: 20rem;
+    height: 5rem;
+    flex-basis: 40%;
+    flex-shrink: 0;
   }
   //////////////////////////////// Section bar
   .sectionBar-cont {
@@ -464,7 +484,19 @@
     @include profileContent-center;
     background: variables.$color-palepink-dark;
     margin: 2rem;
-    height: 40vh;
+  }
+  .parallax-scroll-container {
+    @include profileContent-center;
+    gap: 2rem;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .parallax-scroll-box {
+    background: variables.$color-danger;
+    width: 20rem;
+    height: 10rem;
+    flex-basis: 20%;
+    flex-shrink: 0;
   }
   //////////////////////////////// Section bar
   .sectionBar-cont {
@@ -656,8 +688,21 @@
     @include profileContent-center;
     background: variables.$color-palepink-dark;
     margin: 2rem;
-    height: 40vh;
   }
+  .parallax-scroll-container {
+    @include profileContent-center;
+    gap: 2rem;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .parallax-scroll-box {
+    background: variables.$color-danger;
+    width: 20rem;
+    height: 12rem;
+    flex-basis: 20%;
+    flex-shrink: 0;
+  }
+
   //////////////////////////////// Section bar
   .sectionBar-cont {
     margin: 2rem 0rem;
