@@ -61,11 +61,7 @@ header nav a:hover {
 }
 
 
-.text-container {
-    display: flex;
-    justify-content: center;
-    background: #feebeb;
-}
+
 
 .text-container .text-box {
     margin: 20px;

@@ -30,7 +30,7 @@
 .banner-right-Col {
   width: 60% !important;
 }
-// parallax code
+//////////////////////////////// parallax code
 .parallax {
   height: 80vh;
   width: 100%;
@@ -41,7 +41,7 @@
 }
 .parallax-center {
   @include profileContent-center;
-  height: 50vh;
+  height: 80vh;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -53,13 +53,10 @@
   bottom: 20;
   right: 20;
 }
-// .banner-subtitle-txt::first-letter {
-//   initial-letter: 2;
-//   padding-right: 0.5rem;
-//   padding-bottom: 0.5rem;
-// }
-
-////// Animation Styles text
+.parallax-react-cont {
+  padding: 1rem;
+}
+//////////////////////////////// Animation Styles text
 .banner-name-txt {
   background: variables.$color-danger;
   color: variables.$color-palepink;
@@ -69,7 +66,7 @@
   padding: 0.2rem;
 }
 
-// Section bar
+//////////////////////////////// Section bar
 .sectionBar-left-cont {
   @include profileContent-center;
   justify-content: flex-end;
@@ -220,7 +217,48 @@
       text-indent: 0;
     }
   }
-  // Section bar
+  //////////////////////////////// parallax
+  .parallax-react-txt {
+    background: variables.$color-danger;
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-34;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-flex;
+    overflow: hidden;
+    animation: opencloseReactText 3s ease-in-out infinite;
+    padding: 0.2rem;
+  }
+  .parallax-react-desp-txt {
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+  }
+  @keyframes opencloseReactText {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 7rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
+  .parallax-center-container {
+    @include profileContent-center;
+    background: variables.$color-palepink-dark;
+    margin: 2rem;
+    height: 30vh;
+  }
+  //////////////////////////////// Section bar
   .sectionBar-cont {
     margin: 1.5rem 0rem;
   }
@@ -387,7 +425,48 @@
       text-indent: 0;
     }
   }
-  // Section bar
+  //////////////////////////////// parallax
+  .parallax-react-txt {
+    background: variables.$color-danger;
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-46;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-flex;
+    overflow: hidden;
+    animation: opencloseReactText 3s ease-in-out infinite;
+    padding: 0.2rem;
+  }
+  .parallax-react-desp-txt {
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-26;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+  }
+  @keyframes opencloseReactText {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 9rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
+  .parallax-center-container {
+    @include profileContent-center;
+    background: variables.$color-palepink-dark;
+    margin: 2rem;
+    height: 40vh;
+  }
+  //////////////////////////////// Section bar
   .sectionBar-cont {
     margin: 2rem 0rem;
   }
@@ -538,7 +617,48 @@
       text-indent: 0;
     }
   }
-  // Section bar
+  //////////////////////////////// parallax
+  .parallax-react-txt {
+    background: variables.$color-danger;
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-52;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-flex;
+    overflow: hidden;
+    animation: opencloseReactText 3s ease-in-out infinite;
+    padding: 0.2rem;
+  }
+  .parallax-react-desp-txt {
+    color: variables.$color-palepink;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-28;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+  }
+  @keyframes opencloseReactText {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 10rem;
+    }
+
+    100% {
+      width: 0rem;
+      text-indent: 0;
+    }
+  }
+  .parallax-center-container {
+    @include profileContent-center;
+    background: variables.$color-palepink-dark;
+    margin: 2rem;
+    height: 40vh;
+  }
+  //////////////////////////////// Section bar
   .sectionBar-cont {
     margin: 2rem 0rem;
   }

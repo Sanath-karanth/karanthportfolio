@@ -25,10 +25,8 @@ import AboutComponent from '../../components/AboutComponent/AboutComponent';
 import bannerImg from '../../images/profile/Sanath2.jpg';
 import parallaxBackground1 from '../../images/banner/slider2.jpg';
 import parallaxBackground2 from '../../images/banner/banner01.jpg';
-import parallaxImg from '../../images/parallax/parallaxImg.jpg';
-import parallaxImg1 from '../../images/parallax/parallaxImg1.jpg';
-import parallaxImg2 from '../../images/parallax/parallaxImg2.jpg';
 import parallaxImg3 from '../../images/parallax/parallaxImg3.jpg';
+import parallaxImg4 from '../../images/parallax/parallaxImg4.jpg';
 
 interface IMainScreenProps {
   classname?: string;
@@ -272,11 +270,12 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                 backgroundImage: `url(${parallaxImg3})`,
               }}
             >
-              <div style={{ background: '#ffffff' }}>
-                <h1>Services</h1>
+              <div className={styles['parallax-react-cont']}>
+                <span className={styles['parallax-react-txt']}>React</span>
+                <span className={styles['parallax-react-desp-txt']}>the State-Of-Art</span>
               </div>
             </div>
-            <div className='text-container'>
+            <div className={styles['parallax-center-container']}>
               <div className='text-box'>
                 <h3>Section Text</h3>
                 <p>
@@ -291,7 +290,7 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
             <div
               className={styles['parallax']}
               style={{
-                backgroundImage: `url(${parallaxBackground2})`,
+                backgroundImage: `url(${parallaxImg3})`,
               }}
             ></div>
           </div>
