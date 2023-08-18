@@ -265,17 +265,18 @@
     margin: 2rem;
   }
   .parallax-scroll-container {
-    @include profileContent-center;
-    gap: 1rem;
+    display: inline-flex;
+    gap: 2rem;
     flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: auto;
   }
   .parallax-scroll-box {
+    @include profileContent-center;
+    color: variables.$color-FFFFFF;
     background: variables.$color-danger;
-    width: 20rem;
-    height: 5rem;
-    flex-basis: 40%;
+    width: 10rem;
+    height: 10rem;
     flex-shrink: 0;
   }
   //////////////////////////////// Section bar
@@ -486,16 +487,17 @@
     margin: 2rem;
   }
   .parallax-scroll-container {
-    @include profileContent-center;
-    gap: 2rem;
+    display: inline-flex;
+    gap: 3rem;
     flex-direction: row;
     overflow-x: auto;
   }
   .parallax-scroll-box {
+    @include profileContent-center;
+    color: variables.$color-FFFFFF;
     background: variables.$color-danger;
-    width: 20rem;
+    width: 15rem;
     height: 10rem;
-    flex-basis: 20%;
     flex-shrink: 0;
   }
   //////////////////////////////// Section bar
@@ -690,16 +692,19 @@
     margin: 2rem;
   }
   .parallax-scroll-container {
-    @include profileContent-center;
-    gap: 2rem;
+    display: inline-flex;
+    gap: 4rem;
     flex-direction: row;
     overflow-x: auto;
+    box-sizing: content-box;
   }
   .parallax-scroll-box {
+    @include profileContent-center;
+    color: variables.$color-FFFFFF;
     background: variables.$color-danger;
     width: 20rem;
-    height: 12rem;
-    flex-basis: 20%;
+    height: 15rem;
+    // flex-basis: 40%;
     flex-shrink: 0;
   }
 
