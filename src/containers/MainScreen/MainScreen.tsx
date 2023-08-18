@@ -11,6 +11,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import { faUser, faBriefcase, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  FaHtml5,
+  FaCss3,
+  FaBootstrap,
+  FaReact,
+  FaJsSquare,
+  FaStackOverflow,
+  FaCss3Alt,
+  FaNode,
+  FaGithub,
+} from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
@@ -287,29 +298,58 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
                 <span className={styles['parallax-react-desp-txt']}>the State-Of-Art</span>
               </div>
             </div>
-            <div className={styles['parallax-center-container']}>
-              <div className={styles['parallax-scroll-container']}>
-                {/* <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae
-                    perferendis eos provident vitae iste. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Quam blanditiis, officiis, voluptate quisquam aperiam nobis
-                    est, quis neque esse soluta dolores iste sit corrupti! Magnam, delectus qui.
-                    Odit, accusamus doloremque.
-                  </p>
-                </div> */}
+            <div className={styles['parallax-main-center-container']}>
+              <div className={styles['parallax-center-header']}>
+                <h1 className={styles['parallax-center-header-txt']}>Technology Stack</h1>
+              </div>
+              <div className={styles['parallax-center-container']}>
                 <div className={styles['parallax-scroll-container']}>
-                  <div className={styles['parallax-scroll-box']}>item 1</div>
-                  <div className={styles['parallax-scroll-box']}>item 2</div>
-                  <div className={styles['parallax-scroll-box']}>item 3</div>
-                  <div className={styles['parallax-scroll-box']}>item 4</div>
-                  <div className={styles['parallax-scroll-box']}>item 5</div>
-                  <div className={styles['parallax-scroll-box']}>item 6</div>
-                  <div className={styles['parallax-scroll-box']}>item 7</div>
-                  <div className={styles['parallax-scroll-box']}>item 8</div>
+                  <div className={styles['parallax-scroll-container']}>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaReact className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaHtml5 className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaGithub className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaBootstrap className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaCss3Alt className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaStackOverflow className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaJsSquare className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                    <div className={styles['parallax-scroll-box']}>
+                      <div className={styles['parallax-icon-bg']}>
+                        <FaNode className={styles['tech-icon']} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div
               className={styles['parallax']}
               style={{
