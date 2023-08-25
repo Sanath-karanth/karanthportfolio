@@ -294,10 +294,11 @@
     background: variables.$color-palepink-dark;
     border-radius: 20%;
     padding: 0.3rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
   .parallax-icon-bg:hover {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px 0px rgba(255, 0, 0, 0.4);
   }
   .tech-icon {
     height: 8rem;
@@ -540,10 +541,11 @@
     background: variables.$color-palepink-dark;
     border-radius: 20%;
     padding: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
   .parallax-icon-bg:hover {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px 0px rgba(255, 0, 0, 0.4);
   }
   .tech-icon {
     height: 10rem;
@@ -771,10 +773,11 @@
     background: variables.$color-palepink-dark;
     border-radius: 20%;
     padding: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
   .parallax-icon-bg:hover {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px 0px rgba(255, 0, 0, 0.4);
   }
   .tech-icon {
     height: 10rem;
