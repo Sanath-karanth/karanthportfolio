@@ -2,50 +2,601 @@
 
 /* --------------    parent container styles    ------------------- */
 
-.AppLottie-cont {
-  background: linear-gradient(to right, #000000, #6f6234);
-  min-height: 100vh;
+@mixin profileScreen-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+.profile-main-cont {
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.profile-cont {
+  height: 85vh;
+  width: 100%;
+  background: transparent;
+}
+.profile-img-cont,
+.profile-social-cont,
+.profile-desp-cont {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+  backdrop-filter: blur(20px) brightness(85%);
+  -webkit-backdrop-filter: blur(20px);
+}
+.profile-icon-cont {
+  @include profileScreen-center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.profile-icon-bg:hover {
+  background-color: variables.$color-danger;
+  transition: all 0.6s ease-in-out;
+}
+.profile-icon-bg:hover .media-icon {
+  color: variables.$color-palepink !important;
+  transition: all 0.4s ease-in-out;
+}
+.button-visit:hover {
+  color: variables.$color-palepink !important;
+  background: variables.$color-danger !important;
+}
+.profile-location-cont {
+  @include profileScreen-center;
+  flex-direction: row;
+  gap: 0.2rem;
 }
 
 /* Mobile View */
 @media (max-width: 767px) {
-  .MainContainer-splash {
-    margin: 0 auto;
-    width: auto;
+  .ProfileContainer-cont {
+    width: 100%;
+  }
+  .profile-main-cont {
+    padding: 2rem;
+    height: 150vh;
+  }
+  .profile-main-Row {
+    --bs-gutter-x: 0rem !important;
+    --bs-gutter-y: 2rem !important;
+  }
+  .profile-img-cont {
+    height: 60vh;
+    width: 100%;
+  }
+  .profile-social-cont {
+    height: 18vh;
+    width: 100%;
+    padding: 1rem;
+  }
+  .profile-desp-cont {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .profile-left-cont {
+    @include profileScreen-center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .profile-pic-img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+    transition: all 1s ease-in-out;
+  }
+  .profile-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: variables.$color-danger !important;
+  }
+  .profile-header-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-header-profile-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-border-line {
+    background: linear-gradient(to right, #e38383 50%, transparent 100%);
+    height: 0.4rem;
+    margin: 0.3rem 0rem 1rem 0rem;
+    width: 6rem;
+  }
+  .profile-role-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .location-icon {
+    height: 1rem;
+    width: 1rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-location-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .profile-about-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    gap: 0.2rem;
+    padding: 0.8rem 0rem;
+  }
+  .profile-about-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 50%;
+    padding: 0.4rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .about-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-about-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 0.5rem;
+  }
+  .profile-border-line-full {
+    background: linear-gradient(to right, #e38383 10%, transparent 100%);
+    height: 0.3rem;
+    width: 100%;
+  }
+  .profile-about-desp-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0rem 1rem 0rem;
+  }
+  .profile-about-desp-label {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-skills-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .profile-about-skill-txt {
+    background-color: variables.$color-palepink;
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-8;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
   }
 }
 
 /* Tablet View */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .MainContainer-splash {
-    margin: 0 auto;
-    width: auto;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ProfileContainer-cont {
+    width: 100%;
+  }
+  .profile-main-cont {
+    padding: 3rem 3rem 0rem 3rem;
+    height: 100vh;
+  }
+  .profile-main-Row {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 0rem !important;
+  }
+  .profile-img-cont {
+    height: 60vh;
+    width: 100%;
+  }
+  .profile-social-cont {
+    height: 22vh;
+    width: 100%;
+    padding: 1rem;
+  }
+  .profile-desp-cont {
+    height: 85vh;
+    width: 100%;
+    padding: 2rem;
+  }
+  .profile-left-cont {
+    @include profileScreen-center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-pic-img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+    transition: all 1s ease-in-out;
+  }
+  .profile-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.4rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: variables.$color-danger !important;
+  }
+  .profile-header-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-header-profile-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-26;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-border-line {
+    background: linear-gradient(to right, #e38383 50%, transparent 100%);
+    height: 0.3rem;
+    margin: 0.3rem 0rem 0.5rem 0rem;
+    width: 6rem;
+  }
+  .profile-role-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .location-icon {
+    height: 1rem;
+    width: 1rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-location-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .profile-about-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    gap: 0.2rem;
+    padding: 0.8rem 0rem;
+  }
+  .profile-about-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 50%;
+    padding: 0.4rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .about-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-about-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 0.5rem;
+  }
+  .profile-border-line-full {
+    background: linear-gradient(to right, #e38383 10%, transparent 100%);
+    height: 0.3rem;
+    width: 100%;
+  }
+  .profile-about-desp-cont {
+    display: grid;
+    gap: 0.4rem 1rem;
+    grid-template-columns: 4rem auto;
+    margin: 1rem 0rem 1rem 0rem;
+  }
+  .profile-about-desp-label {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-skills-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .profile-about-skill-txt {
+    background-color: variables.$color-palepink;
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-8;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
   }
 }
 
 /* Desktop View */
-@media (min-width: 1200px) {
-  .MainContainer-splash {
-    margin: 0 auto;
-    width: auto;
+@media (min-width: 1024px) {
+  .ProfileContainer-cont {
+    width: 100%;
+  }
+  .profile-main-cont {
+    padding: 2rem 10rem 0rem 10rem;
+    height: 100vh;
+  }
+  .profile-main-Row {
+    --bs-gutter-x: 2rem !important;
+    --bs-gutter-y: 0rem !important;
+  }
+  .profile-img-cont {
+    height: 60vh;
+    width: 100%;
+  }
+  .profile-social-cont {
+    height: 27vh;
+    width: 100%;
+    padding: 1rem;
+  }
+  .profile-desp-cont {
+    height: 90vh;
+    width: 100%;
+    padding: 2rem;
+  }
+  .profile-left-cont {
+    @include profileScreen-center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-pic-img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+  }
+  .profile-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 20%;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .media-icon {
+    height: 2rem;
+    width: 2rem;
+    color: variables.$color-danger !important;
+  }
+  .profile-header-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-header-profile-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-36;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-border-line {
+    background: linear-gradient(to right, #e38383 50%, transparent 100%);
+    height: 0.4rem;
+    margin: 0.3rem 0rem 1rem 0rem;
+    width: 6rem;
+  }
+  .profile-role-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .location-icon {
+    height: 1rem;
+    width: 1rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-location-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.6rem;
+  }
+  .profile-about-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    gap: 0.2rem;
+    padding: 1rem 0rem;
+  }
+  .profile-about-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-palepink;
+    border-radius: 50%;
+    padding: 0.6rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .about-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: variables.$color-000000 !important;
+  }
+  .profile-about-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-24;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 0.5rem;
+  }
+  .profile-border-line-full {
+    background: linear-gradient(to right, #e38383 10%, transparent 100%);
+    height: 0.4rem;
+    width: 100%;
+  }
+  .profile-about-desp-cont {
+    display: grid;
+    gap: 1rem 1rem;
+    grid-template-columns: 6rem auto;
+    margin: 1.5rem 0rem 1rem 0rem;
+  }
+  .profile-about-desp-label {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-18;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-desp-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .profile-about-skills-cont {
+    @include profileScreen-center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .profile-about-skill-txt {
+    background-color: variables.$color-palepink;
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
   }
 }
 
 /* Large Desktop View */
 @media (min-width: 1367px) {
-  .MainContainer-splash {
-    margin: 0 auto;
-    width: auto;
+  .ProfileContainer-cont {
+    width: 100%;
   }
 }
 
 @media (min-width: 1729px) {
-  .MainContainer-splash {
+  .ProfileContainer-cont {
     margin: 0 auto;
     width: auto;
-    max-width: 2000px;
+    max-width: auto;
   }
 }
