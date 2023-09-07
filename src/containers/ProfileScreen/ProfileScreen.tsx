@@ -9,11 +9,11 @@ import styles from './ProfileScreen.module.scss';
 import bannerImg from '../../images/banner/banner01.jpg';
 import AboutSanathImg from '../../images/profile/SanathIMG30.jpg';
 
-interface ISplashScreenProps {
+interface IProfileScreenProps {
   classname?: string;
 }
 
-const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
+const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
   const navigate = useNavigate();
   const [reviewIconshow, setReviewIconshow] = useState<boolean>(false);
   // functions for navigate to my websites
@@ -33,6 +33,11 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
   const backClick = () => {
     navigate(-1);
   };
+
+  const reviewClick = () => {
+    navigate('/reviews', { replace: false });
+  };
+
   const reviewstoreCheck = () => {
     const userstorevalue: string | null = localStorage.getItem('UserName');
     console.log('userstorevalue', userstorevalue);
@@ -88,7 +93,7 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
                         />
                       </div>
                       {reviewIconshow ? (
-                        <div className={styles['profile-about-icon-bg']}>
+                        <div className={styles['profile-about-icon-bg']} onClick={reviewClick}>
                           <RiFeedbackFill className={styles['about-icon']} />
                         </div>
                       ) : null}
@@ -155,4 +160,4 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
   );
 };
 
-export default React.memo(SplashScreen);
+export default React.memo(ProfileScreen);

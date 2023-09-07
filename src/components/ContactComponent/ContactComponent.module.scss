@@ -53,6 +53,10 @@
   justify-content: center;
   margin-bottom: 2rem;
 }
+.contact-form-label-txt:after {
+  content: ' *';
+  color: variables.$color-danger;
+}
 .button-submit:hover {
   color: variables.$color-palepink !important;
   background: variables.$color-danger !important;
@@ -133,12 +137,32 @@
     font-size: variables.$font-size-16;
     font-weight: 600;
     letter-spacing: 0;
+    margin: 0;
+  }
+  .contact-form-label-optional-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0;
   }
   .contact-form-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-12;
     letter-spacing: 0;
     padding: 0.5rem;
+    margin: 0;
+  }
+  .contact-form-err-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    animation: textshake 0.2s ease-in-out 0s 2;
   }
   .button-submit {
     @include contactComp-center;
@@ -231,12 +255,32 @@
     font-size: variables.$font-size-14;
     font-weight: 600;
     letter-spacing: 0;
+    margin: 0;
+  }
+  .contact-form-label-optional-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0;
   }
   .contact-form-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-8;
     letter-spacing: 0;
     padding: 0.5rem;
+    margin: 0;
+  }
+  .contact-form-err-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    animation: textshake 0.2s ease-in-out 0s 2;
   }
   .button-submit {
     @include contactComp-center;
@@ -330,12 +374,32 @@
     font-size: variables.$font-size-16;
     font-weight: 600;
     letter-spacing: 0;
+    margin: 0;
+  }
+  .contact-form-label-optional-txt {
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-16;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0;
   }
   .contact-form-txt {
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-14;
     letter-spacing: 0;
     padding: 0.5rem;
+    margin: 0;
+  }
+  .contact-form-err-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-10;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    animation: textshake 0.2s ease-in-out 0s 2;
   }
   .button-submit {
     @include contactComp-center;
@@ -350,5 +414,24 @@
     background: variables.$color-palepink !important;
     border-radius: 0px solid transparent !important;
     border-color: transparent !important;
+  }
+  @keyframes textshake {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(4px);
+    }
+
+    50% {
+      transform: translateX(-4px);
+    }
+
+    75% {
+      transform: translateX(4px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }
