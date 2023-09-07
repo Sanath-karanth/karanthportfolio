@@ -61,6 +61,25 @@
   color: variables.$color-palepink !important;
   background: variables.$color-danger !important;
 }
+@keyframes textshake {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(4px);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 /* Mobile View */
 @media (max-width: 767px) {
@@ -414,24 +433,5 @@
     background: variables.$color-palepink !important;
     border-radius: 0px solid transparent !important;
     border-color: transparent !important;
-  }
-  @keyframes textshake {
-    0% {
-      transform: translateX(0px);
-    }
-    25% {
-      transform: translateX(4px);
-    }
-
-    50% {
-      transform: translateX(-4px);
-    }
-
-    75% {
-      transform: translateX(4px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
   }
 }

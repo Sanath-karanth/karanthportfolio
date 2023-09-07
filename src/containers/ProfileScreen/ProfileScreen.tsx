@@ -42,9 +42,9 @@ const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
     const userstorevalue: string | null = localStorage.getItem('UserName');
     console.log('userstorevalue', userstorevalue);
     if (userstorevalue === 'sanathorthotech') {
-      setReviewIconshow(true);
+      // setReviewIconshow(true);
     } else {
-      setReviewIconshow(false);
+      // setReviewIconshow(false);
     }
   };
 
@@ -92,7 +92,7 @@ const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
                           onClick={handleFacebookClick}
                         />
                       </div>
-                      {reviewIconshow ? (
+                      {reviewIconshow === false ? (
                         <div className={styles['profile-about-icon-bg']} onClick={reviewClick}>
                           <RiFeedbackFill className={styles['about-icon']} />
                         </div>
