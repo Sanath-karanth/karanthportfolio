@@ -1,7 +1,9 @@
-import React, { Fragment, FunctionComponent, useEffect } from 'react';
+import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaLinkedin, FaMapMarkerAlt, FaUserAlt } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
+import { RiFeedbackFill } from 'react-icons/ri';
+import { IoChevronBack } from 'react-icons/io5';
 import Lottie from 'lottie-react';
 import styles from './ProfileScreen.module.scss';
 import bannerImg from '../../images/banner/banner01.jpg';
@@ -12,6 +14,8 @@ interface ISplashScreenProps {
 }
 
 const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
+  const navigate = useNavigate();
+  const [reviewIconshow, setReviewIconshow] = useState<boolean>(false);
   // functions for navigate to my websites
   const handleInstagramClick = () => {
     const url = 'https://karantharts.netlify.app';
@@ -26,6 +30,23 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
     window.open(url, '_blank');
   };
 
+  const backClick = () => {
+    navigate(-1);
+  };
+  const reviewstoreCheck = () => {
+    const userstorevalue: string | null = localStorage.getItem('UserName');
+    console.log('userstorevalue', userstorevalue);
+    if (userstorevalue === 'sanathorthotech') {
+      setReviewIconshow(true);
+    } else {
+      setReviewIconshow(false);
+    }
+  };
+
+  useEffect(() => {
+    reviewstoreCheck();
+  }, [reviewIconshow]);
+
   return (
     <Fragment>
       <div className={styles['ProfileContainer-cont']}>
@@ -35,7 +56,13 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
         >
           <div className={styles['profile-cont']}>
             <Row className={`${'gx-0'} ${styles['profile-main-Row']}`}>
-              <Col xs={12} md={5} lg={5} xl={5} className={styles['profileCard-img-Col']}>
+              <Col xs={12} md={1} lg={1} xl={1} className={styles['profileCard-back-Col']}>
+                <div className={styles['profile-back-icon-bg']} onClick={backClick}>
+                  <IoChevronBack className={styles['back-icon']} />
+                  <span className={styles['profile-back-txt']}>Back</span>
+                </div>
+              </Col>
+              <Col xs={12} md={4} lg={4} xl={4} className={styles['profileCard-img-Col']}>
                 <div className={styles['profile-left-cont']}>
                   <div className={styles['profile-img-cont']}>
                     <img
@@ -60,6 +87,11 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
                           onClick={handleFacebookClick}
                         />
                       </div>
+                      {reviewIconshow ? (
+                        <div className={styles['profile-about-icon-bg']}>
+                          <RiFeedbackFill className={styles['about-icon']} />
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -76,9 +108,6 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
                   {/* <div className={styles['profile-border-line-full']}></div> */}
 
                   <div className={styles['profile-about-cont']}>
-                    <div className={styles['profile-about-icon-bg']}>
-                      <FaUserAlt className={styles['about-icon']} />
-                    </div>
                     <span className={styles['profile-about-txt']}>About</span>
                   </div>
 
@@ -89,7 +118,7 @@ const SplashScreen: FunctionComponent<ISplashScreenProps> = () => {
                     <span className={styles['profile-about-desp-txt']}>sanathsk97@gmail.com</span>
                     <h4 className={styles['profile-about-desp-label']}>Phone:</h4>
                     <span className={styles['profile-about-desp-txt']}>+91 9449685219</span>
-                    <h4 className={styles['profile-about-desp-label']}>WebSite:</h4>
+                    <h4 className={styles['profile-about-desp-label']}>Website:</h4>
                     <span className={styles['profile-about-desp-txt']}>
                       <a
                         href='https://karanthportfolio.netlify.com'

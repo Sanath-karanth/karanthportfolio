@@ -68,17 +68,17 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
       {
         skilID: 11,
         skillName: 'CSS',
-        percentage: '90',
+        percentage: '100',
       },
       {
         skilID: 12,
         skillName: 'Bootstrap',
-        percentage: '70',
+        percentage: '90',
       },
       {
         skilID: 13,
         skillName: 'JavaScript',
-        percentage: '40',
+        percentage: '60',
       },
       {
         skilID: 14,
@@ -88,7 +88,7 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
       {
         skilID: 15,
         skillName: 'ReactJS',
-        percentage: '50',
+        percentage: '85',
       },
     ];
     return (
