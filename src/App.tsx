@@ -1,30 +1,19 @@
-import React, { Fragment } from 'react';
+import React, { Children, Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Routers from './routes';
+import { AuthProvider } from './contexts/AuthContext';
 
-function App() {
+type AuthProps = {
+  children: React.ReactNode; // 👈️ type children
+};
+
+const App: React.FunctionComponent = () => {
   return (
     <Fragment>
-      {/* <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
-      </div> */}
       <Routers></Routers>
     </Fragment>
   );
-}
+};
 
 export default App;

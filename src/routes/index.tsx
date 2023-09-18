@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent, lazy, Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import styles from '../App.module.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from '../contexts/AuthContext';
 
 const NotFound: FunctionComponent = () => <Fragment>Not Found!!</Fragment>;
 const Loading: FunctionComponent = () => <Fragment>Loading...</Fragment>;
@@ -18,14 +18,6 @@ const Routers: FunctionComponent = () => {
         <Suspense fallback={<Loading />}>
           <BrowserRouter basename='/'>
             <Routes>
-              {/* <Route
-                path='/design-technician'
-                element={
-                  <Navigate state={{ user: 'DT' }} replace to='/design-technician/plant-number' />
-                }
-              />
-              <Route path='/design-technician/:route' element={<DesignTechnicianComponent />} />
-              <Route path='/admin' element={<AdminComponent />} /> */}
               <Route path='/reviews' element={<ReviewScreenComponent />} />
               <Route path='/profile' element={<ProfileScreenComponent />} />
               <Route path='/mainpage' element={<MainScreenComponent />} />

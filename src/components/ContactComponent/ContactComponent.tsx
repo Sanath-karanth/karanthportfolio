@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
+import { Row, Col, Form } from 'react-bootstrap';
 import { Formik, FormikErrors } from 'formik';
 import * as Yup from 'yup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
+import { useAuth } from '../../contexts/AuthContext';
 
 interface IContactComponentProps {
   classname?: string;
@@ -15,7 +15,7 @@ interface IContactComponentProps {
 interface IUserContactFormProps {
   username: string;
   phoneno: string;
-  emailID: string;
+  emailid: string;
   message: string;
 }
 
@@ -28,32 +28,55 @@ interface IformfielddataProps {
 }
 
 const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props }) => {
+  const { createdata } = useAuth();
+  // const { createdata } = useContext(AuthContext);
   const [usernameval, setUsernameval] = useState<string>('');
   const [phonenoval, setPhonenoval] = useState<string>('');
-  const [emailIDval, setEmailIDval] = useState<string>('');
+  const [emailIDval, setEmailIdval] = useState<string>('');
   const [messageval, setMessageval] = useState<string>('');
   const [alertshowsuccess, setAlertshowsuccess] = useState<boolean>(false);
   const [alertshowfail, setAlertshowfail] = useState<boolean>(false);
-  let interval: any = null;
 
   const initialValues: IUserContactFormProps = {
     username: usernameval,
     phoneno: phonenoval,
-    emailID: emailIDval,
+    emailid: emailIDval,
     message: messageval,
   };
 
-  const validate = (values: IUserContactFormProps) => {
-    const errors: FormikErrors<IUserContactFormProps> = {};
+  const validateForm = (values: IUserContactFormProps) => {
+    const errors: IUserContactFormProps = {
+      username: '',
+      phoneno: '',
+      emailid: '',
+      message: '',
+    };
 
     if (!values.username) {
       errors.username = 'Username is required!';
     } else if (!/^[A-Za-z\b\s]+$/.test(values.username)) {
       errors.username = 'Please enter a Valid username.';
     }
+    if (!values.phoneno) {
+      errors.phoneno = 'Phone no is required!';
+    } else if (!/[6-9]\d{9}$/i.test(values.phoneno)) {
+      errors.phoneno = 'Please enter a valid 10-digit phone number.';
+    }
+    if (!values.emailid) {
+      errors.emailid = 'Email ID is required!';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.emailid)) {
+      errors.emailid = 'Please enter a valid Email ID.';
+    }
+    if (!values.message) {
+      errors.message = 'Message/Feedback is required!';
+    } else if (!/^[A-Za-z\b ]+$/.test(values.message)) {
+      errors.message = 'Please enter the valid characters only.';
+    }
 
     return errors;
   };
+
+  let interval: any = null;
   const timeoutfinish = () => {
     clearInterval(interval);
     setAlertshowsuccess(false);
@@ -61,6 +84,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
   };
 
   const handleSubmit = async (values: IUserContactFormProps) => {
+    console.log('Database created...');
     interval = setTimeout(timeoutfinish, 3000);
     const userstorevalue: string | null = localStorage.getItem('UserName');
     if (userstorevalue === usernameval) {
@@ -81,13 +105,49 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
         messageval,
       };
       try {
-        // await createdata('feedbackdata', formfielddata);
+        // await createdata('feedbackdataPortfolio', formfielddata);
         console.log('Database created...');
         setAlertshowfail(false);
         setAlertshowsuccess(true);
         values.username = '';
         values.phoneno = '';
-        values.emailID = '';
+        values.emailid = '';
+        values.message = '';
+      } catch (err) {
+        console.log(err);
+        setAlertshowfail(true);
+      }
+    }
+  };
+
+  const vclick = async (values: IUserContactFormProps) => {
+    interval = setTimeout(timeoutfinish, 3000);
+    const userstorevalue: string | null = localStorage.getItem('UserName');
+    if (userstorevalue === usernameval) {
+      console.log('username equal');
+      console.log(userstorevalue);
+      setAlertshowfail(true);
+      setAlertshowsuccess(false);
+    } else {
+      console.log('username not equal');
+      console.log(userstorevalue);
+      localStorage.setItem('UserName', usernameval);
+      const uniqueID: number = Math.floor(Math.random() * 1000);
+      const formfielddata: IformfielddataProps = {
+        uniqueID,
+        usernameval,
+        phonenoval,
+        emailIDval,
+        messageval,
+      };
+      try {
+        await createdata('feedbackdataPortfolio', formfielddata);
+        console.log('Database created...');
+        setAlertshowfail(false);
+        setAlertshowsuccess(true);
+        values.username = '';
+        values.phoneno = '';
+        values.emailid = '';
         values.message = '';
       } catch (err) {
         console.log(err);
@@ -160,7 +220,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                   <div>
                     <Formik
                       initialValues={initialValues}
-                      validate={validate}
+                      validate={validateForm}
                       onSubmit={handleSubmit}
                     >
                       {({ handleChange, handleSubmit, values, errors, touched }) => (
@@ -203,9 +263,18 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                                   className={styles['contact-form-txt']}
                                   autoComplete='off'
                                   maxLength={10}
-                                  id='placeholdertext'
                                   name='phoneno'
+                                  value={values.phoneno}
+                                  onChange={(e: any) => {
+                                    handleChange(e);
+                                    setPhonenoval(e.target.value);
+                                  }}
                                 />
+                                {errors.phoneno && touched.phoneno ? (
+                                  <div className={styles['contact-form-err-txt']}>
+                                    {errors.phoneno}
+                                  </div>
+                                ) : null}
                               </Form.Group>
                             </Col>
                           </Row>
@@ -215,13 +284,20 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                               EmailID
                             </Form.Label>
                             <Form.Control
-                              type='email'
+                              type='text'
                               placeholder='Enter your email id'
                               className={styles['contact-form-txt']}
                               autoComplete='off'
-                              id='placeholdertext'
-                              name='email'
+                              name='emailid'
+                              value={values.emailid}
+                              onChange={(e: any) => {
+                                handleChange(e);
+                                setEmailIdval(e.target.value);
+                              }}
                             />
+                            {errors.emailid && touched.emailid ? (
+                              <div className={styles['contact-form-err-txt']}>{errors.emailid}</div>
+                            ) : null}
                           </Form.Group>
 
                           <Form.Group className='mb-3'>
@@ -232,22 +308,33 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                               as='textarea'
                               rows={4}
                               type='text'
-                              placeholder='Enter your feedback message'
+                              placeholder='Enter your valuable feedback message'
                               className={styles['contact-form-txt']}
                               autoComplete='off'
-                              id='placeholdertext'
-                              name='text'
+                              maxLength={10}
+                              name='message'
+                              value={values.message}
+                              onChange={(e: any) => {
+                                handleChange(e);
+                                setMessageval(e.target.value);
+                              }}
                             />
+                            {errors.message && touched.message ? (
+                              <div className={styles['contact-form-err-txt']}>{errors.message}</div>
+                            ) : null}
                           </Form.Group>
 
                           <ButtonUI
                             varientprop={'outline-danger'}
                             classnameprop={styles['button-submit']}
                             styleprop={{ marginTop: '2rem' }}
-                            click={handleSubmit}
+                            click={() => handleSubmit()}
                             disableButtonprop={false}
                             buttonnameprop={'Submit'}
                           ></ButtonUI>
+                          {/* <button onClick={() => vclick(values)} type='button'>
+                            Click me
+                          </button> */}
                         </Form>
                       )}
                     </Formik>
