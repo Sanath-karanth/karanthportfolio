@@ -6,6 +6,10 @@
   display: flex;
   justify-content: center;
 }
+@mixin ReviewScreen-modal-center {
+  display: flex;
+  align-items: center;
+}
 .review-card-cont {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
   backdrop-filter: blur(20px) brightness(85%);
@@ -14,6 +18,10 @@
 .review-cards {
   background: variables.$color-FFFFFF;
   padding: 1rem;
+}
+.button-submit:hover {
+  color: variables.$color-palepink !important;
+  background: variables.$color-danger !important;
 }
 
 /* Mobile View */
@@ -84,7 +92,7 @@
     margin: 1.5rem 0rem 1rem 0rem;
   }
   .review-name-txt {
-    color: variables.$color-000000;
+    color: variables.$color-danger;
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-20;
     font-weight: 600;
@@ -98,6 +106,62 @@
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
+  }
+  // Modal styles
+  .fullScreen-header {
+    @include ReviewScreen-modal-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-cont {
+    max-height: 100vh;
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .button-submit {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
+  }
+  .button-cancel {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-palepink !important;
+    background: variables.$color-success !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 }
 
@@ -157,7 +221,7 @@
     margin: 2rem 0rem 1rem 0rem;
   }
   .review-name-txt {
-    color: variables.$color-000000;
+    color: variables.$color-danger;
     font-family: variables.$font-family-Montserrat;
     font-size: variables.$font-size-20;
     font-weight: 600;
@@ -171,6 +235,62 @@
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
+  }
+  // Modal styles
+  .fullScreen-header {
+    @include ReviewScreen-modal-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-cont {
+    max-height: 100vh;
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .button-submit {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
+  }
+  .button-cancel {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-palepink !important;
+    background: variables.$color-success !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 }
 
@@ -230,9 +350,9 @@
     margin: 2rem 0rem 1rem 0rem;
   }
   .review-name-txt {
-    color: variables.$color-000000;
+    color: variables.$color-danger;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-20;
+    font-size: variables.$font-size-24;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0;
@@ -244,6 +364,62 @@
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
+  }
+  // Modal styles
+  .fullScreen-header {
+    @include ReviewScreen-modal-center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .fullScreen-header-txt {
+    color: variables.$color-danger;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-20;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .fullScreen-cont {
+    max-height: 100vh;
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .button-submit {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-danger !important;
+    background: variables.$color-palepink !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
+  }
+  .button-cancel {
+    @include ReviewScreen-modal-center;
+    justify-content: center !important;
+    font-family: variables.$font-family-Montserrat !important;
+    font-size: variables.$font-size-14 !important;
+    text-transform: uppercase !important;
+    width: 5.5rem !important;
+    height: 2.5rem !important;
+    padding: 1rem !important;
+    color: variables.$color-palepink !important;
+    background: variables.$color-success !important;
+    border-radius: 0px solid transparent !important;
+    border-color: transparent !important;
   }
 }
 

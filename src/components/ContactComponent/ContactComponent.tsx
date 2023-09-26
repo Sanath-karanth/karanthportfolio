@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent, useState } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
-import { Formik, FormikErrors } from 'formik';
-import * as Yup from 'yup';
+import { Formik } from 'formik';
+import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactComponent.module.scss';
@@ -13,23 +13,24 @@ interface IContactComponentProps {
   classname?: string;
 }
 interface IUserContactFormProps {
-  username: string;
-  phoneno: string;
-  emailid: string;
-  message: string;
+  username?: string;
+  phoneno?: string;
+  emailid?: string;
+  message?: string;
 }
 
 interface IformfielddataProps {
-  uniqueID: number;
-  usernameval: string;
-  phonenoval: string;
-  emailIDval: string;
-  messageval: string;
+  uniqueID?: number | null;
+  usernameval?: string | null;
+  phonenoval?: string | null;
+  emailIDval?: string | null;
+  messageval?: string | null;
+  feedbackdate?: string | undefined;
 }
 
 const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props }) => {
   const { createdata } = useAuth();
-  // const { createdata } = useContext(AuthContext);
+  const feedbackdate: string = moment().format('LLL');
   const [usernameval, setUsernameval] = useState<string>('');
   const [phonenoval, setPhonenoval] = useState<string>('');
   const [emailIDval, setEmailIdval] = useState<string>('');
@@ -44,13 +45,8 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
     message: messageval,
   };
 
-  const validateForm = (values: IUserContactFormProps) => {
-    const errors: IUserContactFormProps = {
-      username: '',
-      phoneno: '',
-      emailid: '',
-      message: '',
-    };
+  const validate = (values: IUserContactFormProps) => {
+    const errors: IUserContactFormProps = {};
 
     if (!values.username) {
       errors.username = 'Username is required!';
@@ -84,7 +80,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
   };
 
   const handleSubmit = async (values: IUserContactFormProps) => {
-    console.log('Database created...');
+    console.log('Values...', values);
     interval = setTimeout(timeoutfinish, 3000);
     const userstorevalue: string | null = localStorage.getItem('UserName');
     if (userstorevalue === usernameval) {
@@ -103,46 +99,11 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
         phonenoval,
         emailIDval,
         messageval,
-      };
-      try {
-        // await createdata('feedbackdataPortfolio', formfielddata);
-        console.log('Database created...');
-        setAlertshowfail(false);
-        setAlertshowsuccess(true);
-        values.username = '';
-        values.phoneno = '';
-        values.emailid = '';
-        values.message = '';
-      } catch (err) {
-        console.log(err);
-        setAlertshowfail(true);
-      }
-    }
-  };
-
-  const vclick = async (values: IUserContactFormProps) => {
-    interval = setTimeout(timeoutfinish, 3000);
-    const userstorevalue: string | null = localStorage.getItem('UserName');
-    if (userstorevalue === usernameval) {
-      console.log('username equal');
-      console.log(userstorevalue);
-      setAlertshowfail(true);
-      setAlertshowsuccess(false);
-    } else {
-      console.log('username not equal');
-      console.log(userstorevalue);
-      localStorage.setItem('UserName', usernameval);
-      const uniqueID: number = Math.floor(Math.random() * 1000);
-      const formfielddata: IformfielddataProps = {
-        uniqueID,
-        usernameval,
-        phonenoval,
-        emailIDval,
-        messageval,
+        feedbackdate,
       };
       try {
         await createdata('feedbackdataPortfolio', formfielddata);
-        console.log('Database created...');
+        console.log('Database created...input clear');
         setAlertshowfail(false);
         setAlertshowsuccess(true);
         values.username = '';
@@ -220,10 +181,10 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                   <div>
                     <Formik
                       initialValues={initialValues}
-                      validate={validateForm}
+                      validate={validate}
                       onSubmit={handleSubmit}
                     >
-                      {({ handleChange, handleSubmit, values, errors, touched }) => (
+                      {({ handleChange, handleSubmit, values, errors }) => (
                         <Form>
                           <Row className='gx-0'>
                             <Col xs={12} md={5} lg={5} xl={5}>
@@ -244,7 +205,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                                     setUsernameval(e.target.value);
                                   }}
                                 />
-                                {errors.username && touched.username ? (
+                                {errors.username ? (
                                   <div className={styles['contact-form-err-txt']}>
                                     {errors.username}
                                   </div>
@@ -270,7 +231,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                                     setPhonenoval(e.target.value);
                                   }}
                                 />
-                                {errors.phoneno && touched.phoneno ? (
+                                {errors.phoneno ? (
                                   <div className={styles['contact-form-err-txt']}>
                                     {errors.phoneno}
                                   </div>
@@ -295,7 +256,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                                 setEmailIdval(e.target.value);
                               }}
                             />
-                            {errors.emailid && touched.emailid ? (
+                            {errors.emailid ? (
                               <div className={styles['contact-form-err-txt']}>{errors.emailid}</div>
                             ) : null}
                           </Form.Group>
@@ -319,7 +280,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                                 setMessageval(e.target.value);
                               }}
                             />
-                            {errors.message && touched.message ? (
+                            {errors.message ? (
                               <div className={styles['contact-form-err-txt']}>{errors.message}</div>
                             ) : null}
                           </Form.Group>
@@ -328,13 +289,10 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                             varientprop={'outline-danger'}
                             classnameprop={styles['button-submit']}
                             styleprop={{ marginTop: '2rem' }}
-                            click={() => handleSubmit()}
+                            click={handleSubmit}
                             disableButtonprop={false}
                             buttonnameprop={'Submit'}
                           ></ButtonUI>
-                          {/* <button onClick={() => vclick(values)} type='button'>
-                            Click me
-                          </button> */}
                         </Form>
                       )}
                     </Formik>

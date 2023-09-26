@@ -42,9 +42,9 @@ const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
     const userstorevalue: string | null = localStorage.getItem('UserName');
     console.log('userstorevalue', userstorevalue);
     if (userstorevalue === 'sanathorthotech') {
-      // setReviewIconshow(true);
+      setReviewIconshow(true);
     } else {
-      // setReviewIconshow(false);
+      setReviewIconshow(false);
     }
   };
 

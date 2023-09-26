@@ -1,9 +1,10 @@
-import React, { Fragment, FunctionComponent } from 'react';
+import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styles from './PortfolioComponent.module.scss';
 import { Button as ButtonUI } from '../../commonui';
 
 // Images import
+
 import ArtgalleryImg from '../../images/mainscreenImages/portfolio/artgallery.png';
 import ResumebuilderImg from '../../images/mainscreenImages/portfolio/resumebuilder.png';
 import MygymImg from '../../images/mainscreenImages/portfolio/mygym.png';
