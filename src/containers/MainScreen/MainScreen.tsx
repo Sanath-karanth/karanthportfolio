@@ -1,19 +1,10 @@
-import React, {
-  Fragment,
-  FunctionComponent,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { Fragment, FunctionComponent, useCallback, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
-import { faUser, faBriefcase, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import {
   FaHtml5,
-  FaCss3,
   FaBootstrap,
   FaReact,
   FaJsSquare,
@@ -28,10 +19,8 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import ArrowUpwardTwoToneIcon from '@mui/icons-material/ArrowUpwardTwoTone';
 import Zoom from '@mui/material/Zoom';
-import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
@@ -45,10 +34,7 @@ import AboutComponent from '../../components/AboutComponent/AboutComponent';
 
 // Image imports
 import bannerImg from '../../images/profile/Sanath2.jpg';
-import parallaxBackground1 from '../../images/banner/slider2.jpg';
-import parallaxBackground2 from '../../images/banner/banner01.jpg';
 import parallaxImg3 from '../../images/parallax/parallaxImg3.jpg';
-import parallaxImg4 from '../../images/parallax/parallaxImg4.jpg';
 
 interface IMainScreenProps {
   classname?: string;
@@ -62,7 +48,6 @@ interface IScrollProps {
 const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   const navigate = useNavigate();
   const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
-  const swiperRef = useRef<SwiperRef>(null);
 
   const profileClick = useCallback(() => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(

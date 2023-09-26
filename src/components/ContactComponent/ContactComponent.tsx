@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent, useState } from 'react';
-import { Row, Col, Form } from 'react-bootstrap';
+import { Row, Col, Form, Alert } from 'react-bootstrap';
 import { Formik } from 'formik';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -103,7 +103,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
       };
       try {
         await createdata('feedbackdataPortfolio', formfielddata);
-        console.log('Database created...input clear');
+        console.log('Database created...');
         setAlertshowfail(false);
         setAlertshowsuccess(true);
         values.username = '';
@@ -287,7 +287,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                           <ButtonUI
                             varientprop={'outline-danger'}
                             classnameprop={styles['button-submit']}
-                            styleprop={{ marginTop: '2rem' }}
+                            styleprop={{ margin: '2rem 0rem 1rem 0rem' }}
                             click={handleSubmit}
                             disableButtonprop={false}
                             buttonnameprop={'Submit'}
@@ -295,6 +295,12 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                         </Form>
                       )}
                     </Formik>
+                    <Alert show={alertshowsuccess} variant='success'>
+                      Thanks for your valuable feedback.
+                    </Alert>
+                    <Alert show={alertshowfail} variant='danger'>
+                      You have already submitted your feedback. Thank you!
+                    </Alert>
                   </div>
                 </div>
               </div>

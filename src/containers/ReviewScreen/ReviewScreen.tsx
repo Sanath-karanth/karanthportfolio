@@ -1,8 +1,6 @@
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
-import { RiFeedbackFill } from 'react-icons/ri';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import { IoChevronBack } from 'react-icons/io5';
@@ -36,27 +34,13 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
   const navigate = useNavigate();
   const { getAlldata, deletedata } = useAuth();
   const [reviewIconshow, setReviewIconshow] = useState<boolean>(false);
-  const [tablenull, setTablenull] = useState<boolean>(false);
   const [showDelete, setShowDelete] = useState<boolean>(false);
   const [pathvalue, setPathvalue] = useState<string>('');
   const [idvalue, setIdvalue] = useState<string>('');
   const [carddatavalues, setCarddatavalues] = useState<IReviewData[] | null>([]);
 
+  // functions to close the modal
   const handleCloseDelete = () => setShowDelete(false);
-
-  // functions for navigate to my websites
-  const handleInstagramClick = () => {
-    const url = 'https://karantharts.netlify.app';
-    window.open(url, '_blank');
-  };
-  const handleLinkedinClick = () => {
-    const url = 'https://karanthresumebuilder.netlify.app';
-    window.open(url, '_blank');
-  };
-  const handleFacebookClick = () => {
-    const url = 'https://mygymfitness.netlify.app';
-    window.open(url, '_blank');
-  };
 
   const backClick = () => {
     // navigate(-1);
@@ -75,7 +59,6 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
     try {
       getAlldata('feedbackdataPortfolio').on('value', (snapshot: any) => {
         if (snapshot.val() != null) {
-          setTablenull(false);
           const mainarr: IReviewData[] = [];
           snapshot.forEach((item: any) => {
             const dbkey = item.key;
@@ -92,9 +75,7 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
           });
 
           setCarddatavalues(mainarr);
-          console.log('Review array data  ', mainarr);
-        } else {
-          setTablenull(true);
+          console.log('Review array data--->  ', mainarr);
         }
       });
     } catch (err) {
@@ -122,7 +103,6 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
 
   useEffect(() => {
     reviewData();
-    console.log('card val', carddatavalues);
   }, []);
 
   useEffect(() => {
@@ -203,7 +183,10 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
                             <div className={styles['review-desp-txt']}>{item.phoneno}</div>
                             <div className={styles['review-desp-txt']}>{item.emailID}</div>
                             <div className={styles['review-desp-txt']}>{item.feedbackdate}</div>
-                            <div className={styles['review-desp-txt']}>{item.message}</div>
+                            <div className={styles['review-desp-msg-txt']}>
+                              <b style={{ color: '#808080' }}>Feedback:</b>
+                              <p>{item.message}</p>
+                            </div>
                             <ButtonUI
                               varientprop={'outline-danger'}
                               classnameprop={styles['button-submit']}

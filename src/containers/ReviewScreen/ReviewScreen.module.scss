@@ -94,7 +94,7 @@
   .review-name-txt {
     color: variables.$color-danger;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-20;
+    font-size: variables.$font-size-22;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0;
@@ -102,10 +102,18 @@
   .review-desp-txt {
     color: variables.$color-000000;
     font-family: variables.$font-family-Montserrat;
-    font-size: variables.$font-size-14;
+    font-size: variables.$font-size-12;
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
+  }
+  .review-desp-msg-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-12;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0.4rem 0rem 0rem 0rem;
   }
   // Modal styles
   .fullScreen-header {
@@ -236,6 +244,14 @@
     letter-spacing: 1px;
     margin: 0;
   }
+  .review-desp-msg-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
   // Modal styles
   .fullScreen-header {
     @include ReviewScreen-modal-center;
@@ -364,6 +380,14 @@
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
+  }
+  .review-desp-msg-txt {
+    color: variables.$color-000000;
+    font-family: variables.$font-family-Montserrat;
+    font-size: variables.$font-size-14;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0.4rem 0rem 0rem 0rem;
   }
   // Modal styles
   .fullScreen-header {
