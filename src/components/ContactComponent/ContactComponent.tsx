@@ -65,7 +65,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
     }
     if (!values.message) {
       errors.message = 'Message/Feedback is required!';
-    } else if (!/^[A-Za-z\b ]+$/.test(values.message)) {
+    } else if (!/^[a-zA-Z0-9!@#$%^&*()_+\-={};':"\\|,.<>/?\b\s ]+$/.test(values.message)) {
       errors.message = 'Please enter the valid characters only.';
     }
 
