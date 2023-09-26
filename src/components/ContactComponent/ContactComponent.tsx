@@ -272,7 +272,6 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                               placeholder='Enter your valuable feedback message'
                               className={styles['contact-form-txt']}
                               autoComplete='off'
-                              maxLength={10}
                               name='message'
                               value={values.message}
                               onChange={(e: any) => {
