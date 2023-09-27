@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { FunctionComponent, Fragment } from 'react';
 import { FaInstagram, FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import moment from 'moment';
@@ -41,11 +42,12 @@ const Footer: FunctionComponent<IFooterProps> = () => {
             <div>
               <h1 className={styles['footer-about-header-txt']}>About Portfolio</h1>
               <p className={styles['footer-about-desp-txt']}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eum adipisci blanditiis assumenda atque officiis Vel, fuga facilis
-                quia reprehenderit nihil optio harum. Quo sapiente veniam atque corporis tempora non
-                repellat
+                It's a professionally well-designed, detail-oriented portfolio website that
+                typically includes the projects (KaranthArtGallery, KaranthResumebuilder, and so on)
+                that I've worked on. And also it demonstrates my proficiency in various programming
+                languages, frameworks, and technologies used in my projects. As a web developer, I
+                ensure that my portfolio website is well-designed and responsive, which can create
+                user-friendly experiences.
               </p>
               <div className={styles['footer-social-icon-cont']}>
                 <div className={styles['footer-icon-cont']}>

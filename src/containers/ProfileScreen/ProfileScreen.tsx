@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaInstagram, FaFacebookF, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 import { RiFeedbackFill } from 'react-icons/ri';
 import { IoChevronBack } from 'react-icons/io5';
-import Lottie from 'lottie-react';
 import styles from './ProfileScreen.module.scss';
 import bannerImg from '../../images/banner/banner01.jpg';
 import AboutSanathImg from '../../images/profile/SanathIMG30.jpg';
@@ -16,6 +15,7 @@ interface IProfileScreenProps {
 const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
   const navigate = useNavigate();
   const [reviewIconshow, setReviewIconshow] = useState<boolean>(false);
+
   // functions for navigate to my websites
   const handleInstagramClick = () => {
     const url = 'https://karantharts.netlify.app';
