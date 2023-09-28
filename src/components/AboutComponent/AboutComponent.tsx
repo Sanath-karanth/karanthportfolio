@@ -57,15 +57,15 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
 
   // functions for navigate to my websites
   const handleInstagramClick = () => {
-    const url = 'https://karantharts.netlify.app';
+    const url = 'https://www.instagram.com/sanath_karanth/';
     window.open(url, '_blank');
   };
   const handleLinkedinClick = () => {
-    const url = 'https://karanthresumebuilder.netlify.app';
+    const url = 'https://www.linkedin.com/in/sanath-s-karanth-758bbb176';
     window.open(url, '_blank');
   };
   const handleFacebookClick = () => {
-    const url = 'https://mygymfitness.netlify.app';
+    const url = 'https://www.facebook.com/sanaths.karanth/';
     window.open(url, '_blank');
   };
 
