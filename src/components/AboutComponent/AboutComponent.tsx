@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import moment from 'moment';
 import { FaInstagram, FaFacebookF, FaLinkedin, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { BsShareFill } from 'react-icons/bs';
 import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
 
@@ -39,10 +40,20 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
     getDefaultElement && getDefaultElement.click();
   }
 
-  useEffect(() => {
-    window.addEventListener('load', myFunction);
-    myFunction();
-  }, [myFunction]);
+  const shareClick = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: 'Karanth Portfolio',
+          text: 'Now you can share my profile',
+          url: 'https://karanthportfolio.netlify.com',
+        })
+        .then(() => console.log('Shared Successfully'))
+        .catch((error) => console.error('Error Sharing', error));
+    } else {
+      console.log('Web Share API not working for this browser');
+    }
+  };
 
   // functions for navigate to my websites
   const handleInstagramClick = () => {
@@ -109,6 +120,12 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
       </Fragment>
     );
   };
+
+  useEffect(() => {
+    window.addEventListener('load', myFunction);
+    myFunction();
+  }, [myFunction]);
+
   const ExperienceDetails = () => {
     return (
       <Fragment>
@@ -226,6 +243,9 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
               <div className={styles['about-details-card']}>
                 <div className={styles['about-header-cont']}>
                   <h4 className={styles['about-header-txt']}>About Me</h4>
+                  <div onClick={shareClick}>
+                    <BsShareFill className={styles['review-icon']} />
+                  </div>
                 </div>
                 <div className={styles['about-desp-cont']}>
                   <p className={styles['about-desp-txt']}>

@@ -93,8 +93,8 @@ const ProfileScreen: FunctionComponent<IProfileScreenProps> = () => {
                         />
                       </div>
                       {reviewIconshow ? (
-                        <div className={styles['profile-about-icon-bg']} onClick={reviewClick}>
-                          <RiFeedbackFill className={styles['about-icon']} />
+                        <div className={styles['profile-review-icon-bg']} onClick={reviewClick}>
+                          <RiFeedbackFill className={styles['review-icon']} />
                         </div>
                       ) : null}
                     </div>

@@ -34,7 +34,15 @@
   width: 6rem;
 }
 .about-header-cont {
-  margin-bottom: 1rem;
+  @include aboutComp-center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.review-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: variables.$color-000000 !important;
+  cursor: pointer;
 }
 .about-desp-cont {
   margin-bottom: 1rem;
