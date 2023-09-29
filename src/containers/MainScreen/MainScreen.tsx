@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent, useCallback, useState } from 'react';
+import React, { Fragment, FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +21,7 @@ import ArrowUpwardTwoToneIcon from '@mui/icons-material/ArrowUpwardTwoTone';
 import Zoom from '@mui/material/Zoom';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Confetti from 'react-confetti';
 import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
@@ -48,6 +49,9 @@ interface IScrollProps {
 const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   const navigate = useNavigate();
   const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
+  const [showerShow, setShowerShow] = useState<boolean>(true);
+  const [showerheight, setShowerheight] = useState<number>(0);
+  const [showerwidth, setShowerwidth] = useState<number>(0);
 
   const profileClick = useCallback(() => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(
@@ -148,14 +152,53 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   window.addEventListener('scroll', reveal);
   reveal();
 
+  function showerResize() {
+    if (window.innerWidth < 767) {
+      setShowerwidth(350);
+      setShowerheight(600);
+    } else if (window.innerWidth > 767 && window.innerWidth < 900) {
+      setShowerwidth(500);
+      setShowerheight(800);
+    } else if (window.innerWidth > 767 && window.innerWidth < 1023) {
+      setShowerwidth(700);
+      setShowerheight(800);
+    } else if (window.innerWidth > 1024) {
+      setShowerwidth(1200);
+      setShowerheight(800);
+    }
+    return window.innerWidth;
+  }
+  useEffect(() => {
+    window.addEventListener('load', showerResize, false);
+    showerResize();
+    return () => window.removeEventListener('load', showerResize, false);
+  }, []);
+
+  // UseEffect code to put condition for window resize
+  useEffect(() => {
+    window.addEventListener('resize', showerResize, false);
+    return () => window.removeEventListener('resize', showerResize, false);
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowerShow(false);
+    }, 5000);
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [showerShow]);
+
   return (
     <Fragment>
       <div className={styles['MainContainer-main']}>
+        {showerShow && <Confetti width={showerwidth} height={showerheight} run={true} />}
         <div className={styles['banner-cont']}>
           <section id='home'>
             <div className={styles['header-cont']}>
               <Header />
             </div>
+
             <div id='backtoTop-anchor'></div>
             <div className='container-fluid gx-0'>
               <Row className='gx-0'>
