@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ProgressBar from 'react-bootstrap/ProgressBar';
@@ -89,12 +90,12 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
       {
         skilID: 13,
         skillName: 'JavaScript',
-        percentage: '60',
+        percentage: '80',
       },
       {
         skilID: 14,
         skillName: 'TypeScript',
-        percentage: '40',
+        percentage: '50',
       },
       {
         skilID: 15,
@@ -249,11 +250,12 @@ const AboutComponent: FunctionComponent<IAboutComponentProps> = () => {
                 </div>
                 <div className={styles['about-desp-cont']}>
                   <p className={styles['about-desp-txt']}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, eaque
-                    voluptatibus. Eaque tempore quam nesciunt. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Eum adipisci blanditiis assumenda atque officiis?
-                    Vel, fuga facilis quia reprehenderit nihil optio harum. Quo sapiente veniam
-                    atque corporis tempora non repellat?
+                    Hello! I'm Sanath S Karanth, a passionate front-end developer with a creative
+                    flair and a keen eye for web application design and development. I thrive on
+                    turning ideas into beautiful, user-friendly websites and web applications. With
+                    3+ years of experience in IT industry, I've had the privilege of working on a
+                    wide range of projects that have allowed me to refine my skills and stay at the
+                    forefront of web development trends.
                   </p>
                 </div>
                 <div className='about-tab-cont'>

@@ -148,7 +148,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                     />
                   </div>
                   <div className={styles['contact-txt-cont']}>
-                    <h4 className={styles['contact-header-txt']}>EMail</h4>
+                    <h4 className={styles['contact-header-txt']}>EmailID</h4>
                     <p className={styles['contact-desp-txt']}>sanathsk97@gmail.com</p>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ const ContactComponent: FunctionComponent<IContactComponentProps> = ({ ...props 
                     <FontAwesomeIcon icon={faPhone} size='lg' className={styles['info-icon']} />
                   </div>
                   <div className={styles['contact-txt-cont']}>
-                    <h4 className={styles['contact-header-txt']}>Phone</h4>
+                    <h4 className={styles['contact-header-txt']}>PhoneNo</h4>
                     <p className={styles['contact-desp-txt']}>+91 9449685219</p>
                   </div>
                 </div>
