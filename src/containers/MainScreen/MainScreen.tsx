@@ -26,6 +26,7 @@ import styles from './MainScreen.module.scss';
 import './MainScreen.css';
 import { Header } from '../../commonui';
 import Footer from '../../commonui/Footer/Footer';
+import useRunOnce from '../../customHooks/useRunOnce';
 
 // Components import
 import ServicesComponent from '../../components/ServicesComponent/ServicesComponent';
@@ -49,9 +50,18 @@ interface IScrollProps {
 const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   const navigate = useNavigate();
   const [viewprofileShow, setViewprofileShow] = useState<boolean>(true);
+  const [showerShowonce, setShowerShowonce] = useState<boolean>(true);
   const [showerShow, setShowerShow] = useState<boolean>(true);
   const [showerheight, setShowerheight] = useState<number>(0);
   const [showerwidth, setShowerwidth] = useState<number>(0);
+
+  useRunOnce({
+    fn: () => {
+      setShowerShowonce(false);
+      localStorage.setItem('IsVisited-dashboard', 'true');
+    },
+    sessionKey: 'anyStringHere',
+  });
 
   const profileClick = useCallback(() => {
     const profileIconDivElement: HTMLElement | null = document.querySelector(
@@ -183,22 +193,38 @@ const MainScreen: FunctionComponent<IMainScreenProps> = ({ ...props }) => {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setShowerShow(false);
-    }, 5000);
+    }, 6000);
     return () => {
       window.clearTimeout(timer);
     };
   }, [showerShow]);
 
+  ///  Incomplete Code for local storage value change for page visited check
+  // useEffect(() => {
+  //   if (!showerShowonce) {
+  //     localStorage.setItem('visited-dashboard', 'true');
+  //   } else {
+  //     setShowerShowonce(false);
+  //   }
+  //   const userstorevalue: string | null = localStorage.getItem('visited-dashboard');
+  //   if (userstorevalue !== 'visited-dashboard') {
+  //     setShowerShowonce(true);
+  //   } else {
+  //     setShowerShowonce(false);
+  //   }
+  // }, [showerShowonce]);
+
   return (
     <Fragment>
       <div className={styles['MainContainer-main']}>
-        {showerShow && <Confetti width={showerwidth} height={showerheight} run={true} />}
+        {showerShow && (
+          <Confetti width={showerwidth} height={showerheight} run={showerShowonce ? false : true} />
+        )}
         <div className={styles['banner-cont']}>
           <section id='home'>
             <div className={styles['header-cont']}>
               <Header />
             </div>
-
             <div id='backtoTop-anchor'></div>
             <div className='container-fluid gx-0'>
               <Row className='gx-0'>
