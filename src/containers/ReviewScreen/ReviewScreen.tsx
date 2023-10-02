@@ -176,28 +176,42 @@ const ReviewScreen: FunctionComponent<IReviewScreenProps> = () => {
                     </div>
                   ) : (
                     <>
-                      {carddatavalues?.map((item: IReviewData) => {
-                        return (
-                          <div key={item.uniqueID} className={styles['review-cards']}>
-                            <div className={styles['review-name-txt']}>{item.username}</div>
-                            <div className={styles['review-desp-txt']}>{item.phoneno}</div>
-                            <div className={styles['review-desp-txt']}>{item.emailID}</div>
-                            <div className={styles['review-desp-txt']}>{item.feedbackdate}</div>
-                            <div className={styles['review-desp-msg-txt']}>
-                              <b style={{ color: '#808080' }}>Feedback:</b>
-                              <p>{item.message}</p>
+                      {carddatavalues
+                        // ?.sort((a: any, b: any) => (a.dbkey < b.dbkey ? 1 : -1))
+                        ?.sort((a: any, b: any) => {
+                          const usera = a.username.toLowerCase(),
+                            userb = b.username.toLowerCase();
+
+                          if (usera < userb) {
+                            return -1;
+                          }
+                          if (usera > userb) {
+                            return 1;
+                          }
+                          return 0;
+                        })
+                        .map((item: IReviewData) => {
+                          return (
+                            <div key={item.uniqueID} className={styles['review-cards']}>
+                              <div className={styles['review-name-txt']}>{item.username}</div>
+                              <div className={styles['review-desp-txt']}>{item.phoneno}</div>
+                              <div className={styles['review-desp-txt']}>{item.emailID}</div>
+                              <div className={styles['review-desp-txt']}>{item.feedbackdate}</div>
+                              <div className={styles['review-desp-msg-txt']}>
+                                <b style={{ color: '#808080' }}>Feedback:</b>
+                                <p>{item.message}</p>
+                              </div>
+                              <ButtonUI
+                                varientprop={'outline-danger'}
+                                classnameprop={styles['button-submit']}
+                                styleprop={{ marginTop: '1rem' }}
+                                click={() => deletepopup('feedbackdataPortfolio', item.dbkey)}
+                                disableButtonprop={false}
+                                buttonnameprop={'Delete'}
+                              ></ButtonUI>
                             </div>
-                            <ButtonUI
-                              varientprop={'outline-danger'}
-                              classnameprop={styles['button-submit']}
-                              styleprop={{ marginTop: '1rem' }}
-                              click={() => deletepopup('feedbackdataPortfolio', item.dbkey)}
-                              disableButtonprop={false}
-                              buttonnameprop={'Delete'}
-                            ></ButtonUI>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
                     </>
                   )}
                 </div>
