@@ -9,7 +9,7 @@ import styles from './AboutComponent.module.scss';
 import './AboutComponent.css';
 
 // Images import
-import AboutSanathImg from '../../images/profile/SanathIMG20.jpg';
+import AboutSanathImg from '../../images/profile/SanathIMG31.jpg';
 
 interface IAboutComponentProps {
   classname?: string;
